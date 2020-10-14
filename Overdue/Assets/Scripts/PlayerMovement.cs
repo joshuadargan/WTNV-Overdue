@@ -33,18 +33,19 @@ public class PlayerMovement : MonoBehaviour
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
         
-        if (Input.GetButton("Crouch")){
-        	movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);	
+        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical")){
+        	if (Input.GetButton("Crouch")){
+        		movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);	
+        		}
+        	else if (Input.GetButton("Sprint") && currentstamina > 0){
+       			movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
+       			UseStamina(staminaconsump);
+        	}else{
+        		movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
         	}
-        else if (Input.GetButton("Sprint") && currentstamina > 0){
-       		movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
-       		UseStamina(staminaconsump);
-        }else{
-        	movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
         }
-        
         movement *= Time.deltaTime;
-
+        
         transform.Translate(movement); 
     }
     
@@ -73,5 +74,5 @@ public class PlayerMovement : MonoBehaviour
     	regen = null;
     	}
     	
-    
+
 }
