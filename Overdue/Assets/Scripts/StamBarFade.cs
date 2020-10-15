@@ -65,7 +65,7 @@ public class StamBarFade : MonoBehaviour
     
     public IEnumerator AppearCanvasGroup(float rate){
     	
-    	for (float ft = stambar.alpha; ft < 1; ft += (rate/10)) 
+    	for (float ft = stambar.alpha; ft < 1; ft += (rate/60)) 
     	{
         	stambar.alpha = ft;
         	yield return null;
