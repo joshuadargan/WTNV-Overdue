@@ -55,10 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Test_Movement.cs" />
-     <Compile Include="Assets\Scripts\StamBarFade.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\LoadRooms.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\NPC_TD.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Floater.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Move2D.cs" />
@@ -88,6 +84,7 @@
      <Compile Include="Assets\Scripts\Past 2D Scripts\Level_Change_GotoP2.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Stealth.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Patrol_NOFLIP.cs" />
+     <Compile Include="Assets\Scripts\Test_Movement.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Level_Change_GotoP1.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Gravity_Physics.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\NPC_Audio.cs" />
@@ -100,10 +97,12 @@
      <Compile Include="Assets\Scripts\Past 2D Scripts\PlayerIdleBehaviour.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\PlayerWalkBehaviour.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Enemy_Health.cs" />
+     <Compile Include="Assets\Scripts\StamBarFade.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Teleporter_TD.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Player_Move_Force.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\DialogueTrigger.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Rotator_Planet.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\LevelFader.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Health.cs" />
@@ -116,6 +115,7 @@
      <Compile Include="Assets\Scripts\Past 2D Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Player_Health_Segmented.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\Camera_System.cs" />
+     <Compile Include="Assets\Scripts\LoadRooms.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\DrawTransformLines.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\PlaySound2D.cs" />
      <Compile Include="Assets\Scripts\Past 2D Scripts\QuitOnClick.cs" />
@@ -133,37 +133,37 @@
      <Compile Include="Assets\Scripts\Past 2D Scripts\Player_Move.cs" />
      <None Include="Assets\Scripts\Past 2D Scripts\SampleDialogue.txt" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/margo/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/crist/OneDrive/Documents/GitHub/WTNV-Overdue/Overdue/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
