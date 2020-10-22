@@ -16,7 +16,7 @@ TextureImporter:
     second: Shelf_bottom_only
   - first:
       213: 2870797580459969645
-    second: Emptry_SHelf_side_4
+    second: edgeless_top
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -178,7 +178,7 @@ TextureImporter:
         width: 103
         height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,7 +199,7 @@ TextureImporter:
         width: 103
         height: 188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,6 +207,27 @@ TextureImporter:
       bones: []
       spriteID: 75ebb15ad226e4c10800000000000000
       internalID: 2039675629428522583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: edgeless_top
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 214
+        width: 103
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c0e55703f17d720800000000000000
+      internalID: 2870797580459969645
       vertices: []
       indices: 
       edges: []
