@@ -106,6 +106,7 @@
     <Compile Include="Assets\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
     <Compile Include="Assets\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\Scripts\Past 2D Scripts\Enemy_Health.cs" />
+    <Compile Include="Assets\Scripts\PlayerFlashlight.cs" />
     <Compile Include="Assets\Scripts\StamBarFade.cs" />
     <Compile Include="Assets\Scripts\Past 2D Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\Past 2D Scripts\Teleporter_TD.cs" />
@@ -774,6 +775,46 @@
     <ProjectReference Include="com.unity.quicksearch.csproj">
       <Project>{6CEA43FD-DBCE-8E31-9E4F-4449F17D867C}</Project>
       <Name>com.unity.quicksearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{1972BFFA-B208-818E-6BB9-E10F3A9CA70B}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{BE78684B-904A-EF72-B0C5-094A6887F4F4}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{9D413F0E-AE11-F340-55EA-8F307A10CDF9}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{E670DBE5-505A-EB2D-12E1-6C70C7FE1362}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{9103E87B-F399-F5B8-92BA-31E8FB4B6015}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{93F6CCBD-26EB-69E6-D92A-8C7059478965}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{92408FFC-A6C3-AD41-566A-18F2FBE65EC2}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{61DE65FB-C589-2A56-57FD-E32B09D35278}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{4568F4CC-11B9-EBEC-0518-874CF02FD20A}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{53A03C1D-B2B0-8C78-7894-CA0FDC2A68AC}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
