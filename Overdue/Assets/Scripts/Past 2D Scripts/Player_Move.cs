@@ -61,11 +61,11 @@ public class Player_Move : MonoBehaviour {
     void PlayerRaycast()
     {
         RaycastHit2D rayUp = Physics2D.Raycast(transform.position, Vector2.up);
-        if (rayUp != null && rayUp.collider != null && rayUp.distance < distanceToBottomOfPlayer && rayUp.collider.name == "CMG_StarBox") {
+        if (rayUp && rayUp.collider != null && rayUp.distance < distanceToBottomOfPlayer && rayUp.collider.name == "CMG_StarBox") {
             Destroy (rayUp.collider.gameObject);
         }
             RaycastHit2D rayDown = Physics2D.Raycast(transform.position, Vector2.down);
-        if (rayDown != null && rayDown.collider != null && rayDown.distance < distanceToBottomOfPlayer && rayDown.collider.tag == "Enemy") {
+        if (rayDown && rayDown.collider != null && rayDown.distance < distanceToBottomOfPlayer && rayDown.collider.tag == "Enemy") {
             GetComponent<Rigidbody2D>().AddForce(force: Vector2.up * 500);
             rayDown.collider.gameObject.GetComponent<Rigidbody2D> ().AddForce(Vector2.down * 200);
             rayDown.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 8;
@@ -74,7 +74,7 @@ public class Player_Move : MonoBehaviour {
             rayDown.collider.gameObject.GetComponent<Enemy_Move>().enabled = false;
             //Destroy(hit.collider.gameObject);
         }
-        if (rayDown != null && rayDown.collider != null && rayDown.distance < distanceToBottomOfPlayer && rayDown.collider.tag != "Enemy") {
+        if (rayDown && rayDown.collider != null && rayDown.distance < distanceToBottomOfPlayer && rayDown.collider.tag != "Enemy") {
             isGrounded = true;
         }
     }

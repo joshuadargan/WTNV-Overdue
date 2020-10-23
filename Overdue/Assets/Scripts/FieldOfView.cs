@@ -6,19 +6,32 @@ using CodeMonkey.Utils;
 
 public class FieldOfView : MonoBehaviour
 {
+    [SerializeField] private LayerMask layerMask; 
+    private Mesh mesh;
+    Vector3 origin;
+    private float startingAngle;
+    private float fov;
+    private float viewDistance = 0f;
+
     // Start is called before the first frame update
     private void Start()
     {
-        Debug.Log("Test - FOV");
-        Mesh mesh = new Mesh();
+        mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        origin = Vector3.zero;
+        fov = 90f;
+        startingAngle = 0f;
+    }
 
-        float fov = 90f;
-        Vector3 origin = Vector3.zero;
+    // Update is called once per frame
+    private void LateUpdate()
+    {
+        Debug.Log("Origin " + origin);
+        Debug.Log("Angle: " + startingAngle);
         int rayCount = 50;
-        float angle = 0f;
+        float angle = this.startingAngle;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 50f;
+        
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -31,11 +44,11 @@ public class FieldOfView : MonoBehaviour
         for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance);
-            if (raycastHit2D == null || raycastHit2D.point == null) // No hit
-                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
-            else // hit
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
+            if (raycastHit2D) // Hit
                 vertex = raycastHit2D.point;
+            else // No hit
+                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
             vertices[vertexIndex] = vertex;
 
             if (i > 0)
@@ -53,12 +66,22 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+        mesh.RecalculateBounds();
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
+    public void SetOrigin (Vector3 origin)
+    {
+        this.origin = origin + new Vector3(0,0,0);
+    }
 
-    //}
+    public void SetAimDirection(Vector3 aimDirection)
+    {
+        this.startingAngle = UtilsClass.GetAngleFromVectorFloat(aimDirection) + fov / 2f;
+    }
+    
+    public void SetViewDistance(float distance)
+    {
+        this.viewDistance = distance;
+    }
 }
 
