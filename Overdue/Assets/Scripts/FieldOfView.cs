@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using UnityEngine.Experimental.Rendering;
+using UnityEngine.Experimental.GlobalIllumination;
+using UnityEditor.Experimental.SceneManagement;
+using UnityEngine.Rendering;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -13,6 +18,9 @@ public class FieldOfView : MonoBehaviour
     private float fov;
     private float viewDistance = 0f;
 
+    private Light2D lt;
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -21,13 +29,16 @@ public class FieldOfView : MonoBehaviour
         origin = Vector3.zero;
         fov = 90f;
         startingAngle = 0f;
+        lt = GetComponent<Light2D>();
+        lt.pointLightInnerAngle = this.fov;
+        lt.pointLightOuterAngle = this.fov;
     }
 
     // Update is called once per frame
     private void LateUpdate()
     {
-        Debug.Log("Origin " + origin);
-        Debug.Log("Angle: " + startingAngle);
+        //Debug.Log("Origin " + origin);
+        //Debug.Log("Angle: " + startingAngle);
         int rayCount = 50;
         float angle = this.startingAngle;
         float angleIncrease = fov / rayCount;
@@ -67,6 +78,9 @@ public class FieldOfView : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
+
+        lt.transform.position = origin;
+        lt.transform.rotation = Quaternion.Euler(0, 0, startingAngle);
     }
 
     public void SetOrigin (Vector3 origin)
@@ -76,7 +90,7 @@ public class FieldOfView : MonoBehaviour
 
     public void SetAimDirection(Vector3 aimDirection)
     {
-        this.startingAngle = UtilsClass.GetAngleFromVectorFloat(aimDirection) + fov / 2f;
+        this.startingAngle = UtilsClass.GetAngleFromVectorFloat(aimDirection) - fov ;
     }
     
     public void SetViewDistance(float distance)
