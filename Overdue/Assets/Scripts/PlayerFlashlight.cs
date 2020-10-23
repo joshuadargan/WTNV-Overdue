@@ -15,7 +15,7 @@ public class PlayerFlashlight : MonoBehaviour
     {
         isFlashlightOn = false;
         flashlightFluid = 10f;
-        fieldOfView.SetViewDistance(0);
+        fieldOfView.SetIntensity(0);
     }
 
     // Update is called once per frame
@@ -33,12 +33,12 @@ public class PlayerFlashlight : MonoBehaviour
             {
                 //Flashlight is turned on
                 isFlashlightOn = true;
-                fieldOfView.SetViewDistance(10);
+                fieldOfView.SetIntensity(1);
             }
             else
             {
                 isFlashlightOn = false;
-                fieldOfView.SetViewDistance(0);
+                fieldOfView.SetIntensity(0);
             }
             
         }
