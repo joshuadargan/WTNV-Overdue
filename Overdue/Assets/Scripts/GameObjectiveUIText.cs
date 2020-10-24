@@ -12,12 +12,6 @@ public class GameObjectiveUIText : MonoBehaviour
         objectiveText = GetComponent<Text>();
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
-
     public static void SetObjectiveText(string objective)
     {
         objectiveText.text = objective;
