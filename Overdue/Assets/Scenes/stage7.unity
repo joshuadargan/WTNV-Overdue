@@ -25114,31 +25114,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1523041674}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1525745428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059,
-    type: 3}
-  m_PrefabInstance: {fileID: 1622993179}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1525745433 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8970223993575225010, guid: 533f711c033f6d04ab8761ec31ca0059,
-    type: 3}
-  m_PrefabInstance: {fileID: 1622993179}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1525745434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525745428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b91aee889cb60b044b485a43a71c176b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fieldOfView: {fileID: 191184371}
 --- !u!1001 &1527007466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25875,6 +25850,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1525745434, guid: 533f711c033f6d04ab8761ec31ca0059, type: 3}
+      propertyPath: fieldOfView
+      value: 
+      objectReference: {fileID: 191184371}
     - target: {fileID: 8970223993575225010, guid: 533f711c033f6d04ab8761ec31ca0059,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25935,11 +25914,6 @@ PrefabInstance:
       propertyPath: staminabar
       value: 
       objectReference: {fileID: 444187993}
-    - target: {fileID: 8970223993575225011, guid: 533f711c033f6d04ab8761ec31ca0059,
-        type: 3}
-      propertyPath: fieldOfView
-      value: 
-      objectReference: {fileID: 191184371}
     - target: {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059,
         type: 3}
       propertyPath: m_Name
