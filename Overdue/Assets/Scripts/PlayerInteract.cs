@@ -27,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 hasReturnedBook = true;
                 //TODO: Have it do something for the player to let them know that they returned the book
-                Debug.Log("Book returned");
+                GameObjectiveUIText.SetObjectiveText("Objective: Escape!");
             }
         }
     }
