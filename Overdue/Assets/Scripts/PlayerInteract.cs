@@ -37,6 +37,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 hasExited = true;
                 Debug.Log("You win!");
+                GameObjectiveUIText.SetObjectiveText("You escaped!");
             }
         }
     }
@@ -56,8 +57,8 @@ public class PlayerInteract : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
-            //Debug.Log("Enter final");
-            isCloseToExit = false;
+            Debug.Log("Enter final");
+            isCloseToExit = true;
         }
     }
 
@@ -69,7 +70,7 @@ public class PlayerInteract : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
-            //Debug.Log("Exit final");
+            Debug.Log("Exit final");
             isCloseToExit = false;
         }
     }

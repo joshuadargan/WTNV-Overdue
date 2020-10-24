@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2039254967492483275}
   - component: {fileID: 6448311886875692471}
+  - component: {fileID: 5930865942596738500}
   m_Layer: 0
   m_Name: Cart
-  m_TagString: Untagged
+  m_TagString: ReturnCart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +59,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 6.0356445, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &5930865942596738500
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927822840814078974}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 6.98, y: 7.0099998, z: 6.6499996, w: 6.83}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.48, y: 20.48}
   m_EdgeRadius: 0
 --- !u!1 &3023676929394562206
 GameObject:
@@ -128,7 +155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1974014259
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 5472177190675322060, guid: baa63c452218fd440946a611ff9945c9,
     type: 3}
