@@ -4,4 +4,5 @@
 public static class GameObjectTags
 {
     public const string ReturnCart = "ReturnCart";
+    public const string Finish = "Finish";
 }
