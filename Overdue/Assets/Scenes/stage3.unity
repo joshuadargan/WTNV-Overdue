@@ -3440,6 +3440,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &640773162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3899414041398027162, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+    type: 3}
+  m_PrefabInstance: {fileID: 497945458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &645448111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8684,6 +8696,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8970223993575225011, guid: 533f711c033f6d04ab8761ec31ca0059,
+        type: 3}
+      propertyPath: staminabar
+      value: 
+      objectReference: {fileID: 640773162}
     - target: {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059,
         type: 3}
       propertyPath: m_Name

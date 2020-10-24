@@ -24,6 +24,7 @@ public class FieldOfView : MonoBehaviour
         origin = Vector3.zero;
         startingAngle = 0f;
         lt = GetComponent<Light2D>();
+        lt.intensity = 0;
     }
 
     // Update is called once per frame
