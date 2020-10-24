@@ -15021,6 +15021,28 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4186713978363389539, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186713978363389539, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330375026968409578, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+        type: 3}
+      propertyPath: m_Name
+      value: ObjectiveText
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667038787443331513, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Objective: Return Book in Romance section
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5f358764a4fc04c9fe6c9bbe40023c, type: 3}
 --- !u!1001 &1036934658
