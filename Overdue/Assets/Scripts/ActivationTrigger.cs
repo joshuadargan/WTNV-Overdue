@@ -7,14 +7,14 @@ public class ActivationTrigger : MonoBehaviour {
     [SerializeField] private GameObject displayed;
     void Start()
     {
-        displayed.SetActive(false);
+        displayed.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            displayed.SetActive(true);
+            displayed.SetActive(false);
         }
     }
 
@@ -22,7 +22,7 @@ public class ActivationTrigger : MonoBehaviour {
     {
         if (collision.CompareTag("Player"))
         {
-            displayed.SetActive(false);
+            displayed.SetActive(true);
         }
     }
 }
