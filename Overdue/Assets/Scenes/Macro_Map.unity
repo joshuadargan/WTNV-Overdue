@@ -286,7 +286,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1981353531
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -391,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 7864880493960051223, guid: c79d9f8e4ab607a489c3bac4938975c5,
         type: 3}
       propertyPath: m_Name
-      value: stage4_layout
+      value: TownHistory_stage4_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c79d9f8e4ab607a489c3bac4938975c5, type: 3}
@@ -14209,7 +14209,7 @@ PrefabInstance:
     - target: {fileID: 6539871592213566146, guid: 3335145469c82814498270d36140dfbb,
         type: 3}
       propertyPath: m_Name
-      value: stage6_layout
+      value: SciFi_stage6_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3335145469c82814498270d36140dfbb, type: 3}
@@ -15352,7 +15352,7 @@ PrefabInstance:
     - target: {fileID: 4960229506195260241, guid: 0f67e2ddef3568b4d861389327c568dd,
         type: 3}
       propertyPath: m_Name
-      value: stage7_layout
+      value: Fantasy_stage7_layout
       objectReference: {fileID: 0}
     - target: {fileID: 4960229506195260242, guid: 0f67e2ddef3568b4d861389327c568dd,
         type: 3}
@@ -16004,7 +16004,7 @@ PrefabInstance:
     - target: {fileID: 6201346480382960307, guid: 333e39439dd42584085585130f2352a3,
         type: 3}
       propertyPath: m_Name
-      value: stage5_layout
+      value: KidsRoom_stage5_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333e39439dd42584085585130f2352a3, type: 3}
@@ -16155,7 +16155,7 @@ PrefabInstance:
     - target: {fileID: 1598011537115307769, guid: fc000bb51d2335a45987e5c554fae8ce,
         type: 3}
       propertyPath: m_Name
-      value: stage2_layout
+      value: Mystery_stage2_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc000bb51d2335a45987e5c554fae8ce, type: 3}
@@ -16404,7 +16404,7 @@ PrefabInstance:
     - target: {fileID: 6999585076754045431, guid: 4d2bc48e83f90a84f90755e18f6255e4,
         type: 3}
       propertyPath: m_Name
-      value: stage3_layout
+      value: AutoBio_stage3_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d2bc48e83f90a84f90755e18f6255e4, type: 3}
@@ -16653,7 +16653,7 @@ PrefabInstance:
     - target: {fileID: 3924772965620350354, guid: 7a3b20367406bba4a987eb8aa9b3760c,
         type: 3}
       propertyPath: m_Name
-      value: stage1_layout
+      value: Romance_stage1_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3b20367406bba4a987eb8aa9b3760c, type: 3}
