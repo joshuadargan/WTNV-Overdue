@@ -213,6 +213,119 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 115876131}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &159046720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159046723}
+  - component: {fileID: 159046722}
+  - component: {fileID: 159046724}
+  - component: {fileID: 159046721}
+  m_Layer: 0
+  m_Name: pick-up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &159046721
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159046720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.099999994
+--- !u!212 &159046722
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159046720}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1981353531
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &159046723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159046720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.8, y: -102.02, z: 0}
+  m_LocalScale: {x: 3.0832243, y: 3.0832243, z: 3.0832243}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159046724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159046720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f461ae203326c04d8a294735084d052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayed: {fileID: 159046720}
 --- !u!1001 &201037692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 7864880493960051223, guid: c79d9f8e4ab607a489c3bac4938975c5,
         type: 3}
       propertyPath: m_Name
-      value: stage4_layout
+      value: TownHistory_stage4_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c79d9f8e4ab607a489c3bac4938975c5, type: 3}
@@ -14096,7 +14209,7 @@ PrefabInstance:
     - target: {fileID: 6539871592213566146, guid: 3335145469c82814498270d36140dfbb,
         type: 3}
       propertyPath: m_Name
-      value: stage6_layout
+      value: SciFi_stage6_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3335145469c82814498270d36140dfbb, type: 3}
@@ -14923,6 +15036,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectiveText
       objectReference: {fileID: 0}
+    - target: {fileID: 5795755266168492965, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795755266168492965, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6667038787443331513, guid: ce5f358764a4fc04c9fe6c9bbe40023c,
         type: 3}
       propertyPath: m_Text
@@ -15229,7 +15352,7 @@ PrefabInstance:
     - target: {fileID: 4960229506195260241, guid: 0f67e2ddef3568b4d861389327c568dd,
         type: 3}
       propertyPath: m_Name
-      value: stage7_layout
+      value: Fantasy_stage7_layout
       objectReference: {fileID: 0}
     - target: {fileID: 4960229506195260242, guid: 0f67e2ddef3568b4d861389327c568dd,
         type: 3}
@@ -15881,7 +16004,7 @@ PrefabInstance:
     - target: {fileID: 6201346480382960307, guid: 333e39439dd42584085585130f2352a3,
         type: 3}
       propertyPath: m_Name
-      value: stage5_layout
+      value: KidsRoom_stage5_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333e39439dd42584085585130f2352a3, type: 3}
@@ -16032,7 +16155,7 @@ PrefabInstance:
     - target: {fileID: 1598011537115307769, guid: fc000bb51d2335a45987e5c554fae8ce,
         type: 3}
       propertyPath: m_Name
-      value: stage2_layout
+      value: Mystery_stage2_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc000bb51d2335a45987e5c554fae8ce, type: 3}
@@ -16281,7 +16404,7 @@ PrefabInstance:
     - target: {fileID: 6999585076754045431, guid: 4d2bc48e83f90a84f90755e18f6255e4,
         type: 3}
       propertyPath: m_Name
-      value: stage3_layout
+      value: AutoBio_stage3_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d2bc48e83f90a84f90755e18f6255e4, type: 3}
@@ -16530,7 +16653,7 @@ PrefabInstance:
     - target: {fileID: 3924772965620350354, guid: 7a3b20367406bba4a987eb8aa9b3760c,
         type: 3}
       propertyPath: m_Name
-      value: stage1_layout
+      value: Romance_stage1_layout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3b20367406bba4a987eb8aa9b3760c, type: 3}
