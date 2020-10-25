@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivationTrigger : MonoBehaviour {
+public class RepellentPickup : MonoBehaviour {
 
     [SerializeField] private GameObject displayed;
-    int RepellentStored = 0;
+    public int RepellentStored = 0;
     public GameObject RepellentIcon;
 
     void Start()
@@ -20,14 +20,15 @@ public class ActivationTrigger : MonoBehaviour {
         {
             displayed.SetActive(false);
             RepellentIcon.SetActive(true);
+            RepellentStored++;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+   /* private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             displayed.SetActive(true);
         }
-    }
+    }*/
 }
