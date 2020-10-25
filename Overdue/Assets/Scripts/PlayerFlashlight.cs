@@ -60,8 +60,13 @@ public class PlayerFlashlight : MonoBehaviour
     {
         /*if (flashlightFluid >= 0)
         {*/
+
+        //do{
             flashlightFluid -= amount * Time.deltaTime;
             flashlightbar.value = flashlightFluid;
+
+        //} while (isFlashlightOn == true);
+
            /* Debug.Log("AHHHHHHHHHHHH");
         }
         else
