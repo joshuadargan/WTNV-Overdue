@@ -5,9 +5,13 @@ using UnityEngine;
 public class ActivationTrigger : MonoBehaviour {
 
     [SerializeField] private GameObject displayed;
+    int RepellentStored = 0;
+    public GameObject RepellentIcon;
+
     void Start()
     {
         displayed.SetActive(true);
+        RepellentIcon.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,6 +19,7 @@ public class ActivationTrigger : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
             displayed.SetActive(false);
+            RepellentIcon.SetActive(true);
         }
     }
 
