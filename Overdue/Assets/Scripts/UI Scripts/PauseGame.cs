@@ -9,29 +9,26 @@ public class PauseGame : MonoBehaviour
     [SerializeField] public GameObject pauseMenuGroup;
     [SerializeField] private bool isPaused;
 
-    void Start()
-    {
+    void Start(){
+       
         pauseMenuGroup.SetActive(false);
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(pauseKeyCode))
-        {
+    void Update(){
+        
+        if (Input.GetKeyDown(pauseKeyCode)){
             if (!isPaused) Pause();
             else Unpause();
         }
     }
 
-    public void Pause()
-    {
+    public void Pause(){
         Time.timeScale = 0f;
         pauseMenuGroup.SetActive(true);
         isPaused = true;
     }
 
-    public void Unpause()
-    {
+    public void Unpause(){
         Time.timeScale = 1f;
         pauseMenuGroup.SetActive(false);
         isPaused = false;
