@@ -17,14 +17,20 @@ public class PlayerMovement : MonoBehaviour
     
     private WaitForSeconds regenTick = new WaitForSeconds(.1f);
     private Coroutine regen;
-    	
+
+    public const string stand_layer = "Character";
+    public const string crouch_layer = "Crouching";
+    private SpriteRenderer sprite;
+
 
     // Start is called before the first frame update
     void Start()
     {
-    	currentstamina = maxstamina;
+        currentstamina = maxstamina;
     	staminabar.maxValue = maxstamina;
     	staminabar.value = maxstamina;
+
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -33,17 +39,21 @@ public class PlayerMovement : MonoBehaviour
         //Movement Code
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
-        
-        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical")){
-        	if (Input.GetButton("Crouch")){
-        		movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);	
+
+        Crouching();
+
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")){
+
+            if (Input.GetButton("Crouch")){
+        		movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
         		}
         	else if (Input.GetButton("Sprint") && currentstamina > 0){
        			movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
        			UseStamina(staminaconsump);
-        	}else{
+            }
+            else{
         		movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
-        	}
+            }
         }
         movement *= Time.deltaTime;
         
@@ -74,6 +84,16 @@ public class PlayerMovement : MonoBehaviour
     	
     	regen = null;
     	}
+
+    private void Crouching() {
+        if (Input.GetButton("Crouch")) { 
+            sprite.sortingLayerName = crouch_layer;
+        
+        }else{
+            sprite.sortingLayerName = stand_layer;
+        }
+            
+    }
     	
 
 }
