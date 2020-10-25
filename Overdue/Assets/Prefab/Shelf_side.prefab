@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4860941546081532994}
   - component: {fileID: 568308980}
+  - component: {fileID: -6719143876180409563}
   m_Layer: 0
   m_Name: Shelf_side
   m_TagString: Untagged
@@ -59,6 +60,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9702873, y: 0.98190886}
   m_EdgeRadius: 0
+--- !u!114 &-6719143876180409563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250514971611299073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755df3ba41c90c5f1e689bf74f21ecdee568a97cfcacd
+  m_ShapePath:
+  - {x: -0.5144856, y: -2.3649318, z: -0.000000021513188}
+  - {x: 0.49743256, y: -2.3664882, z: -0.000000021513188}
+  - {x: 0.48850673, y: 0.817482, z: -0.000000021513188}
+  - {x: -0.503927, y: 0.82019037, z: -0.000000021513188}
+  m_ShapePathHash: -1153361464
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 1097530
 --- !u!1 &6072277512147359045
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1974014259
-  m_SortingLayer: 4
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 958446120754408154, guid: 48d903de19da0a543a0b0f6cb158014a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -210,7 +237,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -548022455
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7741435522549630321, guid: 48d903de19da0a543a0b0f6cb158014a,
     type: 3}

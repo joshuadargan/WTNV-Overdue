@@ -11,7 +11,7 @@ public class ReturnCartManager : MonoBehaviour
     {
         
         ReturnCarts.Add(rc);
-        Debug.Log("Cart Addded " + ReturnCarts.Count + " " +  rc.name);
+        //Debug.Log("Cart Addded " + ReturnCarts.Count + " " +  rc.name);
         //Randomly select a cart to become the active cart
         if (ReturnCarts.Count >= NumCarts)
         {
@@ -21,7 +21,7 @@ public class ReturnCartManager : MonoBehaviour
             {
                 if (activeIndex == i)
                 {
-                    Debug.Log("Objective Set");
+                    //Debug.Log("Objective Set");
                     ReturnCarts[i].SetActive(true);
                     GameObjectiveUIText.SetObjectiveText("Current Objective: " + ReturnCarts[i].name);
                 }

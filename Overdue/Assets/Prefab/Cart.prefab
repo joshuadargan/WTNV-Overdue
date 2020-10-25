@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6448311886875692471}
   - component: {fileID: 5930865942596738500}
   - component: {fileID: 5530356117066149549}
+  - component: {fileID: 2589917764685360722}
   m_Layer: 0
   m_Name: Cart
   m_TagString: ReturnCart
@@ -99,6 +100,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71375a54a3f64f4ca89a5dc02497c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2589917764685360722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927822840814078974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755df3ba41c90c5f1e689bf74f21ecdee568a97cfcacd
+  m_ShapePath:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -658790
 --- !u!1 &3023676929394562206
 GameObject:
   m_ObjectHideFlags: 0
