@@ -7,8 +7,9 @@ public class GameObjectiveUIText : MonoBehaviour
 {
     private static Text objectiveText;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Debug.Log("Objective");
         objectiveText = GetComponent<Text>();
     }
 
