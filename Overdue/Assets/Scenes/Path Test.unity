@@ -190,6 +190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Librarian
       objectReference: {fileID: 0}
+    - target: {fileID: 4475600786393597708, guid: fcc062b13a12dea4a85f0736e5a25da5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4475600786393597709, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: blackboard.objectParams.Array.size
@@ -223,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 4475600786393597709, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: blackboard.floatParams.Array.data[1]
-      value: 10000
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc062b13a12dea4a85f0736e5a25da5, type: 3}

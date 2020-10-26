@@ -28,9 +28,10 @@ namespace BBUnity.Conditions
         public override bool Check()
 		{
             Vector3 dir = (target.transform.position - gameObject.transform.position);
-            RaycastHit hit;
-            if (Physics.Raycast(gameObject.transform.position + new Vector3(0, 0.1f, 0), dir, out hit))
+            RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position + new Vector3(0, 0.1f, 0), dir);
+            if (hit)
             {
+                Debug.Log("Hmmm");
                 return hit.collider.gameObject == target && Vector3.Angle(dir, gameObject.transform.forward) < angle * 0.5f;
             }
             return false;
