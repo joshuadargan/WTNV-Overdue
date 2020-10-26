@@ -57,6 +57,9 @@ TagManager:
   - name: Tilemap
     uniqueID: 1213036623
     locked: 0
+  - name: Crouching
+    uniqueID: 3619208637
+    locked: 0
   - name: BelowCharacter
     uniqueID: 3746944841
     locked: 0
