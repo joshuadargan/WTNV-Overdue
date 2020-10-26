@@ -44,8 +44,7 @@ public class PlayerFlashlight : MonoBehaviour
                 //Flashlight is turned on
                 isFlashlightOn = true;
                 fieldOfView.SetIntensity(1);
-                
-                UseFluid(FluidConsump);
+             
             }
             else
             {
@@ -54,6 +53,18 @@ public class PlayerFlashlight : MonoBehaviour
             }
 
         }
+
+        if (flashlightFluid <= 0) {
+            isFlashlightOn = false;
+            fieldOfView.SetIntensity(0);
+        }
+
+
+        if (isFlashlightOn == true) {
+
+            UseFluid(FluidConsump);
+        }
+
     }
 
     public void UseFluid(int amount)
@@ -61,11 +72,11 @@ public class PlayerFlashlight : MonoBehaviour
         /*if (flashlightFluid >= 0)
         {*/
 
-        //do{
+        
             flashlightFluid -= amount * Time.deltaTime;
             flashlightbar.value = flashlightFluid;
 
-        //} while (isFlashlightOn == true);
+        
 
            /* Debug.Log("AHHHHHHHHHHHH");
         }
