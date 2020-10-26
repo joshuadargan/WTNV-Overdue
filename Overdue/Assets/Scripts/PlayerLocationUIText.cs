@@ -9,7 +9,6 @@ public class PlayerLocationUIText : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("Location");
         locationText = GetComponent<Text>();
     }
 
