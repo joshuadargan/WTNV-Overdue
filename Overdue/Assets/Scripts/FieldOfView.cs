@@ -3,10 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
-using UnityEngine.Experimental.Rendering;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEditor.Experimental.SceneManagement;
-using UnityEngine.Rendering;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class FieldOfView : MonoBehaviour
