@@ -130,6 +130,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4475600786393597706, guid: fcc062b13a12dea4a85f0736e5a25da5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1995185885280320973, guid: ff4e1deaf15e25b468f5159824be54e8,
+        type: 3}
     - target: {fileID: 4475600786393597707, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -185,6 +191,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4475600786393597707, guid: fcc062b13a12dea4a85f0736e5a25da5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475600786393597707, guid: fcc062b13a12dea4a85f0736e5a25da5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4475600786393597708, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: m_Name
@@ -228,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 4475600786393597709, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: blackboard.floatParams.Array.data[1]
-      value: 200
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc062b13a12dea4a85f0736e5a25da5, type: 3}
