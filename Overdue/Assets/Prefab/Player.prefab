@@ -204,6 +204,9 @@ GameObject:
   - component: {fileID: 8970223993575225011}
   - component: {fileID: -2168425183316565652}
   - component: {fileID: 5276175457416457273}
+  - component: {fileID: 796321077}
+  - component: {fileID: 796321078}
+  - component: {fileID: 796321086}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -361,6 +364,7 @@ MonoBehaviour:
   flashlightbar: {fileID: 0}
   maxfluid: 100
   FluidConsump: 2
+  pickupvalue: 20
 --- !u!114 &5276175457416457273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +377,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc6e1ecf2f45754f85533a8735851c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &796321077
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970223993575225014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e8b9d121abf33b44950826f10144d19, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &796321078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970223993575225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d81f24629e348438f76bb54c72d45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 796321077}
+--- !u!114 &796321086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970223993575225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f461ae203326c04d8a294735084d052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RepellentStored: 0
+  RepellentIcon: {fileID: 0}
 --- !u!1 &8970223994627235154
 GameObject:
   m_ObjectHideFlags: 0
