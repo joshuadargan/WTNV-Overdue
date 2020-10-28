@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8330053190681618385}
   - component: {fileID: 3929783627036441773}
   - component: {fileID: 5876468659432556591}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Librarian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4475600786393597708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 38.16, y: -80.57, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: -1974014259
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
+  m_Sprite: {fileID: -1995185885280320973, guid: ff4e1deaf15e25b468f5159824be54e8,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,8 +111,8 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
-    - 45
-    - 10
+    - 360
+    - 1
     floatParamsNames:
     - angle
     - closeDistance
@@ -123,7 +124,7 @@ MonoBehaviour:
     colorParamsNames: []
     colorParamsLostDefaultValue: 
     objectParams:
-    - {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
     objectParamsNames:
     - target
@@ -209,7 +210,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 10.666666, y: 17.5}
     newSize: {x: 2.56, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
