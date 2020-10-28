@@ -14,6 +14,8 @@ TagManager:
   - Mystery
   - Romance
   - MainEntrance
+  - light_pickup
+  - repellent_pickup
   layers:
   - Default
   - TransparentFX

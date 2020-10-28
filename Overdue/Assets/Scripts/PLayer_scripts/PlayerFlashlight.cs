@@ -15,6 +15,8 @@ public class PlayerFlashlight : MonoBehaviour
     public Slider flashlightbar;
     public float maxfluid =100;
     public int FluidConsump;
+    
+    public float pickupvalue = 20;
 
 
     // Start is called before the first frame update
@@ -86,6 +88,18 @@ public class PlayerFlashlight : MonoBehaviour
         }*/
 
 
+    }
+    
+     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("light_pickup"))
+        {
+        	flashlightbar.value += pickupvalue;
+        	
+            //displayed.SetActive(false);
+            //RepellentIcon.SetActive(true);
+            //RepellentStored++;
+        }
     }
 
 }

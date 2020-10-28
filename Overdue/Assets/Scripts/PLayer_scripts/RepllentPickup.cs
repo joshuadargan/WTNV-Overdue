@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepellentPickup : MonoBehaviour {
+public class RepllentPickup : MonoBehaviour {
 
-    [SerializeField] private GameObject displayed;
+    //[SerializeField] private GameObject displayed;
     public int RepellentStored = 0;
     public GameObject RepellentIcon;
+   
 
     void Start()
     {
-        displayed.SetActive(true);
+        //displayed.SetActive(true);
         RepellentIcon.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("repellent_pickup"))
         {
-            displayed.SetActive(false);
+        	
+        	
+            //displayed.SetActive(false);
             RepellentIcon.SetActive(true);
             RepellentStored++;
         }
