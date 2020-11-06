@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8330053190681618385}
   - component: {fileID: 3929783627036441773}
   - component: {fileID: 5876468659432556591}
+  - component: {fileID: 3005456987976683957}
   m_Layer: 2
   m_Name: Librarian
   m_TagString: Untagged
@@ -171,6 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3ccdb37e1d0ca40a227d1b06a8aacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Libanimator: {fileID: 0}
+  VoverH: 0
 --- !u!195 &3929783627036441773
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -219,3 +222,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &3005456987976683957
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475600786393597708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45e29969166492449b96be5c898b18ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

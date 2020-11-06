@@ -64,35 +64,35 @@ MonoBehaviour:
     id=\"8\" />\r\n          <SubbehaviorNode id=\"5\" />\r\n          <ConditionEvalNode
     id=\"6\" />\r\n          <ActionNode id=\"7\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"659.6964 327.1699\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"827.134 232.4557\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
     id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"600.6963 489.1699\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    position=\"768.1339 394.4558\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
     id=\"2\" />\r\n          <RepeatDecorator id=\"1\" />\r\n        </data>\r\n     
     </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"8\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"330.696
-    642.8088\" name=\"Perception/IsTargetCloseAndInSight\" description=\"Eval\" cardinality=\"1\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"498.1337
+    548.0946\" name=\"Perception/IsTargetCloseAndInSight\" description=\"Eval\" cardinality=\"1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode
     id=\"8\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n        </data>\r\n     
     </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"7\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"330.696 642.8088\" name=\"Navigation/MoveToGameObject\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"498.1337 548.0946\" name=\"Navigation/MoveToGameObject\"
     description=\"Moves the game object towards a given target by using a NavMeshAgent\"
     cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ConditionEvalNode id=\"6\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"755.8633 649.9758\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"923.3009 555.2617\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"6\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SubbehaviorNode
     id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
-    position=\"755.8633 649.9758\" name=\"QuickStartGuide/DoneWander\" description=\"Wanders
+    position=\"923.3009 555.2617\" name=\"QuickStartGuide/DoneWander\" description=\"Wanders
     to random positions around a NavMesh area.\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"5\" />\r\n       
     </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 1
+  zoom: 0.7
   subslist:
   - {fileID: 11400000, guid: 8adfddffa70852a45ba1b64354494e3c, type: 2}
   _guid: 66cd6f7b6e2f9e647b83079a59ef611f
