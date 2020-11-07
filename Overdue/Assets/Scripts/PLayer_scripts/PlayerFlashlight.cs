@@ -10,7 +10,6 @@ public class PlayerFlashlight : MonoBehaviour
 {
     [SerializeField] private FieldOfView fieldOfView;
     private Boolean isFlashlightOn;
-    private float flashlightFluid;
 
     public Slider flashlightbar;
     public float maxfluid =100;
@@ -23,9 +22,6 @@ public class PlayerFlashlight : MonoBehaviour
     void Start()
     {
         isFlashlightOn = false;
-        flashlightFluid = 10f;
-
-        flashlightFluid = maxfluid;
         flashlightbar.maxValue = maxfluid;
         flashlightbar.value = maxfluid;
     }
@@ -41,7 +37,7 @@ public class PlayerFlashlight : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (!isFlashlightOn && flashlightFluid > 0)
+            if (!isFlashlightOn && flashlightbar.value > 0)
             {
                 //Flashlight is turned on
                 isFlashlightOn = true;
@@ -56,7 +52,7 @@ public class PlayerFlashlight : MonoBehaviour
 
         }
 
-        if (flashlightFluid <= 0) {
+        if (flashlightbar.value <= 0) {
             isFlashlightOn = false;
             fieldOfView.SetIntensity(0);
         }
@@ -71,23 +67,7 @@ public class PlayerFlashlight : MonoBehaviour
 
     public void UseFluid(int amount)
     {
-        /*if (flashlightFluid >= 0)
-        {*/
-
-        
-            flashlightFluid -= amount * Time.deltaTime;
-            flashlightbar.value = flashlightFluid;
-
-        
-
-           /* Debug.Log("AHHHHHHHHHHHH");
-        }
-        else
-        {
-            Debug.Log("Not Enough Fluid");
-        }*/
-
-
+        flashlightbar.value -= amount * Time.deltaTime;
     }
     
      private void OnTriggerEnter2D(Collider2D collision)
@@ -95,7 +75,7 @@ public class PlayerFlashlight : MonoBehaviour
         if (collision.CompareTag("light_pickup"))
         {
         	flashlightbar.value += pickupvalue;
-        	
+            Destroy(collision.gameObject); 
             //displayed.SetActive(false);
             //RepellentIcon.SetActive(true);
             //RepellentStored++;

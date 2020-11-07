@@ -65,7 +65,7 @@ public class LibrarianBehavior : MonoBehaviour
     	
     	if (Math.Abs(Horizontal) > Math.Abs(Vertical)){
         	VoverH = false;
-        }else if (Math.Abs(Vertical) > Math.Abs(Horizontal)){
+        } else if (Math.Abs(Vertical) > Math.Abs(Horizontal)){
         	VoverH = true;
         }
     	

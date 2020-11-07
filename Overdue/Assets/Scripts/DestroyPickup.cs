@@ -21,7 +21,7 @@ public class DestroyPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
            // displayed.SetActive(false);
-            Destroy(gameObject);
+            //Destroy(gameObject);
            // RepellentIcon.SetActive(true);
            // RepellentStored++;
         }
