@@ -14,20 +14,49 @@ public class LibrarianBehavior : MonoBehaviour
 	private Vector3 Direction;
 	float Horizontal;
 	float Vertical;
+
+    const float baseSpeed = 3.5f;
+    private int suspicion = 0;
+
+    private NavMeshAgent agent;
+
+    public void DecrementSuspicion()
+    {
+        --suspicion;
+    }
+
+    public void SetSuspicion(int sus)
+    {
+        suspicion = sus;
+    }
+
+    public bool IsSuspicious()
+    {
+        return suspicion > 0;
+    }
 	
     // Start is called before the first frame update
     void Start()
     {
-        var agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        
-        
+
         prevPos = transform.position;
     }
     
     void Update(){
-    
+        if (IsSuspicious())
+        {
+            Debug.Log("sus " + suspicion);
+            agent.speed = baseSpeed * 2;
+            DecrementSuspicion();
+        }
+        else
+        {
+            agent.speed = baseSpeed;
+        }
+
     	Direction = transform.position - prevPos;
     	
     	
@@ -44,14 +73,12 @@ public class LibrarianBehavior : MonoBehaviour
        animator.SetFloat("Vertical", Vertical);
        animator.SetBool("VoverH", VoverH);
        
-       Debug.Log("Horiztonal = " + Horizontal);
-       Debug.Log("Vertical = " + Vertical);
-       Debug.Log("VoverH = " + VoverH);
-    	
-    prevPos = transform.position;
+       prevPos = transform.position;
        
        
     }
+
+    
 
     //// Update is called once per frame
     //void Update()

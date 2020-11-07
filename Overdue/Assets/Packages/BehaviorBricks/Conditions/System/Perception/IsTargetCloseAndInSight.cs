@@ -24,6 +24,10 @@ namespace BBUnity.Conditions
         [Help("The maximun distance to consider that the target is close")]
         public float closeDistance;
 
+        private Vector3 currentPosition;
+        private Vector3 previousPosition;
+        private int updateCount = 0;
+
         /// <summary>
         /// Checks whether a target is close and in sight depending on a given distance and an angle, 
         /// First calculates the magnitude between the gameobject and the target and then compares with the given distance, then
@@ -33,17 +37,35 @@ namespace BBUnity.Conditions
         /// and if the angle of forward vector with the  raycast direction is lower than the given angle, false therwase.</returns>
 		public override bool Check()
         {
-            Vector3 dir = (target.transform.position - gameObject.transform.position);
+            ++updateCount;
+            if (currentPosition == null)
+            {
+                currentPosition = this.gameObject.transform.position;
+                previousPosition = this.gameObject.transform.position;
+            }
+            else if (updateCount % 5 == 0)
+            {
+                previousPosition = currentPosition;
+                currentPosition = this.gameObject.transform.position;
+            }
+            
+
+            Debug.DrawLine(currentPosition, target.transform.position, Color.green);
+            Vector3 dir = (target.transform.position - currentPosition);
             if (dir.sqrMagnitude > closeDistance * closeDistance)
                 return false;
-            RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position + new Vector3(0, 0.1f, 0), dir);
-            if (hit)
+            RaycastHit2D hit = Physics2D.Raycast(currentPosition + new Vector3(0, 0.1f, 0), dir);
+
+            LibrarianBehavior behavior = this.gameObject.GetComponent<LibrarianBehavior>();
+
+            if (hit || behavior.IsSuspicious())
             {
-                Debug.Log("Hit");
-                Debug.Log(hit.collider.gameObject.name);
-                Debug.Log(hit.collider.gameObject == target);
-                Debug.Log(hit.collider.gameObject == target && Vector3.Angle(dir, gameObject.transform.forward) < angle * 0.5f);
-                return hit.collider.gameObject == target && Vector3.Angle(dir, gameObject.transform.forward) < angle * 0.5f;
+                // If in range and in visible area
+                if (hit && hit.collider.gameObject == target && Vector3.Angle(dir, currentPosition - previousPosition) < angle * 0.5f)
+                {
+                    behavior.SetSuspicion(1000);
+                }
+                return behavior.IsSuspicious();
             }
             return false;
 		}

@@ -24,7 +24,6 @@ namespace BBUnity.Actions
         /// <remarks>Check if GameObject object exists and NavMeshAgent, if there is no NavMeshAgent, the default one is added.</remarks>
         public override void OnStart()
         {
-            Debug.Log("Start move");
             if (target == null)
             {
                 Debug.LogError("The movement target of this game object is null", gameObject);
@@ -37,9 +36,11 @@ namespace BBUnity.Actions
             {
                 Debug.LogWarning("The " + gameObject.name + " game object does not have a Nav Mesh Agent component to navigate. One with default values has been added", gameObject);
                 navAgent = gameObject.AddComponent<UnityEngine.AI.NavMeshAgent>();
+                
             }
 			navAgent.SetDestination(targetTransform.position);
             
+
             #if UNITY_5_6_OR_NEWER
                 navAgent.isStopped = false;
             #else
@@ -52,7 +53,6 @@ namespace BBUnity.Actions
         /// y, the task is running, if it is still moving to the target.</remarks>
         public override TaskStatus OnUpdate()
         {
-            Debug.Log("Update move");
             if (target == null)
                 return TaskStatus.FAILED;
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
@@ -60,7 +60,6 @@ namespace BBUnity.Actions
             else if (navAgent.destination != targetTransform.position)
             {
                 navAgent.SetDestination(targetTransform.position);
-                Debug.Log("Moving to destination");
             }
             return TaskStatus.RUNNING;
         }
