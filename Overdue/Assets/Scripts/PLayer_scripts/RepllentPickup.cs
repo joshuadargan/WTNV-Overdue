@@ -19,11 +19,10 @@ public class RepllentPickup : MonoBehaviour {
     {
         if (collision.CompareTag("repellent_pickup"))
         {
-        	
-        	
             //displayed.SetActive(false);
             RepellentIcon.SetActive(true);
             RepellentStored++;
+            Destroy(collision.gameObject);
         }
     }
 
