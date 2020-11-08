@@ -13,4 +13,5 @@ public static class GameObjectTags
     public const string Kids = "Kids";
     public const string TownHistory = "TownHistory";
     public const string AutoBio = "AutoBio";
+    public const string Table = "Table";
 }

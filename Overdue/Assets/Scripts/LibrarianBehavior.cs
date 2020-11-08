@@ -16,13 +16,13 @@ public class LibrarianBehavior : MonoBehaviour
 	float Vertical;
 
     const float baseSpeed = 3.5f;
-    private int suspicion = 0;
+    private float suspicion = 0;
 
     private NavMeshAgent agent;
 
     public void DecrementSuspicion()
     {
-        --suspicion;
+        suspicion -= Time.deltaTime;
     }
 
     public void SetSuspicion(int sus)
@@ -49,12 +49,8 @@ public class LibrarianBehavior : MonoBehaviour
         if (IsSuspicious())
         {
             Debug.Log("sus " + suspicion);
-            agent.speed = baseSpeed * 2;
+            //agent.acceleration = baseSpeed;
             DecrementSuspicion();
-        }
-        else
-        {
-            agent.speed = baseSpeed;
         }
 
     	Direction = transform.position - prevPos;
