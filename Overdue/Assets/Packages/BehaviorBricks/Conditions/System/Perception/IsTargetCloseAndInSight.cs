@@ -48,22 +48,28 @@ namespace BBUnity.Conditions
                 previousPosition = currentPosition;
                 currentPosition = this.gameObject.transform.position;
             }
-            
+
+            LibrarianBehavior behavior = this.gameObject.GetComponent<LibrarianBehavior>();
 
             Debug.DrawLine(currentPosition, target.transform.position, Color.green);
             Vector3 dir = (target.transform.position - currentPosition);
-            if (dir.sqrMagnitude > closeDistance * closeDistance)
+            if (!behavior.IsSuspicious() && dir.sqrMagnitude > closeDistance * closeDistance)
                 return false;
             RaycastHit2D hit = Physics2D.Raycast(currentPosition + new Vector3(0, 0.1f, 0), dir);
 
-            LibrarianBehavior behavior = this.gameObject.GetComponent<LibrarianBehavior>();
+
 
             if (hit || behavior.IsSuspicious())
             {
                 // If in range and in visible area
                 if (hit && hit.collider.gameObject == target && Vector3.Angle(dir, currentPosition - previousPosition) < angle * 0.5f)
                 {
-                    behavior.SetSuspicion(1000);
+                    PlayerMovement movement = hit.collider.gameObject.GetComponent<PlayerMovement>();
+                    if (!behavior.IsSuspicious() && movement.IsHiddenUnderTable)
+                    {
+                        return false;
+                    }
+                    behavior.SetSuspicion(5);
                 }
                 return behavior.IsSuspicious();
             }

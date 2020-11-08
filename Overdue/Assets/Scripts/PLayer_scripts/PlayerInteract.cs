@@ -57,7 +57,6 @@ public class PlayerInteract : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
-            Debug.Log("Enter final");
             isCloseToExit = true;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Fantasy))
@@ -102,7 +101,6 @@ public class PlayerInteract : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
-            Debug.Log("Exit final");
             isCloseToExit = false;
         }
     }

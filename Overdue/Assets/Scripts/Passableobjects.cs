@@ -21,31 +21,10 @@ public class Passableobjects : MonoBehaviour
         if (Input.GetButton("Crouch"))
         {
             Border.enabled = false;
-
         }
         else
         {
-
             Border.enabled = true;
         }
     }
-
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.tag == "Player")
-        {
-            hidden = true;
-            //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("You are hidden");
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        hidden = false;
-        Debug.Log("You are exposed");
-    }
-
 }

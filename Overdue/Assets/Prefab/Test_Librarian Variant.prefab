@@ -16,12 +16,12 @@ PrefabInstance:
     - target: {fileID: 4475600786393597707, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4238942
+      value: 7.57
       objectReference: {fileID: 0}
     - target: {fileID: 4475600786393597707, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8080559
+      value: 2.84
       objectReference: {fileID: 0}
     - target: {fileID: 4475600786393597707, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
@@ -81,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 4475600786393597708, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: m_Name
-      value: Test_Librarian
+      value: Test_Librarian Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4475600786393597708, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
@@ -116,12 +116,23 @@ PrefabInstance:
     - target: {fileID: 4475600786393597709, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: blackboard.floatParams.Array.data[0]
-      value: 360
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4475600786393597709, guid: fcc062b13a12dea4a85f0736e5a25da5,
         type: 3}
       propertyPath: blackboard.floatParams.Array.data[1]
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8330053190681618385, guid: fcc062b13a12dea4a85f0736e5a25da5,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7226869095002980977}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc062b13a12dea4a85f0736e5a25da5, type: 3}
+--- !u!95 &7226869095002980977 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3005456987976683957, guid: fcc062b13a12dea4a85f0736e5a25da5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5620342878719316932}
+  m_PrefabAsset: {fileID: 0}

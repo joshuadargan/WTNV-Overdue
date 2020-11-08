@@ -39,9 +39,8 @@ namespace BBUnity.Actions
             {
                 randomPosition = new Vector3(UnityEngine.Random.Range(area.transform.position.x - area.transform.localScale.x * boxCollider.size.x * 0.5f,
                                                                       area.transform.position.x + area.transform.localScale.x * boxCollider.size.x * 0.5f),
-                                             area.transform.position.y,
-                                             UnityEngine.Random.Range(area.transform.position.z - area.transform.localScale.z * boxCollider.size.z * 0.5f,
-                                                                      area.transform.position.z + area.transform.localScale.z * boxCollider.size.z * 0.5f));
+                                             UnityEngine.Random.Range(area.transform.position.y - area.transform.localScale.y * boxCollider.size.y * 0.5f,
+                                                                      area.transform.position.y + area.transform.localScale.y * boxCollider.size.y * 0.5f));
             }
             else
             {

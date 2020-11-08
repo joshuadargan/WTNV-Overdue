@@ -39,7 +39,6 @@ namespace BBUnity.Actions
                 
             }
 			navAgent.SetDestination(targetTransform.position);
-            
 
             #if UNITY_5_6_OR_NEWER
                 navAgent.isStopped = false;
@@ -60,6 +59,8 @@ namespace BBUnity.Actions
             else if (navAgent.destination != targetTransform.position)
             {
                 navAgent.SetDestination(targetTransform.position);
+                DrawNavMeshPath.path = navAgent.path.corners;
+                DrawNavMeshPath.isChasingPlayer = true;
             }
             return TaskStatus.RUNNING;
         }
