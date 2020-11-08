@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -6096136496964128554
     second: SmallTable_Top
+  - first:
+      213: 3634859516656333866
+    second: SmallTable_full
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,6 +147,27 @@ TextureImporter:
       bones: []
       spriteID: 6d0b82c972c266ba0800000000000000
       internalID: -6096136496964128554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallTable_full
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 298
+        width: 646
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24bfbad87d917230800000000000000
+      internalID: 3634859516656333866
       vertices: []
       indices: 
       edges: []
