@@ -7,9 +7,11 @@ public class ReturnCartManager : MonoBehaviour
     public const int NumCarts = 7;
     private static List<GameObject> ReturnCarts = new List<GameObject>();
 
+    public static GameObject ActiveReturnCart { get; private set; }
+
     public static void AddReturnCart(GameObject rc)
     {
-        
+        ActiveReturnCart = rc;
         ReturnCarts.Add(rc);
         //Debug.Log("Cart Addded " + ReturnCarts.Count + " " +  rc.name);
         //Randomly select a cart to become the active cart
@@ -23,7 +25,8 @@ public class ReturnCartManager : MonoBehaviour
                 {
                     //Debug.Log("Objective Set");
                     ReturnCarts[i].SetActive(true);
-                    GameObjectiveUIText.SetObjectiveText("Current Objective: " + ReturnCarts[i].name);
+                    GameObjectiveUIText.SetObjectiveText("Objective: Return Cart in " + ReturnCarts[i].name.Split('_')[0] + " section");
+                    ActiveReturnCart = ReturnCarts[i];
                 }
                 else
                 {

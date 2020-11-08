@@ -44,13 +44,17 @@ public class LibrarianBehavior : MonoBehaviour
 
         prevPos = transform.position;
     }
-    
-    void Update(){
+
+    void Update() {
         if (IsSuspicious())
         {
-            Debug.Log("sus " + suspicion);
-            //agent.acceleration = baseSpeed;
+            //Debug.Log("sus " + suspicion);
+            agent.speed = baseSpeed * 2;
             DecrementSuspicion();
+        }
+        else
+        {
+            agent.speed = baseSpeed;
         }
 
     	Direction = transform.position - prevPos;

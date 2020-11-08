@@ -11,6 +11,7 @@ public class PlayerInteract : MonoBehaviour
     private bool hasExited;
     private bool isCloseToReturnCart;
     private bool isCloseToExit;
+    private bool isCloseToNewBookshelf;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class PlayerInteract : MonoBehaviour
         hasSecondBook = false;
         isCloseToReturnCart = false;
         isCloseToExit = false;
+        isCloseToNewBookshelf = false;
     }
 
     // Update is called once per frame
@@ -28,10 +30,19 @@ public class PlayerInteract : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E) && !hasReturnedBook)
             {
+                Debug.Log("Book Returned");
                 ReturnBook();
             }
         }
-        else if (isCloseToExit && hasReturnedBook) //TODO: Add 2nd book
+        else if (isCloseToNewBookshelf)
+        {
+            if (Input.GetKey(KeyCode.E) && hasReturnedBook && !hasSecondBook)
+            {
+                Debug.Log("New book gotten");
+                GetNewBook();
+            }
+        }
+        else if (isCloseToExit && hasReturnedBook && hasSecondBook)
         {
             if (Input.GetKey(KeyCode.E) && !hasExited)
             {
@@ -45,6 +56,13 @@ public class PlayerInteract : MonoBehaviour
     private void ReturnBook()
     {
         hasReturnedBook = true;
+        NewBookBookshelfManager.RemoveBookshelfIfExists(ReturnCartManager.ActiveReturnCart.name.Split('_')[0]);
+        NewBookBookshelfManager.SelectBookshelf();
+    }
+
+    private void GetNewBook()
+    {
+        hasSecondBook = true;
         GameObjectiveUIText.SetObjectiveText("Objective: Escape!");
         ExitGoal.SetExitLightOn();
     }
@@ -54,6 +72,10 @@ public class PlayerInteract : MonoBehaviour
         if (collision.gameObject.CompareTag(GameObjectTags.ReturnCart))
         {
             isCloseToReturnCart = true;
+        }
+        else if (collision.gameObject.CompareTag(GameObjectTags.NewBook))
+        {
+            isCloseToNewBookshelf = true;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
@@ -98,6 +120,10 @@ public class PlayerInteract : MonoBehaviour
         if (collision.gameObject.CompareTag(GameObjectTags.ReturnCart))
         {
             isCloseToReturnCart = false;
+        }
+        else if (collision.gameObject.CompareTag(GameObjectTags.NewBook))
+        {
+            isCloseToNewBookshelf = false;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
