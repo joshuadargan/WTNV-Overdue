@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 crouchspeed = new Vector2 (2,2);
     Vector3 movement;
     
+    public Rigidbody2D rb;
+    
+    
     public Slider staminabar;
     [SerializeField] private int maxstamina = 100;
     private float currentstamina;
@@ -42,27 +45,35 @@ public class PlayerMovement : MonoBehaviour
         //Movement Code
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
+        
+        //rb.velocity = new Vector2(inputX, inputY);
 
         Crouching();
 
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")) {
 
-            if (Input.GetButton("Crouch")) {
-        		movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
+            if (Input.GetButton("Crouch")){
+        		//movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
+        		rb.velocity = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
         		}
-        	else if (Input.GetButton("Sprint") && currentstamina > 0) {
-       			movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
+        	else if (Input.GetButton("Sprint") && currentstamina > 0){
+       			//movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
+       			rb.velocity = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
+       			
        			UseStamina(staminaconsump);
                 IsHiddenUnderTable = false;
             }
-            else {
-        		movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
+            else{
+        		//movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
+        		rb.velocity = new Vector3(speed.x * inputX, speed.y * inputY, 0);
                 IsHiddenUnderTable = false;
             }
+        }else{
+        	rb.velocity = new Vector3(0, 0, 0);
         }
-        movement *= Time.deltaTime;
+        //movement *= Time.deltaTime;
         
-        transform.Translate(movement); 
+        //transform.Translate(movement); 
     }
     
     public void UseStamina(int amount) {
