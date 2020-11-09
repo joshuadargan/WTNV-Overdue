@@ -60,6 +60,8 @@ namespace BBUnity.Conditions
 
             if (hit || behavior.IsSuspicious())
             {
+                //Go to location hit.point; do a circle strafe
+                //If the player goes into hiding while the librarian can't see them.
                 // If in range and in visible area
                 if (hit && hit.collider.gameObject == target && Vector3.Angle(dir, currentPosition - previousPosition) < angle * 0.5f)
                 {
