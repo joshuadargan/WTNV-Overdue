@@ -7,7 +7,7 @@ TextureImporter:
     second: HHShrine_0
   - first:
       213: 4690206927747458413
-    second: HHShrine_1
+    second: HHShrine_bottom
   - first:
       213: -100081525792364560
     second: HHShrine_2
@@ -19,7 +19,22 @@ TextureImporter:
     second: HHShrine_4
   - first:
       213: 352421785348191491
-    second: HHShrine_5
+    second: HHShrine_top
+  - first:
+      213: 6392043153582813456
+    second: HHShrine_0
+  - first:
+      213: -2522747158155213429
+    second: HHShrine_bottom
+  - first:
+      213: 7368630912343154201
+    second: HHShrine_2
+  - first:
+      213: 4358387594919016692
+    second: HHShrine_3
+  - first:
+      213: -1014526399293110275
+    second: HHShrine_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,35 +130,35 @@ TextureImporter:
         width: 387
         height: 833
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8426a54326c68b850800000000000000
-      internalID: 6392978840093352520
+      spriteID: 0117546b16915b850800000000000000
+      internalID: 6392043153582813456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HHShrine_1
+      name: HHShrine_bottom
       rect:
         serializedVersion: 2
         x: 729
         y: 1033
         width: 1346
-        height: 1424
+        height: 712
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d65a67bd956f61140800000000000000
-      internalID: 4690206927747458413
+      spriteID: b85480463d66dfcd0800000000000000
+      internalID: -2522747158155213429
       vertices: []
       indices: 
       edges: []
@@ -157,14 +172,14 @@ TextureImporter:
         width: 386
         height: 833
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f7219ee1607c9ef0800000000000000
-      internalID: -100081525792364560
+      spriteID: 91e1d2b26c2a24660800000000000000
+      internalID: 7368630912343154201
       vertices: []
       indices: 
       edges: []
@@ -176,16 +191,16 @@ TextureImporter:
         x: 1090
         y: 981
         width: 6
-        height: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df1e95e7a8510c800800000000000000
-      internalID: 630527632401359357
+      spriteID: 4f8fd940d6a1c7c30800000000000000
+      internalID: 4358387594919016692
       vertices: []
       indices: 
       edges: []
@@ -199,14 +214,35 @@ TextureImporter:
         width: 1022
         height: 590
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccff38acabbd730c0800000000000000
-      internalID: -4595963299400253492
+      spriteID: df7c0e27d9dabe1f0800000000000000
+      internalID: -1014526399293110275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HHShrine_top
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1745
+        width: 1346
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305b9ce1fbd04e400800000000000000
+      internalID: 352421785348191491
       vertices: []
       indices: 
       edges: []
