@@ -11,6 +11,12 @@ TextureImporter:
   - first:
       213: 3634859516656333866
     second: SmallTable_full
+  - first:
+      213: -6294129271362340127
+    second: SmallTable_Full
+  - first:
+      213: -8820843971088967152
+    second: SmallTable_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,10 +119,10 @@ TextureImporter:
       name: SmallTable_Bottom
       rect:
         serializedVersion: 2
-        x: 715
-        y: 292
-        width: 648
-        height: 425
+        x: 778
+        y: 298
+        width: 521
+        height: 419
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,9 +140,9 @@ TextureImporter:
       name: SmallTable_Top
       rect:
         serializedVersion: 2
-        x: 712
+        x: 778
         y: 717
-        width: 652
+        width: 521
         height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -155,12 +161,12 @@ TextureImporter:
       name: SmallTable_full
       rect:
         serializedVersion: 2
-        x: 714
+        x: 778
         y: 298
-        width: 646
+        width: 521
         height: 671
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

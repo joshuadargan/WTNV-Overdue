@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3005456987976683957}
   m_Layer: 2
   m_Name: Librarian
-  m_TagString: Untagged
+  m_TagString: Librarian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,8 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3ccdb37e1d0ca40a227d1b06a8aacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Libanimator: {fileID: 0}
-  VoverH: 0
+  animator: {fileID: 0}
 --- !u!195 &3929783627036441773
 NavMeshAgent:
   m_ObjectHideFlags: 0

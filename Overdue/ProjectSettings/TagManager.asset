@@ -18,6 +18,7 @@ TagManager:
   - repellent_pickup
   - Table
   - NewBook
+  - Librarian
   layers:
   - Default
   - TransparentFX
@@ -61,14 +62,14 @@ TagManager:
   - name: Tilemap
     uniqueID: 1213036623
     locked: 0
-  - name: Crouching
-    uniqueID: 3619208637
-    locked: 0
   - name: BelowCharacter
     uniqueID: 3746944841
     locked: 0
   - name: Cart_bottom
     uniqueID: 2417796155
+    locked: 0
+  - name: Crouching
+    uniqueID: 3619208637
     locked: 0
   - name: Character
     uniqueID: 2313613765

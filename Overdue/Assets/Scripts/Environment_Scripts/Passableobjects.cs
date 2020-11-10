@@ -16,7 +16,7 @@ public class Passableobjects : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetButton("Crouch"))
         {
