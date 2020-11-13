@@ -5,7 +5,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EndScreenManager : MonoBehaviour
+public class EndScreenManager2 : MonoBehaviour
 {
     [SerializeField] public GameObject LOSE;
     [SerializeField] public GameObject WIN;
