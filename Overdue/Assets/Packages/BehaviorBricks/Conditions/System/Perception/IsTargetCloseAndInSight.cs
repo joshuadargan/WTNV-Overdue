@@ -50,7 +50,8 @@ namespace BBUnity.Conditions
             }
 
             LibrarianBehavior behavior = this.gameObject.GetComponent<LibrarianBehavior>();
-            Debug.DrawLine(currentPosition, target.transform.position, Color.green);
+            if (CheatCodeInput.debugMode)
+                Debug.DrawLine(currentPosition, target.transform.position, Color.green);
             Vector3 dir = (target.transform.position - currentPosition);
             if (!behavior.IsSuspicious() && dir.sqrMagnitude > closeDistance * closeDistance)
                 return false;

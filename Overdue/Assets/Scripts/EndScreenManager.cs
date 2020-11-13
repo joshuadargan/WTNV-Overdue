@@ -16,9 +16,7 @@ public class EndScreenManager : MonoBehaviour
     void Start()
     {
         LOSE.SetActive(false);
-        WIN.SetActive(false);
-
-        
+        WIN.SetActive(false);   
     }
 
     // Update is called once per frame
@@ -29,7 +27,7 @@ public class EndScreenManager : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Librarian")
+        if (collision.gameObject.tag == "Librarian" && !CheatCodeInput.debugMode && !CheatCodeInput.invincible)
         {
             LOSE.SetActive(true);
             Time.timeScale = 0f;

@@ -14,7 +14,7 @@ public class DrawNavMeshPath : MonoBehaviour
 
     void Update()
     {
-        if (path != null)
+        if (path != null && CheatCodeInput.debugMode)
         {
             for (int i = 0; i < path.Length - 1; i++)
             {

@@ -48,7 +48,6 @@ public class LibrarianBehavior : MonoBehaviour
     void Update() {
         if (IsSuspicious())
         {
-            //Debug.Log("sus " + suspicion);
             agent.speed = baseSpeed * 2;
             DecrementSuspicion();
         }

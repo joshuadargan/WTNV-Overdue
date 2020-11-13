@@ -85,7 +85,8 @@ public class PlayerMovement : MonoBehaviour
     		
     		regen = StartCoroutine(RegenStamina());
     	} else {
-    		Debug.Log("Not Enough Stamina");
+            if (CheatCodeInput.debugMode)
+                Debug.Log("Not Enough Stamina");
     	}
     }
     	
@@ -123,7 +124,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(GameObjectTags.Table) && sprite.sortingLayerName == crouch_layer)
         {
-            Debug.Log("You are hidden");
+            if (CheatCodeInput.debugMode)
+                Debug.Log("You are hidden");
             IsUnderTable = true;
         }
     }
@@ -132,7 +134,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(GameObjectTags.Table))
         {
-            Debug.Log("You are exposed");
+            if (CheatCodeInput.debugMode)
+                Debug.Log("You are exposed");
             IsUnderTable = false;
         }
     }

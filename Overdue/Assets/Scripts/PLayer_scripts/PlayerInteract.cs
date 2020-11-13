@@ -30,7 +30,8 @@ public class PlayerInteract : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E) && !hasReturnedBook)
             {
-                Debug.Log("Book Returned");
+                if (CheatCodeInput.debugMode)
+                    Debug.Log("Book Returned");
                 ReturnBook();
             }
         }
@@ -38,7 +39,8 @@ public class PlayerInteract : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E) && hasReturnedBook && !hasSecondBook)
             {
-                Debug.Log("New book gotten");
+                if (CheatCodeInput.debugMode)
+                    Debug.Log("New book gotten");
                 GetNewBook();
             }
         }
@@ -47,7 +49,8 @@ public class PlayerInteract : MonoBehaviour
             if (Input.GetKey(KeyCode.E) && !hasExited)
             {
                 hasExited = true;
-                Debug.Log("You win!");
+                if (CheatCodeInput.debugMode)
+                    Debug.Log("You win!");
                 GameObjectiveUIText.SetObjectiveText("You escaped!");
             }
         }
