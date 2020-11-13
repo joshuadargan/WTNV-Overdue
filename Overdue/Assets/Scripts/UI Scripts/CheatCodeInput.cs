@@ -16,7 +16,7 @@ public class CheatCodeInput : MonoBehaviour
     public static bool invincible = false;
     public static bool repel = false;
     //TODO: DEFAULT THIS TO FALSE
-    public static bool debugMode = true;
+    public static bool debugMode = false;
 
     // Start is called before the first frame update
     void Start()

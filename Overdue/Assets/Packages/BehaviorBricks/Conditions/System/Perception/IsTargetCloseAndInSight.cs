@@ -26,8 +26,10 @@ namespace BBUnity.Conditions
 
         private Vector3 currentPosition;
         private Vector3 previousPosition;
+        private double timeSinceLastSighting = float.MaxValue;
         private int updateCount = 0;
-
+        private PlayerMovement movement;
+        private const double HIDE_TIME = 1;
         /// <summary>
         /// Checks whether a target is close and in sight depending on a given distance and an angle, 
         /// First calculates the magnitude between the gameobject and the target and then compares with the given distance, then
@@ -35,8 +37,13 @@ namespace BBUnity.Conditions
         /// </summary>
         /// <returns>True if the magnitude between the gameobject and de target is lower that the given distance
         /// and if the angle of forward vector with the  raycast direction is lower than the given angle, false therwase.</returns>
-		public override bool Check()
+        public override bool Check()
         {
+            if (!movement)
+            {
+                movement = target.GetComponent<PlayerMovement>();
+            }
+            timeSinceLastSighting += Time.deltaTime;
             ++updateCount;
             if (currentPosition == null)
             {
@@ -54,19 +61,32 @@ namespace BBUnity.Conditions
                 Debug.DrawLine(currentPosition, target.transform.position, Color.green);
             Vector3 dir = (target.transform.position - currentPosition);
             if (!behavior.IsSuspicious() && dir.sqrMagnitude > closeDistance * closeDistance)
+            { 
+                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 1.5)
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
+                }
+                else
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
+                }
                 return false;
+            }
             RaycastHit2D hit = Physics2D.Raycast(currentPosition + new Vector3(0, 0.1f, 0), dir);
 
-
-
+            Debug.Log(timeSinceLastSighting);
             if (hit || behavior.IsSuspicious())
             {
+                if (timeSinceLastSighting > HIDE_TIME && movement && movement.IsHiddenUnderTable)
+                {
+                    behavior.SetSuspicion(0);
+                }
                 //Go to location hit.point; do a circle strafe
                 //If the player goes into hiding while the librarian can't see them.
                 // If in range and in visible area
                 if (hit && hit.collider.gameObject == target && Vector3.Angle(dir, currentPosition - previousPosition) < angle * 0.5f)
                 {
-                    PlayerMovement movement = hit.collider.gameObject.GetComponent<PlayerMovement>();
+                    
                     if (!behavior.IsSuspicious() && movement.IsHiddenUnderTable)
                     {
                         StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
@@ -77,6 +97,8 @@ namespace BBUnity.Conditions
                         StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Open);
                     }
                     behavior.SetSuspicion(5);
+                    timeSinceLastSighting = 0;
+
                 }
                 if (!behavior.IsSuspicious())
                 {
@@ -87,11 +109,19 @@ namespace BBUnity.Conditions
                     StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
                 }
 
-                    return behavior.IsSuspicious();
+                return behavior.IsSuspicious();
             }
-            else
+            else if (Vector2.Distance(currentPosition, target.transform.position) < closeDistance * 5)
             {
-                StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
+                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 1.5)
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
+                }
+                else
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
+                }
+                
             }
             return false;
 		}

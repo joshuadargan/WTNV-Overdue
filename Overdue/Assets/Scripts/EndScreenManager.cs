@@ -27,7 +27,9 @@ public class EndScreenManager : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Librarian" && !CheatCodeInput.debugMode && !CheatCodeInput.invincible)
+        if (collision.gameObject.tag == "Librarian" && 
+            collision.gameObject.GetComponent<LibrarianBehavior>().IsSuspicious() && 
+            !CheatCodeInput.debugMode && !CheatCodeInput.invincible)
         {
             LOSE.SetActive(true);
             Time.timeScale = 0f;
