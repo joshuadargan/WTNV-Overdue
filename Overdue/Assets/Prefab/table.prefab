@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -548022455
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3634859516656333866, guid: 54cb55f5b1c21784ba5521c303491813,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 1497590506778731679}
   - component: {fileID: 6795314540541033934}
   m_Layer: 0
-  m_Name: SmallTable_full
+  m_Name: SmallTable_eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
