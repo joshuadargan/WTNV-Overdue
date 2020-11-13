@@ -23,11 +23,12 @@ public class StealthUIIndicator : MonoBehaviour
     void Start()
     {
         UIEyes = GetComponentsInChildren<Image>();
-
+        SetUIEyeState(EyeState.Closed);
     }
 
     public static void SetUIEyeState(EyeState state)
     {
+        CurrentEyeState = state;
         switch(state)
         {
             case EyeState.Closed:

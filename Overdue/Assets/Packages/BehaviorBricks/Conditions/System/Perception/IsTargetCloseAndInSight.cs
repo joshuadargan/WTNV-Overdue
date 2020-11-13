@@ -69,11 +69,29 @@ namespace BBUnity.Conditions
                     PlayerMovement movement = hit.collider.gameObject.GetComponent<PlayerMovement>();
                     if (!behavior.IsSuspicious() && movement.IsHiddenUnderTable)
                     {
+                        StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
                         return false;
+                    }
+                    else
+                    {
+                        StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Open);
                     }
                     behavior.SetSuspicion(5);
                 }
-                return behavior.IsSuspicious();
+                if (!behavior.IsSuspicious())
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
+                }
+                else if (behavior.IsSuspicious() && hit && hit.collider.gameObject != target)
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
+                }
+
+                    return behavior.IsSuspicious();
+            }
+            else
+            {
+                StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
             }
             return false;
 		}
