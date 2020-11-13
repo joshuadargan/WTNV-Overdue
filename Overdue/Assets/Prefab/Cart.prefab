@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5930865942596738500}
   - component: {fileID: 5530356117066149549}
   - component: {fileID: 2589917764685360722}
+  - component: {fileID: 3067941205984697583}
   m_Layer: 0
   m_Name: Cart
   m_TagString: ReturnCart
@@ -126,6 +127,22 @@ MonoBehaviour:
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
   m_InstanceId: -658790
+--- !u!114 &3067941205984697583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927822840814078974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &3023676929394562206
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +212,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1974014259
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 5472177190675322060, guid: baa63c452218fd440946a611ff9945c9,
     type: 3}
