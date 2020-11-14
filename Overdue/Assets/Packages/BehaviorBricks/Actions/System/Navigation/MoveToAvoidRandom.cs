@@ -59,15 +59,14 @@ namespace BBUnity.Actions
         public override TaskStatus OnUpdate()
         {
 
-            DrawNavMeshPath.path = navAgent.path.corners;
-            DrawNavMeshPath.isChasingPlayer = false;
+            gameObject.GetComponent<DrawNavMeshPath>().path = navAgent.path.corners;
+            gameObject.GetComponent<DrawNavMeshPath>().isChasingPlayer = false;
             if (count++ % 10 == 0 && CheckIfPathIntersectsPlayer(navAgent.path))
             {
                 navAgent.velocity = Vector3.zero;
                 getRandomPosition();
                 previousPosition = navAgent.transform.position;
-                DrawNavMeshPath.path = navAgent.path.corners;
-                DrawNavMeshPath.isChasingPlayer = false;
+                gameObject.GetComponent<DrawNavMeshPath>().path = navAgent.path.corners;
             }
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
                 return TaskStatus.COMPLETED;

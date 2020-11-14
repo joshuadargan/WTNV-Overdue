@@ -25,7 +25,7 @@ public class NewBookBookshelfManager : MonoBehaviour
         int activeIndex = rnd.Next(0, Bookshelves.Count);
         Bookshelves[activeIndex].GetComponent<CircleCollider2D>().enabled = true;
         Bookshelves[activeIndex].GetComponentInChildren<Light2D>().enabled = true;
-        GameObjectiveUIText.SetObjectiveText("Objective: Find a book in the" + Bookshelves[activeIndex].name.Split(' ')[0] + " section");
+        GameObjectiveUIText.SetObjectiveText("Objective: Find a book in " + Bookshelves[activeIndex].name.Split('_')[0] + " section");
 
     }
 }

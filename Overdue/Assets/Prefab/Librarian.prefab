@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3929783627036441773}
   - component: {fileID: 5876468659432556591}
   - component: {fileID: 3005456987976683957}
+  - component: {fileID: 3634982403442467865}
   m_Layer: 2
   m_Name: Librarian
   m_TagString: Librarian
@@ -240,3 +241,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3634982403442467865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475600786393597708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c220b927f8fc10d4284f41f036de215b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

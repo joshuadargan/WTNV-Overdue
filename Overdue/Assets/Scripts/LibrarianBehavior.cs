@@ -50,6 +50,8 @@ public class LibrarianBehavior : MonoBehaviour
         {
             agent.speed = baseSpeed * 2;
             DecrementSuspicion();
+            if (CheatCodeInput.debugMode)
+                Debug.Log("Sus " + suspicion);
         }
         else
         {

@@ -42,8 +42,8 @@ namespace BBUnity.Actions
         /// and otherwise it will remain in operation.</remarks>
         public override TaskStatus OnUpdate()
         {
-            DrawNavMeshPath.path = navAgent.path.corners;
-            DrawNavMeshPath.isChasingPlayer = false;
+            gameObject.GetComponent<DrawNavMeshPath>().path = navAgent.path.corners;
+            gameObject.GetComponent<DrawNavMeshPath>().isChasingPlayer = false;
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
                 return TaskStatus.COMPLETED;
 
