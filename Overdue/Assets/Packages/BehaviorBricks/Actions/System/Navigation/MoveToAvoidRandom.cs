@@ -1,6 +1,7 @@
 ﻿using Pada1.BBCore.Tasks;
 using Pada1.BBCore;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace BBUnity.Actions
 {
@@ -44,6 +45,7 @@ namespace BBUnity.Actions
                 navAgent = gameObject.AddComponent<UnityEngine.AI.NavMeshAgent>();
             }
             getRandomPosition();
+            navAgent.velocity = Vector3.zero;
 
             #if UNITY_5_6_OR_NEWER
                 navAgent.isStopped = false;
@@ -56,12 +58,13 @@ namespace BBUnity.Actions
         /// and otherwise it will remain in operation.</remarks>
         public override TaskStatus OnUpdate()
         {
-            Debug.Log(count);
-            if (count++ % 20 == 0)
+
+            DrawNavMeshPath.path = navAgent.path.corners;
+            DrawNavMeshPath.isChasingPlayer = false;
+            if (count++ % 10 == 0 && CheckIfPathIntersectsPlayer(navAgent.path))
             {
-                //If closer than before
-                if (Vector2.Distance(previousPosition, target.transform.position) > Vector2.Distance(navAgent.transform.position, target.transform.position))
-                    getRandomPosition();
+                navAgent.velocity = Vector3.zero;
+                getRandomPosition();
                 previousPosition = navAgent.transform.position;
                 DrawNavMeshPath.path = navAgent.path.corners;
                 DrawNavMeshPath.isChasingPlayer = false;
@@ -73,31 +76,35 @@ namespace BBUnity.Actions
 
         private Vector3 getRandomPosition()
         {
+            
             Vector3 randomPosition;
             BoxCollider boxCollider = area != null ? area.GetComponent<BoxCollider>() : null;
             if (boxCollider != null)
             {
+                NavMeshPath path = new NavMeshPath();
                 int numIterations = 0;
                 do
                 {
-                    randomPosition = new Vector3(UnityEngine.Random.Range(area.transform.position.x - area.transform.localScale.x * boxCollider.size.x * 0.5f,
-                                                                          area.transform.position.x + area.transform.localScale.x * boxCollider.size.x * 0.5f),
-                                                 UnityEngine.Random.Range(area.transform.position.y - area.transform.localScale.y * boxCollider.size.y * 0.5f,
-                                                                          area.transform.position.y + area.transform.localScale.y * boxCollider.size.y * 0.5f));
-                    navAgent.SetDestination(randomPosition);
-                    for (int i = 1; i < navAgent.path.corners.Length; i++)
+                    do
                     {
-                        // Prev corner is farther from target than the subsequent and the subsequent is close to target, reset
-                        if (Vector2.Distance(navAgent.path.corners[i - 1], target.transform.position) > Vector2.Distance(navAgent.path.corners[i], target.transform.position)
-                            && i > 3 && Vector2.Distance(navAgent.path.corners[i], target.transform.position) < closeDistance)
-                        {
-                            randomPosition = target.transform.position;
-                            break;
-                        }
+                        randomPosition = new Vector3(UnityEngine.Random.Range(area.transform.position.x - area.transform.localScale.x * boxCollider.size.x * 0.5f,
+                                                      area.transform.position.x + area.transform.localScale.x * boxCollider.size.x * 0.5f),
+                             UnityEngine.Random.Range(area.transform.position.y - area.transform.localScale.y * boxCollider.size.y * 0.5f,
+                                                      area.transform.position.y + area.transform.localScale.y * boxCollider.size.y * 0.5f));
                     }
+                    while (Vector2.Distance(randomPosition, target.transform.position) < closeDistance);
+
+                    navAgent.CalculatePath(randomPosition, path);
+                    Debug.Log("Iteration #" + numIterations + ": " + path.corners.Length + "corners");
+
                     numIterations++;
                 }
-                while (Vector2.Distance(randomPosition, target.transform.position) < closeDistance * 2 && numIterations < 100);
+                while (numIterations < 10 && CheckIfPathIntersectsPlayer(path));
+                if (numIterations >= 10)
+                {
+                    navAgent.SetDestination(navAgent.transform.position);
+                }
+                navAgent.SetPath(path);
                 return randomPosition;
             }
             else
@@ -117,6 +124,24 @@ namespace BBUnity.Actions
                 }
             }
         }
+
+        public bool CheckIfPathIntersectsPlayer(NavMeshPath path)
+        {
+            for (int i = 1; i < path.corners.Length; i++)
+            {
+                Vector3 dir = (path.corners[i] - path.corners[i - 1]);
+                RaycastHit2D hit = Physics2D.CircleCast(path.corners[i - 1] + new Vector3(0, 0.1f, 0), 0.25f, dir, Vector2.Distance(path.corners[i - 1], path.corners[i]));
+                // Prev corner is farther from target than the subsequent and the subsequent is close to target, reset
+                if (hit && hit.collider.gameObject == target)
+                //((Vector2.Distance(path.corners[i - 1], target.transform.position) > Vector2.Distance(path.corners[i], target.transform.position)
+                //&& Vector2.Distance(path.corners[i], target.transform.position) < closeDistance / 2)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /// <summary>Abort method of MoveToRandomPosition </summary>
         /// <remarks>When the task is aborted, it stops the navAgentMesh.</remarks>
         public override void OnAbort()

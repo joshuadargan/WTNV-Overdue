@@ -22,7 +22,7 @@ namespace BBUnity.Conditions
         /// <returns>True if the magnitude between the gameobject and de target is lower that the given distance.</returns>
         public override bool Check()
 		{
-            return target.GetComponent<RepllentPickup>().IsRepellant();
+            return RepllentPickup.IsPlayerRepellant;
 		}
     }
 }

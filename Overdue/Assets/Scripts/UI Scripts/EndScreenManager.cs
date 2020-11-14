@@ -31,7 +31,7 @@ public class EndScreenManager : MonoBehaviour
         if (collision.gameObject.tag == "Librarian" &&
             collision.gameObject.GetComponent<LibrarianBehavior>().IsSuspicious() &&
             !CheatCodeInput.debugMode && !CheatCodeInput.invincible && 
-            !this.gameObject.GetComponent<RepllentPickup>().IsRepellant())
+            !RepllentPickup.IsPlayerRepellant)
         {
             LOSE.SetActive(true);
             Time.timeScale = 0f;

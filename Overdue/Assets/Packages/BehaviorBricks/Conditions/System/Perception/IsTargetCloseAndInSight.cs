@@ -74,7 +74,7 @@ namespace BBUnity.Conditions
             }
             RaycastHit2D hit = Physics2D.Raycast(currentPosition + new Vector3(0, 0.1f, 0), dir);
 
-            Debug.Log(timeSinceLastSighting);
+            //Debug.Log(timeSinceLastSighting);
             if (hit || behavior.IsSuspicious())
             {
                 if (timeSinceLastSighting > HIDE_TIME && movement && movement.IsHiddenUnderTable)

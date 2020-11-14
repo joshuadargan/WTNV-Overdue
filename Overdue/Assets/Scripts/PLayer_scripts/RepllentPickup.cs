@@ -9,6 +9,7 @@ public class RepllentPickup : MonoBehaviour {
     public GameObject RepellentIcon;
     public const float repellantTime = 5;
     public float remainingRepellantTime = 0;
+    public static bool IsPlayerRepellant = false;
 
     void Start()
     {
@@ -25,8 +26,11 @@ public class RepllentPickup : MonoBehaviour {
         }
         if (remainingRepellantTime > 0)
         {
+            IsPlayerRepellant = true;
             remainingRepellantTime -= Time.deltaTime;
         }
+        if (remainingRepellantTime <= 0)
+            IsPlayerRepellant = false;
     }
 
     public bool IsRepellant()

@@ -46,7 +46,7 @@ public class LibrarianBehavior : MonoBehaviour
     }
 
     void Update() {
-        if (IsSuspicious())
+        if (IsSuspicious() || RepllentPickup.IsPlayerRepellant)
         {
             agent.speed = baseSpeed * 2;
             DecrementSuspicion();
