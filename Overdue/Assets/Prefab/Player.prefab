@@ -358,7 +358,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6945c57c0de30436fa487291427e77e8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -485,7 +485,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f9b0d7c7dde44fb9b56a68ce3e3f30d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -858,12 +858,12 @@ MonoBehaviour:
   speed: {x: 5, y: 5}
   sprintspeed: {x: 7.5, y: 7.5}
   crouchspeed: {x: 2, y: 2}
-  rb: {fileID: 0}
+  rb: {fileID: 8970223993575225012}
   staminabar: {fileID: 0}
   maxstamina: 100
   staminaconsump: 10
-  walkSound: {fileID: 0}
-  runSound: {fileID: 0}
+  walkSound: {fileID: 7525727215123181451}
+  runSound: {fileID: 8170014205868817266}
 --- !u!114 &-2168425183316565652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,8 +881,8 @@ MonoBehaviour:
   maxfluid: 100
   FluidConsump: 2
   pickupvalue: 20
-  flashlightSource: {fileID: 0}
-  flashlightOff: {fileID: 0}
+  flashlightSource: {fileID: 3941868690624980074}
+  flashlightOff: {fileID: 5025702530410701443}
 --- !u!114 &5276175457416457273
 MonoBehaviour:
   m_ObjectHideFlags: 0
