@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3929783627036441773}
   - component: {fileID: 5876468659432556591}
   - component: {fileID: 3005456987976683957}
+  - component: {fileID: 3634982403442467865}
   m_Layer: 2
   m_Name: Librarian
   m_TagString: Librarian
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1974014259
-  m_SortingLayer: 8
+  m_SortingLayerID: -1981353531
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1995185885280320973, guid: ff4e1deaf15e25b468f5159824be54e8,
     type: 3}
@@ -112,8 +113,8 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
-    - 360
-    - 1
+    - 90
+    - 5
     floatParamsNames:
     - angle
     - closeDistance
@@ -125,7 +126,7 @@ MonoBehaviour:
     colorParamsNames: []
     colorParamsLostDefaultValue: 
     objectParams:
-    - {fileID: 0}
+    - {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059, type: 3}
     - {fileID: 0}
     objectParamsNames:
     - target
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3ccdb37e1d0ca40a227d1b06a8aacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 3005456987976683957}
 --- !u!195 &3929783627036441773
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -240,3 +241,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3634982403442467865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475600786393597708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c220b927f8fc10d4284f41f036de215b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

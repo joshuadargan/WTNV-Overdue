@@ -31,7 +31,7 @@ public class EndScreenManager : MonoBehaviour
         if (collision.gameObject.tag == "Librarian" &&
             collision.gameObject.GetComponent<LibrarianBehavior>().IsSuspicious() &&
             !CheatCodeInput.debugMode && !CheatCodeInput.invincible && 
-            !this.gameObject.GetComponent<RepllentPickup>().IsRepellant())
+            !RepllentPickup.IsPlayerRepellant)
         {
             LOSE.SetActive(true);
             Time.timeScale = 0f;
@@ -42,17 +42,14 @@ public class EndScreenManager : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void Win()
     {
-        if (collision.CompareTag("Finish"))
-        {
-            WIN.SetActive(true);
-            Time.timeScale = 0f;
+        WIN.SetActive(true);
+        Time.timeScale = 0f;
 
-            Debug.Log("Win");
+        Debug.Log("Win");
 
-           StartCoroutine(MoveGameForward(2));
-        }
+        StartCoroutine(MoveGameForward(2));
     }
 
     public IEnumerator MoveGameForward(int SceneSwitchDelay) {          // DOES NOT WORK

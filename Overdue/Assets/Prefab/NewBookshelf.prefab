@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4286063153157342382}
   - component: {fileID: 4536957527340691372}
+  - component: {fileID: 1492871163}
   m_Layer: 0
   m_Name: bottom
   m_TagString: Untagged
@@ -166,6 +167,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1492871163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031691806004663381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 0
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.587
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.8
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755df3ba41c90bdbdb8d7c5f1e689bf74f21ecdee568a97cfcacd
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 4
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 6
+  m_ShapeLightFalloffSize: 10
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &6520585576879159398
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +376,7 @@ MonoBehaviour:
   - {x: -7.4422607, y: 14.215248, z: 0.00000023841858}
   m_ShapePathHash: 1930966057
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47784
+  m_InstanceId: -28992
 --- !u!114 &6380435042566845913
 MonoBehaviour:
   m_ObjectHideFlags: 0

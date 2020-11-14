@@ -46,10 +46,12 @@ public class LibrarianBehavior : MonoBehaviour
     }
 
     void Update() {
-        if (IsSuspicious())
+        if (IsSuspicious() || RepllentPickup.IsPlayerRepellant)
         {
             agent.speed = baseSpeed * 2;
             DecrementSuspicion();
+            if (CheatCodeInput.debugMode)
+                Debug.Log("Sus " + suspicion);
         }
         else
         {

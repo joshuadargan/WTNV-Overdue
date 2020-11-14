@@ -24,6 +24,8 @@ namespace BBUnity.Actions
         /// <remarks>Check if GameObject object exists and NavMeshAgent, if there is no NavMeshAgent, the default one is added.</remarks>
         public override void OnStart()
         {
+            if (CheatCodeInput.debugMode)
+                Debug.Log("Begin Chasing");
             if (target == null)
             {
                 Debug.LogError("The movement target of this game object is null", gameObject);
@@ -52,6 +54,8 @@ namespace BBUnity.Actions
         /// y, the task is running, if it is still moving to the target.</remarks>
         public override TaskStatus OnUpdate()
         {
+            if (CheatCodeInput.debugMode)
+                Debug.Log("Chasing");
             if (target == null)
                 return TaskStatus.FAILED;
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
@@ -59,8 +63,8 @@ namespace BBUnity.Actions
             else if (navAgent.destination != targetTransform.position)
             {
                 navAgent.SetDestination(targetTransform.position);
-                DrawNavMeshPath.path = navAgent.path.corners;
-                DrawNavMeshPath.isChasingPlayer = true;
+                gameObject.GetComponent<DrawNavMeshPath>().path = navAgent.path.corners;
+                gameObject.GetComponent<DrawNavMeshPath>().isChasingPlayer = true;
             }
             return TaskStatus.RUNNING;
         }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DrawNavMeshPath : MonoBehaviour
 {
-    public static Vector3[] path = null;
-    public static bool isChasingPlayer = false;
+    public Vector3[] path { get; set; } = null;
+    public bool isChasingPlayer { get; set; } = false;
 
 
     void Start()
