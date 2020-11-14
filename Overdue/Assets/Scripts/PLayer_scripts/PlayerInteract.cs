@@ -2,16 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PlayerInteract : MonoBehaviour
 {
-    private bool hasReturnedBook;
-    private bool hasSecondBook;
-    private bool hasExited;
-    private bool isCloseToReturnCart;
-    private bool isCloseToExit;
-    private bool isCloseToNewBookshelf;
+    public bool hasReturnedBook { get; private set; }
+    public bool hasSecondBook { get; private set; }
+    public bool hasExited { get; private set; }
+    public bool isCloseToReturnCart { get; private set; }
+    public GameObject closeReturnCart { get; private set; }
+    public bool isCloseToExit { get; private set; }
+    public bool isCloseToNewBookshelf { get; private set; }
+    public GameObject closeNewBookshelf { get; private set; }
+    public bool isCloseToCollectible { get; private set; }
+    public GameObject closeCollectible { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +23,12 @@ public class PlayerInteract : MonoBehaviour
         hasReturnedBook = false;
         hasSecondBook = false;
         isCloseToReturnCart = false;
+        closeReturnCart = null;
         isCloseToExit = false;
         isCloseToNewBookshelf = false;
+        closeNewBookshelf = null;
+        isCloseToCollectible = false;
+        closeCollectible = null;
     }
 
     // Update is called once per frame
@@ -49,9 +57,17 @@ public class PlayerInteract : MonoBehaviour
             if (Input.GetKey(KeyCode.E) && !hasExited)
             {
                 hasExited = true;
-                if (CheatCodeInput.debugMode)
-                    Debug.Log("You win!");
+                gameObject.GetComponent<EndScreenManager>().Win();
                 GameObjectiveUIText.SetObjectiveText("You escaped!");
+            }
+        }
+        else if (isCloseToCollectible && closeCollectible)
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                isCloseToCollectible = false;
+                closeCollectible.SetActive(false);
+                closeCollectible = null;
             }
         }
     }
@@ -61,6 +77,7 @@ public class PlayerInteract : MonoBehaviour
         hasReturnedBook = true;
         NewBookBookshelfManager.RemoveBookshelfIfExists(ReturnCartManager.ActiveReturnCart.name.Split('_')[0]);
         NewBookBookshelfManager.SelectBookshelf();
+        closeReturnCart.GetComponentInChildren<Light2D>().enabled = false;
     }
 
     private void GetNewBook()
@@ -68,6 +85,7 @@ public class PlayerInteract : MonoBehaviour
         hasSecondBook = true;
         GameObjectiveUIText.SetObjectiveText("Objective: Escape!");
         ExitGoal.SetExitLightOn();
+        closeNewBookshelf.GetComponentInChildren<Light2D>().enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,14 +93,21 @@ public class PlayerInteract : MonoBehaviour
         if (collision.gameObject.CompareTag(GameObjectTags.ReturnCart))
         {
             isCloseToReturnCart = true;
+            closeReturnCart = collision.gameObject;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.NewBook))
         {
             isCloseToNewBookshelf = true;
+            closeNewBookshelf = collision.gameObject;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
             isCloseToExit = true;
+        }
+        else if (collision.gameObject.CompareTag(GameObjectTags.Collectible))
+        {
+            isCloseToCollectible = true;
+            closeCollectible = collision.gameObject;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Fantasy))
         {
@@ -123,14 +148,21 @@ public class PlayerInteract : MonoBehaviour
         if (collision.gameObject.CompareTag(GameObjectTags.ReturnCart))
         {
             isCloseToReturnCart = false;
+            closeReturnCart = null;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.NewBook))
         {
             isCloseToNewBookshelf = false;
+            closeNewBookshelf = null;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Finish))
         {
             isCloseToExit = false;
+        }
+        else if (collision.gameObject.CompareTag(GameObjectTags.Collectible))
+        {
+            isCloseToCollectible = false;
+            closeCollectible = null;
         }
     }
 }
