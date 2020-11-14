@@ -112,8 +112,8 @@ MonoBehaviour:
     boolParamsNames: []
     boolParamsLostDefaultValue: 
     floatParams:
-    - 360
-    - 1
+    - 90
+    - 5
     floatParamsNames:
     - angle
     - closeDistance
@@ -125,7 +125,7 @@ MonoBehaviour:
     colorParamsNames: []
     colorParamsLostDefaultValue: 
     objectParams:
-    - {fileID: 0}
+    - {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059, type: 3}
     - {fileID: 0}
     objectParamsNames:
     - target
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3ccdb37e1d0ca40a227d1b06a8aacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 3005456987976683957}
 --- !u!195 &3929783627036441773
 NavMeshAgent:
   m_ObjectHideFlags: 0
