@@ -22,6 +22,18 @@ namespace BBUnity.Conditions
         /// <returns>True if the magnitude between the gameobject and de target is lower that the given distance.</returns>
         public override bool Check()
 		{
+            Vector3 dir = (target.transform.position - gameObject.transform.position);
+            if (dir.sqrMagnitude > 20)
+            {
+                if (dir.sqrMagnitude > 10)
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
+                }
+                else
+                {
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
+                }
+            }
             return RepllentPickup.IsPlayerRepellant;
 		}
     }

@@ -8,6 +8,7 @@ public class PauseGame : MonoBehaviour
     public KeyCode pauseKeyCode;
     [SerializeField] public GameObject pauseMenuGroup;
     [SerializeField] private bool isPaused;
+    public static bool IsPaused;
 
     void Start(){
        
@@ -26,11 +27,13 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 0f;
         pauseMenuGroup.SetActive(true);
         isPaused = true;
+        IsPaused = true;
     }
 
     public void Unpause(){
         Time.timeScale = 1f;
         pauseMenuGroup.SetActive(false);
         isPaused = false;
+        IsPaused = false;
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 using CodeMonkey.Utils;
 using System;
 using UnityEngine.UI;
-using System.Diagnostics;
 
 public class PlayerFlashlight : MonoBehaviour
 {
@@ -17,10 +16,10 @@ public class PlayerFlashlight : MonoBehaviour
     
     public float pickupvalue = 20;
 
-
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Start fl");
         isFlashlightOn = false;
         flashlightbar.maxValue = maxfluid;
         flashlightbar.value = maxfluid;
@@ -29,6 +28,10 @@ public class PlayerFlashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseGame.IsPaused)
+        {
+            return;
+        }
         //Code for the player FOV
         Vector3 targetPosition = UtilsClass.GetMouseWorldPosition();
         Vector3 aimDir = (targetPosition - transform.position).normalized;
@@ -57,11 +60,11 @@ public class PlayerFlashlight : MonoBehaviour
             fieldOfView.SetIntensity(0);
         }
 
-
         if (isFlashlightOn == true) {
 
             UseFluid(FluidConsump);
         }
+
 
     }
 
@@ -76,9 +79,6 @@ public class PlayerFlashlight : MonoBehaviour
         {
         	flashlightbar.value += pickupvalue;
             Destroy(collision.gameObject); 
-            //displayed.SetActive(false);
-            //RepellentIcon.SetActive(true);
-            //RepellentStored++;
         }
     }
 
