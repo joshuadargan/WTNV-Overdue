@@ -13,8 +13,13 @@ public class PlayerFlashlight : MonoBehaviour
     public Slider flashlightbar;
     public float maxfluid =100;
     public int FluidConsump;
-    
+
     public float pickupvalue = 20;
+
+    public AudioSource flashlightSource;
+    public AudioSource flashlightOff;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,12 +50,14 @@ public class PlayerFlashlight : MonoBehaviour
                 //Flashlight is turned on
                 isFlashlightOn = true;
                 fieldOfView.SetIntensity(1);
-             
+                flashlightSource.Play();
+
             }
             else
             {
                 isFlashlightOn = false;
                 fieldOfView.SetIntensity(0);
+                flashlightOff.Play();
             }
 
         }
@@ -72,13 +79,13 @@ public class PlayerFlashlight : MonoBehaviour
     {
         flashlightbar.value -= amount * Time.deltaTime;
     }
-    
+
      private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("light_pickup"))
         {
         	flashlightbar.value += pickupvalue;
-            Destroy(collision.gameObject); 
+            Destroy(collision.gameObject);
         }
     }
 
