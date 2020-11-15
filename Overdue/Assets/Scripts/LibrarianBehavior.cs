@@ -81,9 +81,9 @@ public class LibrarianBehavior : MonoBehaviour
 			{
 				walkSound.Play();
 			}
-            else if(agent.speed == baseSpeed * 2 && !suspiciousHiss.isPlaying && playAudio)
+            else if(agent.speed == baseSpeed * 2 && !chaseSound.isPlaying && playAudio)
             {
-                suspiciousHiss.Play();
+                chaseSound.Play();
             }
 
 

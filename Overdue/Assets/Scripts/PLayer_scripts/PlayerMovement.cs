@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsUnderTable { get; private set; } = false;
 
     public AudioSource walkSound;
-
+    public AudioSource heavyBreathing;
     public AudioSource runSound;
 
     // Start is called before the first frame update
@@ -47,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(staminabar.value == staminabar.maxValue)
+        {
+            heavyBreathing.Stop();
+        }
         //Movement Code
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
@@ -87,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
             runSound.Stop();
 
         }
+
         //movement *= Time.deltaTime;
 
         //transform.Translate(movement);
@@ -112,6 +117,10 @@ public class PlayerMovement : MonoBehaviour
     	while(currentstamina < maxstamina) {
     		currentstamina += maxstamina / 100;
     		staminabar.value = currentstamina;
+            if(!heavyBreathing.isPlaying)
+            {
+                heavyBreathing.Play();
+            }
     		yield return regenTick;
     		}
 
