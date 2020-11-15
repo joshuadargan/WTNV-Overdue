@@ -7,13 +7,13 @@ public class PauseGame : MonoBehaviour
 {
     public KeyCode pauseKeyCode;
     [SerializeField] public GameObject pauseMenuGroup;
-    [SerializeField] private bool isPaused;
-    public static bool IsPaused;
+    [SerializeField] public GameObject collectibleMenuGroup;
+    [SerializeField] public bool isPaused { get; private set; }
 
     void Start(){
        
         pauseMenuGroup.SetActive(false);
-        IsPaused = false;
+        collectibleMenuGroup.SetActive(false);
     }
 
     void Update(){
@@ -28,13 +28,19 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 0f;
         pauseMenuGroup.SetActive(true);
         isPaused = true;
-        IsPaused = true;
     }
 
     public void Unpause(){
         Time.timeScale = 1f;
         pauseMenuGroup.SetActive(false);
+        collectibleMenuGroup.SetActive(false);
         isPaused = false;
-        IsPaused = false;
+    }
+
+    public void Read()
+    {
+        Time.timeScale = 0f;
+        collectibleMenuGroup.SetActive(true);
+        isPaused = true;
     }
 }

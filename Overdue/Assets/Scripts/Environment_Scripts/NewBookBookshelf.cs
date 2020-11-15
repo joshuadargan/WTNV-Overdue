@@ -7,6 +7,6 @@ public class NewBookBookshelf : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NewBookBookshelfManager.AddBookshelf(this.gameObject);
+        GameObject.Find("ObjectiveManager").GetComponent<NewBookBookshelfManager>().AddBookshelf(this.gameObject);
     }
 }
