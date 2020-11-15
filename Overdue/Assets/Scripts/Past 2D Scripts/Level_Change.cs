@@ -8,13 +8,20 @@ using UnityEngine.SceneManagement;
 public class Level_Change : MonoBehaviour
 {
 
+	public int Level;
+	
     void OnTriggerEnter2D(Collider2D other)
     {
         //other.name should equal the root of your Player object
         if (other.name == "Player")
         {
             //The scene number to load (in File->Build Settings)
-            SceneManager.LoadScene(1);
+            ChangeScene();
         }
+    }
+    
+    
+   public void ChangeScene(){
+    	SceneManager.LoadScene(Level);
     }
 }
