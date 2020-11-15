@@ -238,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 727084543}
   m_Layer: 5
-  m_Name: Collectible
+  m_Name: Collectible_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ RectTransform:
   - {fileID: 500269519}
   - {fileID: 1230744606}
   m_Father: {fileID: 3899414041366999377}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 1230744608}
   - component: {fileID: 1230744607}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 696926361}
-        m_TargetAssemblyTypeName: ReadCollectible, Assembly-CSharp
-        m_MethodName: Close
+      - m_Target: {fileID: 1132076899}
+        m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
+        m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102907878}
+      - m_Target: {fileID: 102907878, guid: ce5f358764a4fc04c9fe6c9bbe40023c, type: 3}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
         m_MethodName: Unpause
         m_Mode: 1
@@ -947,9 +947,8 @@ GameObject:
   - component: {fileID: 1929502228}
   - component: {fileID: 1929502230}
   - component: {fileID: 1929502229}
-  - component: {fileID: 1929502231}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PaperText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1016,18 +1015,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
---- !u!114 &1929502231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929502227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b12b630190bc5e4c95355c311fe762c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &200053744701242017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,8 +1684,7 @@ GameObject:
   - component: {fileID: 3899414041366999378}
   - component: {fileID: 3899414041366999379}
   - component: {fileID: 3899414041366999380}
-  - component: {fileID: 102907878}
-  - component: {fileID: 696926361}
+  - component: {fileID: 1132076899}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1791,7 +1777,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &102907878
+--- !u!114 &1132076899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1805,19 +1791,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseKeyCode: 27
   pauseMenuGroup: {fileID: 5733707556867154136}
-  isPaused: 0
---- !u!114 &696926361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3899414041366999381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a7d73d39aac9743a59d9788bc6adba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   collectibleMenuGroup: {fileID: 727084542}
 --- !u!1 &3899414041398027164
 GameObject:
@@ -2280,7 +2253,6 @@ GameObject:
   - component: {fileID: 4186713978363389539}
   - component: {fileID: 1786291751332797428}
   - component: {fileID: 6667038787443331513}
-  - component: {fileID: 3444216637782511497}
   m_Layer: 5
   m_Name: ObjectiveText
   m_TagString: Untagged
@@ -2351,18 +2323,6 @@ MonoBehaviour:
   m_Text: 'Objective: Return Book in Romance section
 
 '
---- !u!114 &3444216637782511497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4330375026968409578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c3a3b2e70b1a44fa73c02ceee75aab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4367477637721430301
 GameObject:
   m_ObjectHideFlags: 0

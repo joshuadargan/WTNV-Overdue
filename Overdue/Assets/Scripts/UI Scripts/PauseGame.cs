@@ -32,8 +32,10 @@ public class PauseGame : MonoBehaviour
 
     public void Unpause(){
         Time.timeScale = 1f;
-        pauseMenuGroup.SetActive(false);
-        collectibleMenuGroup.SetActive(false);
+        if (pauseMenuGroup)
+            pauseMenuGroup.SetActive(false);
+        if (collectibleMenuGroup)
+            collectibleMenuGroup.SetActive(false);
         isPaused = false;
     }
 

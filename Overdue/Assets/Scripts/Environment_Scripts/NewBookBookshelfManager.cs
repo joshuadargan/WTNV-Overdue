@@ -8,7 +8,7 @@ public class NewBookBookshelfManager : MonoBehaviour
 {
     private List<GameObject> Bookshelves;
 
-    public void Start()
+    public void Awake()
     {
         Bookshelves = new List<GameObject>();
     }

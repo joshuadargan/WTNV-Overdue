@@ -10,7 +10,7 @@ public class ReturnCartManager : MonoBehaviour
 
     public GameObject ActiveReturnCart { get; private set; }
 
-    public void Start()
+    public void Awake()
     {
         ReturnCarts = new List<GameObject>();
     }

@@ -29,7 +29,7 @@ public class PlayerFlashlight : MonoBehaviour
         isFlashlightOn = false;
         flashlightbar.maxValue = maxfluid;
         flashlightbar.value = maxfluid;
-        GameObject.Find("Canvas").GetComponent<PauseGame>();
+        pauseGame = GameObject.Find("Canvas").GetComponent<PauseGame>();
     }
 
     // Update is called once per frame
