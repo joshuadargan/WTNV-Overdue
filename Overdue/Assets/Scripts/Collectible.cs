@@ -22,7 +22,7 @@ public class Collectible : MonoBehaviour
         "Excerpt from changes to the Night Vale School District: In addition to the current foreign language offerings of Spanish, French, and Modified Sumerian, schools will now be offering Double Spanish, Weird Spanish, Coptic Spanish, Russian, and Unmodified Sumerian.", // EP5 The Shape in Grove Park
         // Town Events (Paraphrased)
         "Vote today! If you don't have time to make it to the polling places, in a pinch you can just raise your hand for your mayoral candidate. The cameras everywhere in town will count it.",
-        "It's electrion season again! Please stand by for the Sheriff's Secret Police to collect certain family members so that everyone votes for the correct council seats and there's no confusion." // EP4 PTA Meeting
+        "It's electrion season again! Please stand by for the Sheriff's Secret Police to collect certain family members so that everyone votes for the correct council seats and there's no confusion.", // EP4 PTA Meeting
         // Proverbs
         "There's a special place in Hell. It's really hip. Very exclusive.",                                                                                // EP3 Station Management
         "A million dollars isn’t cool. You know what’s cool? A basilisk.",                                                                                  // EP5 The Shape in Grove Park
@@ -51,7 +51,7 @@ public class Collectible : MonoBehaviour
         "Beware of Greeks bearing gifts. Also beware of gifts of Greek bears. Gifted and bare Greeks are totally okay.",                                    // EP57 The List
         "If you want a picture of the future, imagine a person writing headlines about millennials forever.",                                               // EP59 Antiques
         "When you wish upon a star, your dreams come true. But, because of distance, not for millions of years.",                                           // EP66 worms...
-        "Don’t be afraid of the dark. Be afraid of the terrible things that are hiding in there, and the terrible things they will do."                     // EP68 Faceless Old Women
+        "Don’t be afraid of the dark. Be afraid of the terrible things that are hiding in there, and the terrible things they will do.",                    // EP68 Faceless Old Women
         "A rose by any other name is called something else.",                                                                                               // EP70a Taking Off
         "I'm a single issue voter. If the candidate is not a baby polar bear, I straight up cannot support them.",                                          // EP77 A Stranger
         "Be careful what you wish for. Because it probably won't come true, and life is about expectations management.",                                    // EP82 Skating Rink

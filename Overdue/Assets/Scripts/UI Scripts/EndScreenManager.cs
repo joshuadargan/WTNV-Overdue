@@ -30,7 +30,7 @@ public class EndScreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(!soundtrack.isPlaying && playing)
+      if(soundtrack && !soundtrack.isPlaying && playing)
       {
         soundtrack.Play();
       }
@@ -47,7 +47,8 @@ public class EndScreenManager : MonoBehaviour
             playing = false;
             doorSlam.Play();
             shush.Play();
-            soundtrack.Stop();
+            if (soundtrack)
+                soundtrack.Stop();
             Time.timeScale = 0f;
             Debug.Log("You lose");
 
@@ -63,7 +64,8 @@ public class EndScreenManager : MonoBehaviour
 
         Debug.Log("Win");
         playing = false;
-        soundtrack.Stop();
+        if (soundtrack)
+            soundtrack.Stop();
         doorOpen.Play();
 
         StartCoroutine(MoveGameForward(2));
