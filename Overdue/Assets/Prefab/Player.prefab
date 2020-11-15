@@ -716,6 +716,7 @@ GameObject:
   - component: {fileID: 3243554648774522627}
   - component: {fileID: 5497380095472698421}
   - component: {fileID: 8594044790908521491}
+  - component: {fileID: 6263629558598419494}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -956,6 +957,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LOSE: {fileID: 0}
   WIN: {fileID: 0}
+  doorSlam: {fileID: 0}
+  doorOpen: {fileID: 0}
+--- !u!81 &6263629558598419494
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970223993575225014}
+  m_Enabled: 1
 --- !u!1 &8970223994627235154
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,19 +6,26 @@ using System;
 
 public class LibrarianBehavior : MonoBehaviour
 {
-	
+
 	public Animator animator;
 	bool VoverH;
-	
+
 	private Vector3 prevPos;
 	private Vector3 Direction;
 	float Horizontal;
 	float Vertical;
 
+	public AudioSource neutralHiss;
+	public AudioSource walkSound;
+    public AudioSource chaseSound;
+
     const float baseSpeed = 3.5f;
     private float suspicion = 0;
 
-    private NavMeshAgent agent;
+    private float playerDist;
+    private float volume;
+
+    private NavMeshAgent agent; 
 
     public void DecrementSuspicion()
     {
@@ -34,7 +41,7 @@ public class LibrarianBehavior : MonoBehaviour
     {
         return suspicion > 0;
     }
-	
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,31 +66,39 @@ public class LibrarianBehavior : MonoBehaviour
         }
 
     	Direction = transform.position - prevPos;
-    	
-    	
+			if(agent.speed == baseSpeed && !walkSound.isPlaying)
+			{
+				walkSound.Play();
+			}
+            else if(agent.speed == baseSpeed * 2 && !chaseSound.isPlaying)
+            {
+                chaseSound.Play();
+            }
+
+
     	Horizontal = Direction.x;
     	Vertical = Direction.y;
-    	
+
     	if (Math.Abs(Horizontal) > Math.Abs(Vertical)){
         	VoverH = false;
         } else if (Math.Abs(Vertical) > Math.Abs(Horizontal)){
         	VoverH = true;
         }
-    	
+
        animator.SetFloat("Horizontal", Horizontal);
        animator.SetFloat("Vertical", Vertical);
        animator.SetBool("VoverH", VoverH);
-       
+
        prevPos = transform.position;
-       
-       
+
+
     }
 
-    
+
 
     //// Update is called once per frame
     //void Update()
     //{
-        
+
     //}
 }

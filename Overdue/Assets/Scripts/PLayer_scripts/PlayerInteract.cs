@@ -16,6 +16,8 @@ public class PlayerInteract : MonoBehaviour
     public GameObject closeNewBookshelf { get; private set; }
     public bool isCloseToCollectible { get; private set; }
     public GameObject closeCollectible { get; private set; }
+    public AudioSource bookDrop;
+    public AudioSource newBook;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +81,7 @@ public class PlayerInteract : MonoBehaviour
         NewBookBookshelfManager.RemoveBookshelfIfExists(ReturnCartManager.ActiveReturnCart.name.Split('_')[0]);
         NewBookBookshelfManager.SelectBookshelf();
         closeReturnCart.GetComponentInChildren<Light2D>().enabled = false;
+        bookDrop.Play();
     }
 
     private void GetNewBook()
@@ -87,6 +90,7 @@ public class PlayerInteract : MonoBehaviour
         GameObjectiveUIText.SetObjectiveText("Objective: Escape!");
         ExitGoal.SetExitLightOn();
         closeNewBookshelf.GetComponentInChildren<Light2D>().enabled = false;
+        newBook.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
