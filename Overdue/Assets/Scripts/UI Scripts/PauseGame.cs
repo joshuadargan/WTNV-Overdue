@@ -13,11 +13,12 @@ public class PauseGame : MonoBehaviour
     void Start(){
        
         pauseMenuGroup.SetActive(false);
+        IsPaused = false;
     }
 
     void Update(){
         
-        if (Input.GetKeyDown(pauseKeyCode) && !ReadCollectible.IsPaused){
+        if (Input.GetKeyDown(pauseKeyCode)){
             if (!isPaused) Pause();
             else Unpause();
         }

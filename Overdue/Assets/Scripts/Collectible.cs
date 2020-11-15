@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collectible : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Collectible : MonoBehaviour
 
     public void Read()
     {
-        ReadCollectible.SetLore(text);
+        GameObject.Find("Canvas").GetComponent<ReadCollectible>().Read();
+        GameObject.Find("PaperText").GetComponent<Text>().text = text;
     }
 }
