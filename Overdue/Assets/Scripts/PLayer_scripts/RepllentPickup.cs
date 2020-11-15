@@ -9,6 +9,7 @@ public class RepllentPickup : MonoBehaviour {
     public GameObject RepellentIcon;
     public const float repellantTime = 5;
     public float remainingRepellantTime = 0;
+    public AudioSource repellent;
 
     void Start()
     {
@@ -22,6 +23,10 @@ public class RepllentPickup : MonoBehaviour {
         {
             remainingRepellantTime = 5;
             RepellentStored--;
+            if(!repellent.isPlaying)
+            {
+              repellent.Play();
+            }
         }
         if (remainingRepellantTime > 0)
         {
