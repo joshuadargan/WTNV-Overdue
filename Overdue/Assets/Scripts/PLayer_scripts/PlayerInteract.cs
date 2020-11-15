@@ -65,6 +65,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
+                closeCollectible.GetComponent<Collectible>().Read();
                 isCloseToCollectible = false;
                 closeCollectible.SetActive(false);
                 closeCollectible = null;

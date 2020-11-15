@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: -5654303751441287394
     second: FlashlightFluidItem_0
+  - first:
+      213: -7704929079401964231
+    second: FlashlightFluidItem_0
+  - first:
+      213: -4253928133868289913
+    second: FlashlightFluidItem_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,8 +112,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e17fe2322b0e781b0800000000000000
-      internalID: -5654303751441287394
+      spriteID: 93d1ba223d7921590800000000000000
+      internalID: -7704929079401964231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1333
+        width: 161
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7808db886e207f4c0800000000000000
+      internalID: -4253928133868289913
       vertices: []
       indices: 
       edges: []
