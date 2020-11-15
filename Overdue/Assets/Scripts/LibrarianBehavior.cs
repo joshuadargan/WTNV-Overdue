@@ -29,6 +29,8 @@ public class LibrarianBehavior : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    private GameObject target;
+
     public void DecrementSuspicion()
     {
         suspicion -= Time.deltaTime;
@@ -57,11 +59,12 @@ public class LibrarianBehavior : MonoBehaviour
         agent.updateUpAxis = false;
 
         prevPos = transform.position;
+        target = GameObject.Find(GameObjectNames.Player);
         playAudio = true;
     }
 
     void Update() {
-        if (IsSuspicious() || RepllentPickup.IsPlayerRepellant)
+        if (IsSuspicious() || target.GetComponent<RepllentPickup>().IsRepellant())
         {
             agent.speed = baseSpeed * 2;
             DecrementSuspicion();

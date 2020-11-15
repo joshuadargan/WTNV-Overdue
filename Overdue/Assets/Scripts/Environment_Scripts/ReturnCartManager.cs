@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReturnCartManager : MonoBehaviour
 {
     public const int NumCarts = 7;
-    private static List<GameObject> ReturnCarts = new List<GameObject>();
+    private List<GameObject> ReturnCarts;
 
-    public static GameObject ActiveReturnCart { get; private set; }
+    public GameObject ActiveReturnCart { get; private set; }
 
-    public static void AddReturnCart(GameObject rc)
+    public void Awake()
+    {
+        ReturnCarts = new List<GameObject>();
+    }
+
+    public void AddReturnCart(GameObject rc)
     {
         ActiveReturnCart = rc;
         ReturnCarts.Add(rc);
@@ -23,7 +29,7 @@ public class ReturnCartManager : MonoBehaviour
                 if (activeIndex == i)
                 {
                     ReturnCarts[i].SetActive(true);
-                    GameObjectiveUIText.SetObjectiveText("Objective: Return Cart in " + ReturnCarts[i].name.Split('_')[0] + " section");
+                    GameObject.Find(GameObjectNames.ObjectiveText).GetComponent<Text>().text = "Objective: Return Cart in " + ReturnCarts[i].name.Split('_')[0] + " section";
                     ActiveReturnCart = ReturnCarts[i];
                 }
                 else

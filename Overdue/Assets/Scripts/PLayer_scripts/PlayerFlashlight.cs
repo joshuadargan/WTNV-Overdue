@@ -19,6 +19,7 @@ public class PlayerFlashlight : MonoBehaviour
     public AudioSource flashlightSource;
     public AudioSource flashlightOff;
 
+    public PauseGame pauseGame;
 
 
     // Start is called before the first frame update
@@ -28,12 +29,13 @@ public class PlayerFlashlight : MonoBehaviour
         isFlashlightOn = false;
         flashlightbar.maxValue = maxfluid;
         flashlightbar.value = maxfluid;
+        pauseGame = GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PauseGame.IsPaused)
+        if (pauseGame.isPaused)
         {
             return;
         }
