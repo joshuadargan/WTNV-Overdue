@@ -791,7 +791,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 6.002345, y: 10.000001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -835,8 +835,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.11, y: 9.590991}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 6.002345, y: 10.000001}
+    newSize: {x: 6.002345, y: 10.000001}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -896,6 +896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc6e1ecf2f45754f85533a8735851c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bookDrop: {fileID: 0}
+  newBook: {fileID: 0}
 --- !u!114 &796321086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +961,7 @@ MonoBehaviour:
   WIN: {fileID: 0}
   doorSlam: {fileID: 0}
   doorOpen: {fileID: 0}
+  shush: {fileID: 0}
 --- !u!81 &6263629558598419494
 AudioListener:
   m_ObjectHideFlags: 0
