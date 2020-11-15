@@ -17,7 +17,9 @@ public class LibrarianBehavior : MonoBehaviour
 
 	public AudioSource neutralHiss;
 	public AudioSource walkSound;
-    public AudioSource chaseSound;
+  public AudioSource chaseSound;
+	public AudioSource suspiciousHiss;
+  bool playAudio;
 
     const float baseSpeed = 3.5f;
     private float suspicion = 0;
@@ -37,6 +39,11 @@ public class LibrarianBehavior : MonoBehaviour
     public void SetSuspicion(int sus)
     {
         suspicion = sus;
+        if(!suspiciousHiss.isPlaying && playAudio)
+        {
+          Debug.Log("player acting sus");
+          suspiciousHiss.Play();
+        }
     }
 
     public bool IsSuspicious()
@@ -53,6 +60,7 @@ public class LibrarianBehavior : MonoBehaviour
 
         prevPos = transform.position;
         target = GameObject.Find(GameObjectNames.Player);
+        playAudio = true;
     }
 
     void Update() {
@@ -69,13 +77,13 @@ public class LibrarianBehavior : MonoBehaviour
         }
 
     	Direction = transform.position - prevPos;
-			if(agent.speed == baseSpeed && !walkSound.isPlaying)
+			if(agent.speed == baseSpeed && !walkSound.isPlaying && playAudio)
 			{
 				walkSound.Play();
 			}
-            else if(agent.speed == baseSpeed * 2 && chaseSound && !chaseSound.isPlaying)
+            else if(agent.speed == baseSpeed * 2 && !suspiciousHiss.isPlaying && playAudio)
             {
-                chaseSound.Play();
+                suspiciousHiss.Play();
             }
 
 
@@ -97,4 +105,24 @@ public class LibrarianBehavior : MonoBehaviour
 
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+      if(collision.gameObject.tag == "Player")
+      {
+        playAudio = false;
+        neutralHiss.Stop();
+        walkSound.Stop();
+        chaseSound.Stop();
+        suspiciousHiss.Stop();
+      }
+    }
+
+
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+
+    //}
 }
