@@ -36,7 +36,7 @@ public class EndScreenManager : MonoBehaviour
         if (collision.gameObject.tag == "Librarian" &&
             collision.gameObject.GetComponent<LibrarianBehavior>().IsSuspicious() &&
             !CheatCodeInput.debugMode && !CheatCodeInput.invincible &&
-            !RepllentPickup.IsPlayerRepellant)
+            !gameObject.GetComponent<RepllentPickup>().IsRepellant())
         {
             LOSE.SetActive(true);
             doorSlam.Play();

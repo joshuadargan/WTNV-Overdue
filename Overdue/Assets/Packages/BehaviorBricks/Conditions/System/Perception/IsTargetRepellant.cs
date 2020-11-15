@@ -34,7 +34,7 @@ namespace BBUnity.Conditions
                     StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
                 }
             }
-            return RepllentPickup.IsPlayerRepellant;
+            return target.GetComponent<RepllentPickup>().IsRepellant();
 		}
     }
 }

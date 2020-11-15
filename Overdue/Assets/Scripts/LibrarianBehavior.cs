@@ -25,7 +25,9 @@ public class LibrarianBehavior : MonoBehaviour
     private float playerDist;
     private float volume;
 
-    private NavMeshAgent agent; 
+    private NavMeshAgent agent;
+
+    private GameObject target;
 
     public void DecrementSuspicion()
     {
@@ -50,10 +52,11 @@ public class LibrarianBehavior : MonoBehaviour
         agent.updateUpAxis = false;
 
         prevPos = transform.position;
+        target = GameObject.Find("Player");
     }
 
     void Update() {
-        if (IsSuspicious() || RepllentPickup.IsPlayerRepellant)
+        if (IsSuspicious() || target.GetComponent<RepllentPickup>().IsRepellant())
         {
             agent.speed = baseSpeed * 2;
             DecrementSuspicion();
@@ -94,11 +97,4 @@ public class LibrarianBehavior : MonoBehaviour
 
     }
 
-
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 }
