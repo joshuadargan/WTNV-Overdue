@@ -17,8 +17,8 @@ public class AnimatorControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        //animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
         
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0;
