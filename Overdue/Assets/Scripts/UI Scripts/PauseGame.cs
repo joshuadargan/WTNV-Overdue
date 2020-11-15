@@ -17,7 +17,7 @@ public class PauseGame : MonoBehaviour
 
     void Update(){
         
-        if (Input.GetKeyDown(pauseKeyCode)){
+        if (Input.GetKeyDown(pauseKeyCode) && !ReadCollectible.IsPaused){
             if (!isPaused) Pause();
             else Unpause();
         }

@@ -6,26 +6,28 @@ using UnityEngine.UI;
 public class ReadCollectible : MonoBehaviour
 {
     [SerializeField] public GameObject collectibleMenuGroup;
-    [SerializeField] private bool isPaused;
+    [SerializeField] public static bool IsPaused;
 
     public static string lore;
 
     void Start()
     {
+        IsPaused = false;
         collectibleMenuGroup.SetActive(false);
         lore = "";
     }
+
 
     void Update()
     {
         if (lore.Length == 0)
         {
-            if (isPaused)
+            if (IsPaused)
             {
                 Close();
             }
         }
-        else if (!isPaused)
+        else if (!IsPaused)
         {
             Read();
         }
@@ -40,16 +42,20 @@ public class ReadCollectible : MonoBehaviour
     {
         Time.timeScale = 0f;
         collectibleMenuGroup.SetActive(true);
-        isPaused = true;
+        IsPaused = true;
         PauseGame.IsPaused = true;
+        PaperText.SetPaperText(lore);
     }
 
     public void Close()
     {
+        Debug.Log("Close note");
         Time.timeScale = 1f;
         collectibleMenuGroup.SetActive(false);
-        isPaused = false;
+        IsPaused = false;
         PauseGame.IsPaused = false;
+        SetLore("");
+
 
     }
 }
