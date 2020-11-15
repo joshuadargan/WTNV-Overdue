@@ -12,6 +12,7 @@ public class EndScreenManager : MonoBehaviour
     [SerializeField] public GameObject WIN;
 
     bool win;
+    public bool playing;
 
     public AudioSource doorSlam;
     public AudioSource doorOpen;
@@ -23,12 +24,16 @@ public class EndScreenManager : MonoBehaviour
     {
         LOSE.SetActive(false);
         WIN.SetActive(false);
+        playing = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+      if(!soundtrack.isPlaying && playing)
+      {
+        soundtrack.Play();
+      }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -39,6 +44,7 @@ public class EndScreenManager : MonoBehaviour
             !RepllentPickup.IsPlayerRepellant)
         {
             LOSE.SetActive(true);
+            playing = false;
             doorSlam.Play();
             shush.Play();
             soundtrack.Stop();
@@ -56,6 +62,7 @@ public class EndScreenManager : MonoBehaviour
         Time.timeScale = 0f;
 
         Debug.Log("Win");
+        playing = false;
         soundtrack.Stop();
         doorOpen.Play();
 

@@ -451,7 +451,7 @@ MonoBehaviour:
   animator: {fileID: 3005456987976683957}
   neutralHiss: {fileID: 7756838160716842750}
   walkSound: {fileID: 1407601236428992512}
-  chaseSound: {fileID: 0}
+  chaseSound: {fileID: 1014671427435195414}
 --- !u!195 &3929783627036441773
 NavMeshAgent:
   m_ObjectHideFlags: 0
