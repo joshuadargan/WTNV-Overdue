@@ -60,7 +60,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 hasExited = true;
                 gameObject.GetComponent<EndScreenManager>().Win();
-                GameObject.Find("ObjectiveText").GetComponent<UnityEngine.UI.Text>().text = "You escaped!";
+                GameObject.Find(GameObjectNames.ObjectiveText).GetComponent<UnityEngine.UI.Text>().text = "You escaped!";
             }
         }
         else if (isCloseToCollectible && closeCollectible)
@@ -78,8 +78,8 @@ public class PlayerInteract : MonoBehaviour
     private void ReturnBook()
     {
         hasReturnedBook = true;
-        GameObject.Find("ObjectiveManager").GetComponent<NewBookBookshelfManager>().RemoveBookshelfIfExists(GameObject.Find("ObjectiveManager").GetComponent<ReturnCartManager>().ActiveReturnCart.name.Split('_')[0]);
-        GameObject.Find("ObjectiveManager").GetComponent<NewBookBookshelfManager>().SelectBookshelf();
+        GameObject.Find(GameObjectNames.ObjectiveManager).GetComponent<NewBookBookshelfManager>().RemoveBookshelfIfExists(GameObject.Find(GameObjectNames.ObjectiveManager).GetComponent<ReturnCartManager>().ActiveReturnCart.name.Split('_')[0]);
+        GameObject.Find(GameObjectNames.ObjectiveManager).GetComponent<NewBookBookshelfManager>().SelectBookshelf();
         closeReturnCart.GetComponentInChildren<Light2D>().enabled = false;
         bookDrop.Play();
     }
@@ -87,7 +87,7 @@ public class PlayerInteract : MonoBehaviour
     private void GetNewBook()
     {
         hasSecondBook = true;
-        GameObject.Find("ObjectiveText").GetComponent<UnityEngine.UI.Text>().text = "Objective: Escape!";
+        GameObject.Find(GameObjectNames.ObjectiveText).GetComponent<UnityEngine.UI.Text>().text = "Objective: Escape!";
         ExitGoal.SetExitLightOn();
         closeNewBookshelf.GetComponentInChildren<Light2D>().enabled = false;
         newBook.Play();

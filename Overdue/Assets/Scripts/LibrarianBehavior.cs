@@ -52,7 +52,7 @@ public class LibrarianBehavior : MonoBehaviour
         agent.updateUpAxis = false;
 
         prevPos = transform.position;
-        target = GameObject.Find("Player");
+        target = GameObject.Find(GameObjectNames.Player);
     }
 
     void Update() {

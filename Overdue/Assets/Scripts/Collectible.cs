@@ -27,7 +27,7 @@ public class Collectible : MonoBehaviour
 
     public void Read()
     {
-        GameObject.Find("Canvas").GetComponent<PauseGame>().Read();
-        GameObject.Find("PaperText").GetComponent<Text>().text = text;
+        GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>().Read();
+        GameObject.Find(GameObjectNames.PaperText).GetComponent<Text>().text = text;
     }
 }
