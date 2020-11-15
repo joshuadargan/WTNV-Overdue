@@ -880,10 +880,11 @@ MonoBehaviour:
   fieldOfView: {fileID: 592269700645017149}
   flashlightbar: {fileID: 0}
   maxfluid: 100
-  FluidConsump: 2
+  FluidConsump: 1
   pickupvalue: 20
   flashlightSource: {fileID: 3941868690624980074}
   flashlightOff: {fileID: 5025702530410701443}
+  pauseGame: {fileID: 0}
 --- !u!114 &5276175457416457273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,9 +960,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LOSE: {fileID: 0}
   WIN: {fileID: 0}
+  playing: 0
   doorSlam: {fileID: 0}
   doorOpen: {fileID: 0}
   shush: {fileID: 0}
+  soundtrack: {fileID: 0}
 --- !u!81 &6263629558598419494
 AudioListener:
   m_ObjectHideFlags: 0
