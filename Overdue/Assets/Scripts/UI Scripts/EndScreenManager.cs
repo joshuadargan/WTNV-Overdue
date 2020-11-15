@@ -16,6 +16,7 @@ public class EndScreenManager : MonoBehaviour
     public AudioSource doorSlam;
     public AudioSource doorOpen;
     public AudioSource shush;
+    public AudioSource soundtrack;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class EndScreenManager : MonoBehaviour
             LOSE.SetActive(true);
             doorSlam.Play();
             shush.Play();
+            soundtrack.Stop();
             Time.timeScale = 0f;
             Debug.Log("You lose");
 
@@ -54,6 +56,7 @@ public class EndScreenManager : MonoBehaviour
         Time.timeScale = 0f;
 
         Debug.Log("Win");
+        soundtrack.Stop();
         doorOpen.Play();
 
         StartCoroutine(MoveGameForward(2));
