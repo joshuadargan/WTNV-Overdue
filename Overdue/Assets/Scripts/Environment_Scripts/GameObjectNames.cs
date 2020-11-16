@@ -8,4 +8,5 @@ public static class GameObjectNames
     public const string ObjectiveText = "ObjectiveText";
     public const string Canvas = "Canvas";
     public const string PaperText = "PaperText";
+    public const string ReminderE = "ReminderE";
 }
