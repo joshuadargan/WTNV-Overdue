@@ -99,11 +99,10 @@ public class LibrarianBehavior : MonoBehaviour
        animator.SetFloat("Horizontal", Horizontal);
        animator.SetFloat("Vertical", Vertical);
        animator.SetBool("VoverH", VoverH);
-       animator.SetFloat("Suspicion", suspicion);
 
        prevPos = transform.position;
 
-	
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
