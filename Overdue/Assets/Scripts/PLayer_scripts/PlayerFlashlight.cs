@@ -18,6 +18,7 @@ public class PlayerFlashlight : MonoBehaviour
 
     public AudioSource flashlightSource;
     public AudioSource flashlightOff;
+    public AudioSource fluidPickup;
 
     public PauseGame pauseGame;
 
@@ -86,6 +87,10 @@ public class PlayerFlashlight : MonoBehaviour
     {
         if (collision.CompareTag("light_pickup"))
         {
+          if(!fluidPickup.isPlaying)
+          {
+            fluidPickup.Play();
+          }
         	flashlightbar.value += pickupvalue;
             Destroy(collision.gameObject);
         }

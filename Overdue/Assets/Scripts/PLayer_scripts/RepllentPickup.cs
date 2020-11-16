@@ -10,6 +10,7 @@ public class RepllentPickup : MonoBehaviour {
     public const float repellantTime = 5;
     public float remainingRepellantTime = 0;
     public AudioSource repellent;
+    public AudioSource pickupRepellent;
 
     void Start()
     {
@@ -44,6 +45,10 @@ public class RepllentPickup : MonoBehaviour {
         if (collision.CompareTag("repellent_pickup"))
         {
             //displayed.SetActive(false);
+            if(!pickupRepellent.isPlaying)
+            {
+                pickupRepellent.Play();
+            }
             RepellentIcon.SetActive(true);
             RepellentStored++;
             Destroy(collision.gameObject);
