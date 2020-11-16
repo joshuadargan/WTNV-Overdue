@@ -14,7 +14,7 @@ public class Perspective_trigger : MonoBehaviour
 	
 	public BoxCollider2D border;
 	
-	public const string front = "AboveCharacter";
+	public const string front = "Character";
     public const string back = "BelowCharacter";
 	
     // Start is called before the first frame update
