@@ -86,7 +86,7 @@ public class Collectible : MonoBehaviour
         text = Lore[rnd.Next(0, Lore.Length)];
     }
 
-    public void Read()
+    public virtual void Read()
     {
         GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>().Read();
         GameObject.Find(GameObjectNames.PaperText).GetComponent<Text>().text = text;
