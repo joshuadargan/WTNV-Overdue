@@ -20,6 +20,8 @@ public class PlayerInteract : MonoBehaviour
     public AudioSource newBook;
     public AudioSource collectiblePickup;
 
+    private GameObject reminderEText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,32 +34,37 @@ public class PlayerInteract : MonoBehaviour
         closeNewBookshelf = null;
         isCloseToCollectible = false;
         closeCollectible = null;
+        reminderEText = GameObject.Find(GameObjectNames.ReminderE);
+        reminderEText.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isCloseToReturnCart)
+        if (isCloseToReturnCart && !hasReturnedBook)
         {
-            if (Input.GetKey(KeyCode.E) && !hasReturnedBook)
+            reminderEText.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
             {
                 if (CheatCodeInput.debugMode)
                     Debug.Log("Book Returned");
                 ReturnBook();
             }
         }
-        else if (isCloseToNewBookshelf)
+        else if (isCloseToNewBookshelf && hasReturnedBook && !hasSecondBook)
         {
-            if (Input.GetKey(KeyCode.E) && hasReturnedBook && !hasSecondBook)
+            reminderEText.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
             {
                 if (CheatCodeInput.debugMode)
                     Debug.Log("New book gotten");
                 GetNewBook();
             }
         }
-        else if (isCloseToExit && hasReturnedBook && hasSecondBook)
+        else if (isCloseToExit && hasReturnedBook && hasSecondBook && !hasExited)
         {
-            if (Input.GetKey(KeyCode.E) && !hasExited)
+            reminderEText.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
             {
                 hasExited = true;
                 gameObject.GetComponent<EndScreenManager>().Win();
@@ -66,6 +73,7 @@ public class PlayerInteract : MonoBehaviour
         }
         else if (isCloseToCollectible && closeCollectible)
         {
+            reminderEText.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
                 closeCollectible.GetComponent<Collectible>().Read();
@@ -77,6 +85,10 @@ public class PlayerInteract : MonoBehaviour
                 closeCollectible.SetActive(false);
                 closeCollectible = null;
             }
+        }
+        else
+        {
+            reminderEText.SetActive(false);
         }
     }
 

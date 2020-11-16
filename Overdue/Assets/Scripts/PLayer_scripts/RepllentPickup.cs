@@ -28,6 +28,8 @@ public class RepllentPickup : MonoBehaviour {
             {
               repellent.Play();
             }
+            
+            RepellentIcon.SetActive(false);
         }
         if (remainingRepellantTime > 0)
         {
@@ -42,7 +44,7 @@ public class RepllentPickup : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("repellent_pickup"))
+        if (collision.CompareTag("repellent_pickup") && RepellentStored < 1)
         {
             //displayed.SetActive(false);
             if(!pickupRepellent.isPlaying)
