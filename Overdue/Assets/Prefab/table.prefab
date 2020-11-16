@@ -303,10 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d0b444f92fa8249b01df88524e1232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  child: {fileID: 0}
-  child2: {fileID: 0}
+  child: {fileID: 4463270451545400786}
+  child2: {fileID: 6795314540541033934}
   child3: {fileID: 0}
-  border: {fileID: 0}
+  border: {fileID: 3141789241637225341}
 --- !u!1 &5638611443852606047
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7554591361410711494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1d0b444f92fa8249b01df88524e1232, type: 3}
   m_Name: 
