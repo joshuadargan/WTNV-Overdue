@@ -16,4 +16,5 @@ public static class GameObjectTags
     public const string Table = "Table";
     public const string NewBook = "NewBook";
     public const string Collectible = "Collectible";
+    public const string Map = "Map";
 }

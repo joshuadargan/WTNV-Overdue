@@ -16,6 +16,9 @@ public class PlayerInteract : MonoBehaviour
     public GameObject closeNewBookshelf { get; private set; }
     public bool isCloseToCollectible { get; private set; }
     public GameObject closeCollectible { get; private set; }
+    public bool isCloseToMap { get; private set; }
+    public GameObject closeMap { get; private set; }
+
     public AudioSource bookDrop;
     public AudioSource newBook;
     public AudioSource collectiblePickup;
@@ -34,6 +37,8 @@ public class PlayerInteract : MonoBehaviour
         closeNewBookshelf = null;
         isCloseToCollectible = false;
         closeCollectible = null;
+        isCloseToMap = false;
+        closeMap = null;
         reminderEText = GameObject.Find(GameObjectNames.ReminderE);
         reminderEText.SetActive(false);
     }
@@ -41,6 +46,10 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
         if (isCloseToReturnCart && !hasReturnedBook)
         {
             reminderEText.SetActive(true);
@@ -84,6 +93,14 @@ public class PlayerInteract : MonoBehaviour
                 isCloseToCollectible = false;
                 closeCollectible.SetActive(false);
                 closeCollectible = null;
+            }
+        }
+        else if (isCloseToMap && closeMap)
+        {
+            reminderEText.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
+            {
+                GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>().OpenMap(closeMap.GetComponent<SpriteRenderer>());
             }
         }
         else
@@ -130,6 +147,11 @@ public class PlayerInteract : MonoBehaviour
         {
             isCloseToCollectible = true;
             closeCollectible = collision.gameObject;
+        }
+        else if (collision.gameObject.CompareTag(GameObjectTags.Map))
+        {
+            isCloseToMap = true;
+            closeMap = collision.gameObject;
         }
         else if (collision.gameObject.CompareTag(GameObjectTags.Fantasy))
         {
@@ -185,6 +207,11 @@ public class PlayerInteract : MonoBehaviour
         {
             isCloseToCollectible = false;
             closeCollectible = null;
+        }
+        else if (collision.gameObject.CompareTag(GameObjectTags.Map))
+        {
+            isCloseToMap = false;
+            closeMap = null;
         }
     }
 }
