@@ -18,6 +18,7 @@ public class PlayerInteract : MonoBehaviour
     public GameObject closeCollectible { get; private set; }
     public AudioSource bookDrop;
     public AudioSource newBook;
+    public AudioSource collectiblePickup;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,10 @@ public class PlayerInteract : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 closeCollectible.GetComponent<Collectible>().Read();
+                if(!collectiblePickup.isPlaying)
+                {
+                  collectiblePickup.Play();
+                }
                 isCloseToCollectible = false;
                 closeCollectible.SetActive(false);
                 closeCollectible = null;
