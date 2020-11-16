@@ -993,7 +993,7 @@ MonoBehaviour:
   maxstamina: 100
   staminaconsump: 10
   walkSound: {fileID: 7525727215123181451}
-  heavyBreathing: {fileID: 0}
+  heavyBreathing: {fileID: 2332580366412735305}
   runSound: {fileID: 8170014205868817266}
 --- !u!114 &-2168425183316565652
 MonoBehaviour:
@@ -1044,6 +1044,7 @@ MonoBehaviour:
   RepellentStored: 0
   RepellentIcon: {fileID: 0}
   remainingRepellantTime: 0
+  repellent: {fileID: 7840974772861209807}
 --- !u!95 &3243554648774522627
 Animator:
   serializedVersion: 3
