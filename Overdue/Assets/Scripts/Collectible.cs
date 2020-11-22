@@ -83,12 +83,10 @@ public class Collectible : MonoBehaviour
     void Start()
     {
         text = Lore[Random.Range(0, Lore.Length-1)];
-        Debug.Log(text);
     }
 
     public virtual void Read()
     {
-        Debug.Log(text);
         GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>().Read();
         GameObject.Find(GameObjectNames.PaperText).GetComponent<Text>().text = text;
     }

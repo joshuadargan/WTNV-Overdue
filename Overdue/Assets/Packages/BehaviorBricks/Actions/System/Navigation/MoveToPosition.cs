@@ -18,6 +18,10 @@ namespace BBUnity.Actions
 
         private UnityEngine.AI.NavMeshAgent navAgent;
 
+        private Vector3 lastPosition;
+        private float timeInPosition;
+        private const float MAX_IDLE_TIME = 1f;
+
         /// <summary>Initialization Method of MoveToPosition.</summary>
         /// <remarks>Check if there is a NavMeshAgent to assign a default one and assign the destination to the NavMeshAgent the given position.</remarks>
         public override void OnStart()
@@ -29,6 +33,8 @@ namespace BBUnity.Actions
                 navAgent = gameObject.AddComponent<UnityEngine.AI.NavMeshAgent>();
             }
             navAgent.SetDestination(target);
+            lastPosition = gameObject.transform.position;
+            timeInPosition = 0;
 
             #if UNITY_5_6_OR_NEWER
                 navAgent.isStopped = false;
@@ -42,6 +48,20 @@ namespace BBUnity.Actions
         /// and otherwise it will remain in operation.</remarks>
         public override TaskStatus OnUpdate()
         {
+            if (lastPosition == gameObject.transform.position)
+            {
+                timeInPosition += Time.deltaTime;
+            }
+            else
+            {
+                timeInPosition = 0;
+            }
+            if (timeInPosition > MAX_IDLE_TIME)
+            {
+                return TaskStatus.COMPLETED;
+            }
+            lastPosition = gameObject.transform.position;
+
             gameObject.GetComponent<DrawNavMeshPath>().path = navAgent.path.corners;
             gameObject.GetComponent<DrawNavMeshPath>().isChasingPlayer = false;
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
