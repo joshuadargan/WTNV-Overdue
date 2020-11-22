@@ -22,8 +22,7 @@ public class ReturnCartManager : MonoBehaviour
         //Randomly select a cart to become the active cart
         if (ReturnCarts.Count >= NumCarts)
         {
-            System.Random rnd = new System.Random();
-            int activeIndex = rnd.Next(0, ReturnCarts.Count);
+            int activeIndex = Random.Range(0, ReturnCarts.Count-1);
             for (int i = 0; i < ReturnCarts.Count; i++)
             {
                 if (activeIndex == i)

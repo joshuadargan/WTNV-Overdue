@@ -269,7 +269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427211371487941986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 329.3807, y: -164.00531, z: -83350.99}
+  m_LocalPosition: {x: 329.3807, y: -164.00531, z: 0}
   m_LocalScale: {x: 4.415401, y: 4.415401, z: 97.15216}
   m_Children: []
   m_Father: {fileID: 8970223993575225010}
@@ -286,7 +286,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f62e445aaa3224f81bc3a56c8ed0d073, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -595,7 +595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2741487089821622682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 329.3807, y: -164.00531, z: -83350.99}
+  m_LocalPosition: {x: 329.3807, y: -164.00531, z: 0}
   m_LocalScale: {x: 4.415401, y: 4.415401, z: 97.15216}
   m_Children: []
   m_Father: {fileID: 8970223993575225010}
@@ -849,7 +849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7297695963794561540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 329.3807, y: -164.00531, z: -83350.99}
+  m_LocalPosition: {x: 329.3807, y: -164.00531, z: 0}
   m_LocalScale: {x: 4.415401, y: 4.415401, z: 97.15216}
   m_Children: []
   m_Father: {fileID: 8970223993575225010}
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   pickupvalue: 20
   flashlightSource: {fileID: 3941868690624980074}
   flashlightOff: {fileID: 5025702530410701443}
-  fluidPickup: {fileID: 0}
+  fluidPickup: {fileID: 8128547968513066266}
   pauseGame: {fileID: 0}
 --- !u!114 &5276175457416457273
 MonoBehaviour:
@@ -1431,7 +1431,7 @@ MonoBehaviour:
   RepellentIcon: {fileID: 0}
   remainingRepellantTime: 0
   repellent: {fileID: 7840974772861209807}
-  pickupRepellent: {fileID: 0}
+  pickupRepellent: {fileID: 977347618765462594}
 --- !u!95 &3243554648774522627
 Animator:
   serializedVersion: 3

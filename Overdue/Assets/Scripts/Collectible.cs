@@ -82,12 +82,13 @@ public class Collectible : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        System.Random rnd = new System.Random();
-        text = Lore[rnd.Next(0, Lore.Length)];
+        text = Lore[Random.Range(0, Lore.Length-1)];
+        Debug.Log(text);
     }
 
     public virtual void Read()
     {
+        Debug.Log(text);
         GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>().Read();
         GameObject.Find(GameObjectNames.PaperText).GetComponent<Text>().text = text;
     }

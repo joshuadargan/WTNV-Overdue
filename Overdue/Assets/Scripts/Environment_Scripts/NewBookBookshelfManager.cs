@@ -27,8 +27,7 @@ public class NewBookBookshelfManager : MonoBehaviour
 
     public void SelectBookshelf()
     {
-        System.Random rnd = new System.Random();
-        int activeIndex = rnd.Next(0, Bookshelves.Count);
+        int activeIndex = Random.Range(0, Bookshelves.Count-1);
         Bookshelves[activeIndex].GetComponent<CircleCollider2D>().enabled = true;
         Bookshelves[activeIndex].GetComponentInChildren<Light2D>().enabled = true;
         GameObject.Find(GameObjectNames.ObjectiveText).GetComponent<Text>().text = "Objective: Find a book in " + Bookshelves[activeIndex].name.Split('_')[0] + " section";
