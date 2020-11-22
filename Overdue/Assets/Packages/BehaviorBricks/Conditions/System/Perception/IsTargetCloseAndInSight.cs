@@ -62,7 +62,7 @@ namespace BBUnity.Conditions
             Vector3 dir = (target.transform.position - currentPosition);
             if (!behavior.IsSuspicious() && dir.sqrMagnitude > closeDistance * closeDistance)
             { 
-                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 1.5)
+                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 2)
                 {
                     StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
                 }
