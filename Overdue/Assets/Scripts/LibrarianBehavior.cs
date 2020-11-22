@@ -17,12 +17,14 @@ public class LibrarianBehavior : MonoBehaviour
 
 	public AudioSource neutralHiss;
 	public AudioSource walkSound;
-  public AudioSource chaseSound;
+    public AudioSource chaseSound;
 	public AudioSource suspiciousHiss;
-  bool playAudio;
+    bool playAudio;
 
     const float baseSpeed = 3.5f;
     private float suspicion = 0;
+    private float totalTimeSuspicious = 0;
+    private const float COOLDOWN = 2;
 
     private float playerDist;
     private float volume;
@@ -64,16 +66,33 @@ public class LibrarianBehavior : MonoBehaviour
     }
 
     void Update() {
-        if (IsSuspicious() || target.GetComponent<RepllentPickup>().IsRepellant())
+        if (IsSuspicious())
         {
-            agent.speed = baseSpeed * 2;
+            if (totalTimeSuspicious == 0)
+            {
+                agent.velocity = Vector3.zero;
+            }
+            totalTimeSuspicious += Time.deltaTime;
+            if (totalTimeSuspicious > COOLDOWN)
+            {
+                agent.speed = baseSpeed * 2;
+                agent.acceleration = 8;
+            }
+            else
+            {
+                agent.speed = baseSpeed * totalTimeSuspicious;
+                agent.acceleration = totalTimeSuspicious;
+            }
             DecrementSuspicion();
-            if (CheatCodeInput.debugMode)
-                Debug.Log("Sus " + suspicion);
         }
         else
         {
-            agent.speed = baseSpeed;
+            totalTimeSuspicious = 0;
+            agent.acceleration = 8;
+            if (target.GetComponent<RepllentPickup>().IsRepellant())
+                agent.speed = baseSpeed * 2;
+            else
+                agent.speed = baseSpeed;
         }
 
     	Direction = transform.position - prevPos;
@@ -119,11 +138,4 @@ public class LibrarianBehavior : MonoBehaviour
       }
     }
 
-
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 }

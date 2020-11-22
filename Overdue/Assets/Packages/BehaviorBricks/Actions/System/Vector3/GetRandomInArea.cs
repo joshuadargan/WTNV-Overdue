@@ -41,6 +41,10 @@ namespace BBUnity.Actions
                                                                       area.transform.position.x + area.transform.localScale.x * boxCollider.size.x * 0.5f),
                                              UnityEngine.Random.Range(area.transform.position.y - area.transform.localScale.y * boxCollider.size.y * 0.5f,
                                                                       area.transform.position.y + area.transform.localScale.y * boxCollider.size.y * 0.5f));
+                if (gameObject.name == "Librarian_Biography")
+                {
+                    Debug.Log("X: " + randomPosition.x + ", Y: " + randomPosition.y + " vs " + gameObject.transform.position + " dist: " + Vector2.Distance(randomPosition, gameObject.transform.position));
+                }  
             }
             else
             {
