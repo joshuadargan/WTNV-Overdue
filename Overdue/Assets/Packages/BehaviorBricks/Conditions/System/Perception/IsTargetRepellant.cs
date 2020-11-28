@@ -23,17 +23,6 @@ namespace BBUnity.Conditions
         public override bool Check()
 		{
             Vector3 dir = (target.transform.position - gameObject.transform.position);
-            if (dir.sqrMagnitude > 20)
-            {
-                if (dir.sqrMagnitude > 10)
-                {
-                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
-                }
-                else
-                {
-                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
-                }
-            }
             return target.GetComponent<RepllentPickup>().IsRepellant();
 		}
     }

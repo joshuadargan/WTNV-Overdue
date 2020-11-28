@@ -20,7 +20,7 @@ public class StealthUIIndicator : MonoBehaviour
     public static EyeState CurrentEyeState { get; private set; }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         UIEyes = GetComponentsInChildren<Image>();
         SetUIEyeState(EyeState.Closed);

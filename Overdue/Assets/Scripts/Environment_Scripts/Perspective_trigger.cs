@@ -17,27 +17,21 @@ public class Perspective_trigger : MonoBehaviour
 	public const string front = "Character";
     public const string back = "BelowCharacter";
 	
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     void OnTriggerEnter2D(){
-    	child.sortingLayerName = front;
-    	child2.sortingLayerName = front;
-    	child3.sortingLayerName = front;
+        if (child)
+    	    child.sortingLayerName = front;
+        if (child2)
+    	    child2.sortingLayerName = front;
+        if (child3)
+            child3.sortingLayerName = front;
     }
     
     void OnTriggerExit2D(){
-    	child.sortingLayerName = back;
-    	child2.sortingLayerName = back;
-    	child3.sortingLayerName = back;
+        if (child)
+            child.sortingLayerName = back;
+        if (child2)
+            child2.sortingLayerName = back;
+        if (child3)
+            child3.sortingLayerName = back;
     }
 }

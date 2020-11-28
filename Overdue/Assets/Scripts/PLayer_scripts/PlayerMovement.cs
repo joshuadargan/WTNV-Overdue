@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     	staminabar.value = maxstamina;
 
         sprite = GetComponent<SpriteRenderer>();
-
     }
 
     // Update is called once per frame

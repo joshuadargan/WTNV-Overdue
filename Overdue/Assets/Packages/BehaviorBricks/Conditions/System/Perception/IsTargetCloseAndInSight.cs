@@ -60,29 +60,20 @@ namespace BBUnity.Conditions
             if (CheatCodeInput.debugMode)
                 Debug.DrawLine(currentPosition, target.transform.position, Color.green);
             Vector3 dir = (target.transform.position - currentPosition);
-            if (!behavior.IsSuspicious() && dir.sqrMagnitude > closeDistance * closeDistance)
+            Debug.Log(dir.magnitude);
+            // If not suspicious and far away
+            if (!behavior.IsSuspicious() && dir.magnitude > closeDistance * 3)
             { 
-                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 2)
-                {
-                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
-                }
-                else
-                {
-                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
-                }
                 return false;
             }
-            RaycastHit2D hit = Physics2D.Raycast(currentPosition + new Vector3(0, 0.1f, 0), dir);
+            RaycastHit2D hit = Physics2D.Raycast(currentPosition + new Vector3(0, 0.1f, 0), dir, closeDistance+1);
 
-            //Debug.Log(timeSinceLastSighting);
             if (hit || behavior.IsSuspicious())
             {
                 if (timeSinceLastSighting > HIDE_TIME && movement && movement.IsHiddenUnderTable)
                 {
                     behavior.SetSuspicion(0);
                 }
-                //Go to location hit.point; do a circle strafe
-                //If the player goes into hiding while the librarian can't see them.
                 // If in range and in visible area
                 if (hit && hit.collider.gameObject == target && Vector3.Angle(dir, currentPosition - previousPosition) < angle * 0.5f)
                 {
@@ -92,28 +83,20 @@ namespace BBUnity.Conditions
                         StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
                         return false;
                     }
-                    else
-                    {
-                        StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Open);
-                    }
+                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Open);
                     behavior.SetSuspicion(5);
                     timeSinceLastSighting = 0;
-
                 }
-                if (!behavior.IsSuspicious())
-                {
-                    StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
-                }
-                else if (behavior.IsSuspicious() && hit && hit.collider.gameObject != target)
+                else
                 {
                     StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
                 }
 
                 return behavior.IsSuspicious();
             }
-            else if (Vector2.Distance(currentPosition, target.transform.position) < closeDistance * 5)
+            else
             {
-                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 1.5)
+                if (Vector2.Distance(currentPosition, target.transform.position) > closeDistance * 2)
                 {
                     StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Closed);
                 }
@@ -121,8 +104,8 @@ namespace BBUnity.Conditions
                 {
                     StealthUIIndicator.SetUIEyeState(StealthUIIndicator.EyeState.Ajar);
                 }
-                
             }
+
             return false;
 		}
     }

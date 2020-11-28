@@ -92,7 +92,6 @@ public class PlayerFlashlight : MonoBehaviour
                     if (tempDistance < minDistance)
                         minDistance = tempDistance;
                 }
-                Debug.Log("Distance: " + minDistance);
                 if (UnityEngine.Random.Range(0, minDistance) < FLICKER_CHANCE)
                 {
                     // Flicker lights
