@@ -151,6 +151,7 @@ public class PlayerMovement : MonoBehaviour
             if (CheatCodeInput.debugMode)
                 Debug.Log("You are hidden");
             IsUnderTable = true;
+            gameObject.layer = 2;
         }
     }
 
@@ -161,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
             if (CheatCodeInput.debugMode)
                 Debug.Log("You are exposed");
             IsUnderTable = false;
+            gameObject.layer = 0;
         }
     }
 
