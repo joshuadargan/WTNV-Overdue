@@ -40,7 +40,7 @@ public class FieldOfView : MonoBehaviour
         this.startingAngle = UtilsClass.GetAngleFromVectorFloat(aimDirection) - 90f;
     }
 
-    public void SetIntensity(int intensity)
+    public void SetIntensity(float intensity)
     {
         lt.intensity = intensity;
     }
