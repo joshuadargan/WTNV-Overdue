@@ -21,6 +21,7 @@ TagManager:
   - Librarian
   - Collectible
   - Map
+  - Catch
   layers:
   - Default
   - TransparentFX
@@ -30,9 +31,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - Player
+  - Librarian
   - 
   - 
   - 
