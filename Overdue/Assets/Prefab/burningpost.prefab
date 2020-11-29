@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7188538572485256418}
   - component: {fileID: 5026213213172367423}
   - component: {fileID: 1022656659505736154}
-  - component: {fileID: 7934359206395106423}
   - component: {fileID: 6490285329148959571}
   m_Layer: 0
   m_Name: AnimBrazierFlame_0
@@ -105,21 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &7934359206395106423
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2448144143464204412}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b4383d5153a690b4ebaa704f56ad2a8e, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!114 &6490285329148959571
 MonoBehaviour:
   m_ObjectHideFlags: 0
