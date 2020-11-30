@@ -1394,6 +1394,7 @@ MonoBehaviour:
   fieldOfView: {fileID: 592269700645017149}
   flashlightbar: {fileID: 0}
   maxfluid: 100
+  startfluid: 100
   FluidConsump: 1
   pickupvalue: 20
   flashlightSource: {fileID: 3941868690624980074}

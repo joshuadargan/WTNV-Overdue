@@ -12,6 +12,7 @@ public class PlayerFlashlight : MonoBehaviour
 
     public Slider flashlightbar;
     public float maxfluid = 100;
+    public float startfluid;
     public int FluidConsump;
 
     public float pickupvalue = 20;
@@ -35,7 +36,7 @@ public class PlayerFlashlight : MonoBehaviour
         Debug.Log("Start fl");
         isFlashlightOn = false;
         flashlightbar.maxValue = maxfluid;
-        flashlightbar.value = maxfluid;
+        flashlightbar.value = startfluid;
         pauseGame = GameObject.Find(GameObjectNames.Canvas).GetComponent<PauseGame>();
         closeLibrarians = new List<GameObject>();
     }

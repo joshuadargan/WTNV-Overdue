@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Macro_Map.unity
     guid: ae8f2282619003641bc5b25e582b6f4e
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: ad032b360b82a424b998be57a7e869f7
   m_configObjects: {}
