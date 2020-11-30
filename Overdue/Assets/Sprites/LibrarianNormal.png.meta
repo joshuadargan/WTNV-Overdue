@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: 6928763771766563785
     second: LibrarianNormal_2
+  - first:
+      213: -7065462288347052444
+    second: LibrarianNormal_0
+  - first:
+      213: 2118652912063015742
+    second: LibrarianNormal_1
+  - first:
+      213: 3070782886940240549
+    second: LibrarianNormal_2
+  - first:
+      213: 5906608586385238079
+    second: LibrarianNormal_Right
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,6 +106,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,19 +137,19 @@ TextureImporter:
       name: LibrarianNormal_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1066.6666
-        height: 1750
+        x: 59
+        y: 1584
+        width: 995
+        height: 1331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8358153a0ef016710800000000000000
-      internalID: 1684645193100395832
+      spriteID: 466c721bb7f62fd90800000000000000
+      internalID: -7065462288347052444
       vertices: []
       indices: 
       edges: []
@@ -122,19 +158,19 @@ TextureImporter:
       name: LibrarianNormal_1
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 0
-        width: 1066.6666
-        height: 1750
+        x: 1185
+        y: 1579
+        width: 877
+        height: 1344
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3324efe120daf44e0800000000000000
-      internalID: -1995185885280320973
+      spriteID: e3becd13997f66d10800000000000000
+      internalID: 2118652912063015742
       vertices: []
       indices: 
       edges: []
@@ -143,19 +179,40 @@ TextureImporter:
       name: LibrarianNormal_2
       rect:
         serializedVersion: 2
-        x: 2132
-        y: 0
-        width: 1066.6666
-        height: 1750
+        x: 2241
+        y: 1582
+        width: 879
+        height: 1344
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c3edb4b0f9e72060800000000000000
-      internalID: 6928763771766563785
+      spriteID: 5aaeb6614cc9d9a20800000000000000
+      internalID: 3070782886940240549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianNormal_Right
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 246
+        width: 994
+        height: 1331
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38a3caf63d78f150800000000000000
+      internalID: 5906608586385238079
       vertices: []
       indices: 
       edges: []
