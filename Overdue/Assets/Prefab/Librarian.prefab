@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 3005456987976683957}
   - component: {fileID: 3634982403442467865}
   - component: {fileID: 1792509985636408970}
+  - component: {fileID: 9073330294352133195}
   m_Layer: 2
   m_Name: Librarian
   m_TagString: Librarian
@@ -550,6 +551,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 50
+--- !u!114 &9073330294352133195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475600786393597708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755df3ba41c90bdbdb8d7c5f1e689bf74f21ecdee568a97cfcacd
+  m_ShapePath:
+  - {x: -2.9472961, y: -6.471588, z: 0}
+  - {x: -1.5417519, y: -6.561577, z: 0}
+  - {x: 1.0707626, y: -6.660187, z: 0}
+  - {x: 2.9965744, y: -6.1264725, z: 0}
+  - {x: 3.4860954, y: -5.42762, z: 0}
+  - {x: 2.9472885, y: -4.2273254, z: 0}
+  - {x: -2.8980103, y: -4.2766495, z: 0}
+  - {x: -3.3162727, y: -5.2304, z: 0}
+  m_ShapePathHash: -710432251
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 146248
 --- !u!1 &4505462231138609080
 GameObject:
   m_ObjectHideFlags: 0
