@@ -16,6 +16,7 @@ public class PauseGame : MonoBehaviour
         pauseMenuGroup.SetActive(false);
         collectibleMenuGroup.SetActive(false);
         mapMenuGroup.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     void Update(){
