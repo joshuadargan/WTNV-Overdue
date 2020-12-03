@@ -41,7 +41,7 @@ public class LibrarianBehavior : MonoBehaviour
     public void SetSuspicion(int sus)
     {
         suspicion = sus;
-        if(!suspiciousHiss.isPlaying && playAudio)
+        if(sus != 0 && !suspiciousHiss.isPlaying && playAudio)
         {
           Debug.Log("player acting sus");
           suspiciousHiss.Play();
@@ -122,7 +122,7 @@ public class LibrarianBehavior : MonoBehaviour
 
        prevPos = transform.position;
 
-	
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
