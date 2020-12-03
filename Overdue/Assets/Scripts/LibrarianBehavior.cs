@@ -81,7 +81,7 @@ public class LibrarianBehavior : MonoBehaviour
             else
             {
                 agent.speed = baseSpeed * totalTimeSuspicious;
-                agent.acceleration = totalTimeSuspicious;
+                agent.acceleration = 8;
             }
             DecrementSuspicion();
         }
