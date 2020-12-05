@@ -47,7 +47,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: -0.009115219, y: -0.74156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   - {x: -0.503927, y: 0.82019037, z: -0.000000021513188}
   m_ShapePathHash: -1153361464
   m_Mesh: {fileID: 0}
-  m_InstanceId: 1097530
+  m_InstanceId: 383422
 --- !u!114 &6559468334527639440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -548022455
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7741435522549630321, guid: 48d903de19da0a543a0b0f6cb158014a,
     type: 3}

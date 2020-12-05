@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 6982629604061281631}
   - component: {fileID: 1112480656}
   - component: {fileID: 3150299832379885566}
-  - component: {fileID: 5238233775073608144}
   - component: {fileID: 9090585744425268592}
   m_Layer: 0
   m_Name: Empty_Shelf_front
@@ -131,7 +130,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: -1.6850147, y: -3.0581112}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +169,7 @@ MonoBehaviour:
   - {x: -8.3102455, y: 3.64227, z: 0}
   m_ShapePathHash: -454675629
   m_Mesh: {fileID: 0}
-  m_InstanceId: -22094
---- !u!114 &5238233775073608144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5047782392015691535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
+  m_InstanceId: 410862
 --- !u!114 &9090585744425268592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +255,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -548022455
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -3463960272428309988, guid: c893892ae9e69844db094b67e5e97ed4,
     type: 3}
