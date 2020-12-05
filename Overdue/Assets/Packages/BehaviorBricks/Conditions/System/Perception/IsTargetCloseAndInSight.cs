@@ -60,7 +60,6 @@ namespace BBUnity.Conditions
             if (CheatCodeInput.debugMode)
                 Debug.DrawLine(currentPosition, target.transform.position, Color.green);
             Vector3 dir = (target.transform.position - currentPosition);
-            Debug.Log(dir.magnitude);
             // If not suspicious and far away
             if (!behavior.IsSuspicious() && dir.magnitude > closeDistance * 3)
             { 
