@@ -233,7 +233,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.0332265, y: 0.06361723}
+  m_Size: {x: 5.0332265, y: 0.41}
   m_EdgeRadius: 0
 --- !u!114 &657374699
 MonoBehaviour:
@@ -309,6 +309,24 @@ MonoBehaviour:
   child: {fileID: 4463270451545400786}
   child2: {fileID: 6795314540541033934}
   child3: {fileID: 0}
+  child4: {fileID: 0}
+  child5: {fileID: 0}
+  child6: {fileID: 0}
+  child7: {fileID: 0}
+  child8: {fileID: 0}
+  child9: {fileID: 0}
+  child10: {fileID: 0}
+  child11: {fileID: 0}
+  child12: {fileID: 0}
+  child13: {fileID: 0}
+  child14: {fileID: 0}
+  child15: {fileID: 0}
+  child16: {fileID: 0}
+  child17: {fileID: 0}
+  child18: {fileID: 0}
+  child19: {fileID: 0}
+  child20: {fileID: 0}
+  child21: {fileID: 0}
   border: {fileID: 3141789241637225341}
 --- !u!1 &5638611443852606047
 GameObject:
@@ -599,6 +617,24 @@ MonoBehaviour:
   child: {fileID: 4463270451545400786}
   child2: {fileID: 0}
   child3: {fileID: 0}
+  child4: {fileID: 0}
+  child5: {fileID: 0}
+  child6: {fileID: 0}
+  child7: {fileID: 0}
+  child8: {fileID: 0}
+  child9: {fileID: 0}
+  child10: {fileID: 0}
+  child11: {fileID: 0}
+  child12: {fileID: 0}
+  child13: {fileID: 0}
+  child14: {fileID: 0}
+  child15: {fileID: 0}
+  child16: {fileID: 0}
+  child17: {fileID: 0}
+  child18: {fileID: 0}
+  child19: {fileID: 0}
+  child20: {fileID: 0}
+  child21: {fileID: 0}
   border: {fileID: 3141789241637225341}
 --- !u!61 &3141789241637225341
 BoxCollider2D:
