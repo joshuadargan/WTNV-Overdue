@@ -29,25 +29,9 @@ public class DialogueManager : MonoBehaviour
         CanvasBox.SetActive(false); // close the dialogue box on play
     }
 
-    private void DisablePlayerController()
-    {
-        animController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimController>();
-        animController.ForceIdle();
-        animController.enabled = false;
-    }
-
-    private void EnablePlayerController()
-    {
-        animController.enabled = true;
-    }
 
     public void StartDialogue(Queue<string> dialogue)
     {
-        if (freezePlayerOnDialogue)
-        {
-            DisablePlayerController();
-        }
-
         CanvasBox.SetActive(true); // open the dialogue box
         // isOpen = true;
         inputStream = dialogue; // store the dialogue from dialogue trigger
@@ -85,11 +69,6 @@ public class DialogueManager : MonoBehaviour
         NameText.text = "";
         inputStream.Clear();
         CanvasBox.SetActive(false);
-        // isOpen = false;
-        if (freezePlayerOnDialogue)
-        {
-            EnablePlayerController();
-        }
     }
 
 }
