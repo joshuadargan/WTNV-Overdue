@@ -17,6 +17,84 @@ TextureImporter:
   - first:
       213: -6188582687490050923
     second: FlashlightFluidItem_2
+  - first:
+      213: -4090069182195185191
+    second: FlashlightFluidItem_2
+  - first:
+      213: 1349795127246856173
+    second: FlashlightFluidItem_3
+  - first:
+      213: -1456486791123460085
+    second: FlashlightFluidItem_4
+  - first:
+      213: 347263199335648839
+    second: FlashlightFluidItem_5
+  - first:
+      213: 5230441199161121009
+    second: FlashlightFluidItem_6
+  - first:
+      213: -6869969887751802079
+    second: FlashlightFluidItem_7
+  - first:
+      213: 5976966414798839338
+    second: FlashlightFluidItem_8
+  - first:
+      213: 7604499468094896133
+    second: FlashlightFluidItem_9
+  - first:
+      213: 1067052678472390732
+    second: FlashlightFluidItem_10
+  - first:
+      213: -2155653015004667985
+    second: FlashlightFluidItem_11
+  - first:
+      213: -4152089472805317692
+    second: FlashlightFluidItem_12
+  - first:
+      213: -2803963931959435615
+    second: FlashlightFluidItem_13
+  - first:
+      213: -768802743036516448
+    second: FlashlightFluidItem_14
+  - first:
+      213: 8755614255187760446
+    second: FlashlightFluidItem_15
+  - first:
+      213: 5395249162394869898
+    second: FlashlightFluidItem_16
+  - first:
+      213: 1089983063248769789
+    second: FlashlightFluidItem_17
+  - first:
+      213: 2104606315003997827
+    second: FlashlightFluidItem_18
+  - first:
+      213: -4022224067038636130
+    second: FlashlightFluidItem_19
+  - first:
+      213: 1455168931563259689
+    second: FlashlightFluidItem_20
+  - first:
+      213: -8058710351316912443
+    second: FlashlightFluidItem_21
+  - first:
+      213: 623070165731837303
+    second: FlashlightFluidItem_22
+  - first:
+      213: -6648641047470223865
+    second: FlashlightFluidItem_23
+  - first:
+      213: 1816225341483692444
+    second: FlashlightFluidItem_24
+  - first:
+      213: -8049459313829848628
+    second: FlashlightFluidItem_25
+  - first:
+      213: 6363700996606204073
+    second: FlashlightFluidItem_26
+  - first:
+      213: 76781449438155726
+    second: FlashlightFluidItem_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,7 +125,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -107,12 +185,12 @@ TextureImporter:
       name: FlashlightFluidItem_0
       rect:
         serializedVersion: 2
-        x: 953
-        y: 1335
-        width: 138
-        height: 308
+        x: 44
+        y: 1874
+        width: 198
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,12 +206,12 @@ TextureImporter:
       name: FlashlightFluidItem_1
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 1333
-        width: 161
-        height: 311
+        x: 248
+        y: 1874
+        width: 198
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,10 +227,535 @@ TextureImporter:
       name: FlashlightFluidItem_2
       rect:
         serializedVersion: 2
+        x: 456
+        y: 1874
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9cb78bfb72d37c0800000000000000
+      internalID: -4090069182195185191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_3
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1874
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def1a17448f6bb210800000000000000
+      internalID: 1349795127246856173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1874
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00a903faf489cbe0800000000000000
+      internalID: -1456486791123460085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_5
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1874
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e87f73a0ab1d400800000000000000
+      internalID: 347263199335648839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_6
+      rect:
+        serializedVersion: 2
         x: 1412
         y: 1292
         width: 609
         height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8119efe82469840800000000000000
+      internalID: 5230441199161121009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_7
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1666
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1237ce629c6f8a0a0800000000000000
+      internalID: -6869969887751802079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1666
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e5684794372f250800000000000000
+      internalID: 5976966414798839338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1666
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5087172d9fb988960800000000000000
+      internalID: 7604499468094896133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_10
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1666
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48d9f0f1ceeece00800000000000000
+      internalID: 1067052678472390732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_11
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1666
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf95a501059512e0800000000000000
+      internalID: -2155653015004667985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_12
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 1666
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3dcc98f90d066c0800000000000000
+      internalID: -4152089472805317692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_13
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1482
+        width: 286
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aedc80f8a15619d0800000000000000
+      internalID: -2803963931959435615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1482
+        width: 286
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a766fe7af9a455f0800000000000000
+      internalID: -768802743036516448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1482
+        width: 286
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3510de96c0328970800000000000000
+      internalID: 8755614255187760446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_16
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1335
+        width: 138
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8025472786cfda40800000000000000
+      internalID: 5395249162394869898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_17
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1333
+        width: 161
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2922032d5602f00800000000000000
+      internalID: 1089983063248769789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_18
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1304
+        width: 284
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e6bd5fa40153d10800000000000000
+      internalID: 2104606315003997827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_19
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1304
+        width: 286
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97922d85803e28c0800000000000000
+      internalID: -4022224067038636130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 897
+        width: 232
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9274306fe6cc13410800000000000000
+      internalID: 1455168931563259689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_21
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 880
+        width: 254
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6fdf1e1a5b92090800000000000000
+      internalID: -8058710351316912443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_22
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1081
+        width: 176
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775079ab30795a800800000000000000
+      internalID: 623070165731837303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_23
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 1082
+        width: 178
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ec47e71384bb3a0800000000000000
+      internalID: -6648641047470223865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_24
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 936
+        width: 308
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91b2374357843910800000000000000
+      internalID: 1816225341483692444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_25
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 896
+        width: 118
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc95635e6639a4090800000000000000
+      internalID: -8049459313829848628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_26
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 912
+        width: 159
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8138f0758605850800000000000000
+      internalID: 6363700996606204073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlashlightFluidItem_27
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1305
+        width: 283
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +763,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 594f50195dcbd1aa0800000000000000
-      internalID: -6188582687490050923
+      spriteID: ec3d91b4258c01100800000000000000
+      internalID: 76781449438155726
       vertices: []
       indices: 
       edges: []
