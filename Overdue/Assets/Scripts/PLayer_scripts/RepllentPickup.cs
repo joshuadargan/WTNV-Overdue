@@ -11,6 +11,7 @@ public class RepllentPickup : MonoBehaviour {
     public float remainingRepellantTime = 0;
     public AudioSource repellent;
     public AudioSource pickupRepellent;
+    public ParticleSystem repellentCloud;
 
     void Start()
     {
@@ -27,8 +28,9 @@ public class RepllentPickup : MonoBehaviour {
             if(!repellent.isPlaying)
             {
               repellent.Play();
+              repellentCloud.Play();
             }
-            
+
             RepellentIcon.SetActive(false);
         }
         if (remainingRepellantTime > 0)
