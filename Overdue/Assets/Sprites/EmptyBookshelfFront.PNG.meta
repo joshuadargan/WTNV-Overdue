@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -3463960272428309988
     second: EmptyBookshelfFront_Bottom
+  - first:
+      213: -2691870016449033285
+    second: EmptyBookshelfFront_Bottom
+  - first:
+      213: 1658709211238383393
+    second: EmptyBookshelfFront_Top
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,43 +125,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmptyBookshelfFront_Top
+      name: EmptyBookshelfFront_Bottom
       rect:
         serializedVersion: 2
-        x: 355
-        y: 1032
-        width: 1341
-        height: 676
+        x: 308
+        y: 290
+        width: 1440
+        height: 711
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0cd0702422448e00800000000000000
-      internalID: 1046033736387320846
+      spriteID: bbbc7007b7e84aad0800000000000000
+      internalID: -2691870016449033285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EmptyBookshelfFront_Bottom
+      name: EmptyBookshelfFront_Top
       rect:
         serializedVersion: 2
-        x: 378
-        y: 364
-        width: 1300
-        height: 667
+        x: 308
+        y: 998
+        width: 1440
+        height: 711
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1268dd2c7a8defc0800000000000000
-      internalID: -3463960272428309988
+      spriteID: 12f38894d3be40710800000000000000
+      internalID: 1658709211238383393
       vertices: []
       indices: 
       edges: []
