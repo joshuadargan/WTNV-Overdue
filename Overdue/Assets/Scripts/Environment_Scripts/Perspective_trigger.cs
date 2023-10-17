@@ -33,7 +33,7 @@ public class Perspective_trigger : MonoBehaviour
 	
 	public BoxCollider2D border;
 	
-	public const string front = "Character";
+	public const string front = "AboveCharacter";
     public const string back = "BelowCharacter";
 	
     void OnTriggerEnter2D(){
