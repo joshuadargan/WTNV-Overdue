@@ -74,6 +74,9 @@ TagManager:
   - name: Crouching
     uniqueID: 3619208637
     locked: 0
+  - name: Forward_Light_Fix
+    uniqueID: 1106194921
+    locked: 0
   - name: Character
     uniqueID: 2313613765
     locked: 0

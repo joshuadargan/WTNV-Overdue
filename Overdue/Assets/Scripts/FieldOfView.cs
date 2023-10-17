@@ -26,7 +26,7 @@ public class FieldOfView : MonoBehaviour
     // Update is called once per frame
     private void LateUpdate()
     {
-        lt.transform.position = origin;
+        //lt.transform.position = origin;
         lt.transform.rotation = Quaternion.Euler(0, 0, startingAngle);
     }
 
