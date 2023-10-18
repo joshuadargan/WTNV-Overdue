@@ -36,54 +36,54 @@ public class Perspective_trigger : MonoBehaviour
 	public const string front = "AboveCharacter";
     public const string back = "BelowCharacter";
 	
-    void OnTriggerEnter2D(Collider2D col){
+    void OnTriggerStay2D(Collider2D col){   //changed from OnTriggerEnter2D
 
-            if (child)
-                child.sortingLayerName = front;
-            if (child2)
-                child2.sortingLayerName = front;
-            if (child3)
-                child3.sortingLayerName = front;
-            if (child4)
-                child4.sortingLayerName = front;
-            if (child5)
-                child5.sortingLayerName = front;
-            if (child6)
-                child6.sortingLayerName = front;
-            if (child7)
-                child7.sortingLayerName = front;
-            if (child8)
-                child8.sortingLayerName = front;
-            if (child9)
-                child9.sortingLayerName = front;
-            if (child10)
-                child10.sortingLayerName = front;
-            if (child11)
-                child11.sortingLayerName = front;
-            if (child12)
-                child12.sortingLayerName = front;
-            if (child13)
-                child13.sortingLayerName = front;
-            if (child14)
-                child14.sortingLayerName = front;
-            if (child15)
-                child15.sortingLayerName = front;
-            if (child16)
-                child16.sortingLayerName = front;
-            if (child17)
-                child17.sortingLayerName = front;
-            if (child18)
-                child18.sortingLayerName = front;
-            if (child19)
-                child19.sortingLayerName = front;
-            if (child20)
-                child20.sortingLayerName = front;
-            if (child21)
-                child21.sortingLayerName = front;
+        // if(col.gameObject.sortingLayerName == "Character"){}
+
+            if (child && child.sortingLayerName != front) child.sortingLayerName = front;
+
+            if (child2 && child2.sortingLayerName != front) child2.sortingLayerName = front;
+
+            if (child3 && child3.sortingLayerName != front) child3.sortingLayerName = front;
+
+            if (child4 && child4.sortingLayerName != front) child4.sortingLayerName = front;
+
+            if (child5 && child5.sortingLayerName != front) child5.sortingLayerName = front;
+
+            if (child6 && child6.sortingLayerName != front) child6.sortingLayerName = front;
+
+            if (child7 && child7.sortingLayerName != front) child7.sortingLayerName = front;
+
+            if (child8 && child8.sortingLayerName != front) child8.sortingLayerName = front;
+
+            if (child9 && child9.sortingLayerName != front) child9.sortingLayerName = front;
+
+            if (child10 && child10.sortingLayerName != front) child10.sortingLayerName = front;
+
+            if (child11 && child11.sortingLayerName != front) child11.sortingLayerName = front;
+
+            if (child12 && child12.sortingLayerName != front) child12.sortingLayerName = front;
+
+            if (child13 && child13.sortingLayerName != front) child13.sortingLayerName = front;
+
+            if (child14 && child14.sortingLayerName != front) child14.sortingLayerName = front;
+
+            if (child15 && child15.sortingLayerName != front) child15.sortingLayerName = front;
+
+            if (child16 && child16.sortingLayerName != front) child16.sortingLayerName = front;
+
+            if (child17 && child17.sortingLayerName != front) child17.sortingLayerName = front;
+
+            if (child18 && child18.sortingLayerName != front) child18.sortingLayerName = front;
+
+            if (child19 && child19.sortingLayerName != front) child19.sortingLayerName = front;
+
+            if (child20 && child20.sortingLayerName != front) child20.sortingLayerName = front;
+
+            if (child21 && child21.sortingLayerName != front) child21.sortingLayerName = front;
     }
     
     void OnTriggerExit2D(Collider2D col){
-
 
         if (child)
             child.sortingLayerName = back;
@@ -129,4 +129,9 @@ public class Perspective_trigger : MonoBehaviour
             child21.sortingLayerName = back;
         
     }
+
+//     void ChangetoFront(SpriteRenderer childN){
+
+//         if (childN && childN.sortingLayerName != front) childN.sortingLayerName = front;
+//     }
 }

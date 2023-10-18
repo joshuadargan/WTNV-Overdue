@@ -929,7 +929,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -6257,7 +6257,7 @@ MonoBehaviour:
   remainingRepellantTime: 0
   repellent: {fileID: 7840974772861209807}
   pickupRepellent: {fileID: 977347618765462594}
-  repellentCloud: {fileID: 0}
+  repellentCloud: {fileID: 94702208059291273}
 --- !u!95 &3243554648774522627
 Animator:
   serializedVersion: 3
