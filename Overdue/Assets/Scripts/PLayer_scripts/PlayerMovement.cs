@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     public const string stand_layer = "Character";
     public const string crouch_layer = "Crouching";
+    public bool isCrouching;
     private SpriteRenderer sprite;
 
     public bool IsHiddenUnderTable { get; private set; } = false;
@@ -128,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Crouching() {
         if (Input.GetButton("Crouch")) {
+            isCrouching = true;
             sprite.sortingLayerName = crouch_layer;
             if (IsUnderTable)
             {
@@ -138,7 +140,8 @@ public class PlayerMovement : MonoBehaviour
                 IsHiddenUnderTable = false;
             }
         } else {
-            sprite.sortingLayerName = stand_layer;
+            //sprite.sortingLayerName = stand_layer;
+            isCrouching = false;
             IsHiddenUnderTable = false;
         }
 

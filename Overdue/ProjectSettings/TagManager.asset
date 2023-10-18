@@ -22,6 +22,7 @@ TagManager:
   - Collectible
   - Map
   - Catch
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -74,7 +75,7 @@ TagManager:
   - name: Crouching
     uniqueID: 3619208637
     locked: 0
-  - name: Forward_Light_Fix
+  - name: Flashlight_Immune
     uniqueID: 1106194921
     locked: 0
   - name: Character
