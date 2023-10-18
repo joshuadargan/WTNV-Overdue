@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 1
   m_Name: FieldOfView
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755df3ba41c90c5f1e689bf74f21ecdee568a97cfcacdbdbdb8d7
+  m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755df3ba41c90bf74f21ecdee568a97cfcacdbdbdb8d7c5f1e689
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.565
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.9
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000000d27d7d54f784d4849d755dfc5f1e689cdee568a97cfcacdbdbdb8d7
   m_LightCookieSprite: {fileID: 0}
@@ -429,8 +429,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.5
-  m_PointLightOuterRadius: 2
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 4
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -5618,7 +5618,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1974014259
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -6046,7 +6046,8 @@ GameObject:
   - component: {fileID: 5497380095472698421}
   - component: {fileID: 8594044790908521491}
   - component: {fileID: 6263629558598419494}
-  m_Layer: 0
+  - component: {fileID: 796321077}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6118,7 +6119,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1981353531
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7224842498758794987, guid: 702ed4dd0cd900040a4c6d15e102ba4e,
     type: 3}
@@ -6198,6 +6199,7 @@ MonoBehaviour:
   staminabar: {fileID: 0}
   maxstamina: 100
   staminaconsump: 10
+  isCrouching: 0
   walkSound: {fileID: 7525727215123181451}
   heavyBreathing: {fileID: 2332580366412735305}
   runSound: {fileID: 8170014205868817266}
@@ -6315,6 +6317,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8970223993575225014}
   m_Enabled: 1
+--- !u!114 &796321077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970223993575225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb6a1135d9f56240af0a8fb2cf6e357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playersprite: {fileID: 8970223993575225013}
 --- !u!1 &8970223994627235154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,7 +6341,8 @@ GameObject:
   - component: {fileID: 8970223994627235246}
   - component: {fileID: 8970223994627235153}
   - component: {fileID: 8480950536720689003}
-  m_Layer: 0
+  - component: {fileID: 420736443}
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6421,6 +6437,23 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &420736443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970223994627235154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 5a77d3da706ddc6408225d44674abe57, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &9220659991244319785
 GameObject:
   m_ObjectHideFlags: 0

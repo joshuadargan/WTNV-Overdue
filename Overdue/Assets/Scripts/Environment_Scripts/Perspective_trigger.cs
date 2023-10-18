@@ -36,52 +36,55 @@ public class Perspective_trigger : MonoBehaviour
 	public const string front = "AboveCharacter";
     public const string back = "BelowCharacter";
 	
-    void OnTriggerEnter2D(){
-        if (child)
-    	    child.sortingLayerName = front;
-        if (child2)
-    	    child2.sortingLayerName = front;
-        if (child3)
-            child3.sortingLayerName = front;
-        if (child4)
-            child4.sortingLayerName = front;
-        if (child5)
-            child5.sortingLayerName = front;
-        if (child6)
-            child6.sortingLayerName = front;
-        if (child7)
-            child7.sortingLayerName = front;
-        if (child8)
-            child8.sortingLayerName = front;
-        if (child9)
-    	    child9.sortingLayerName = front;
-        if (child10)
-    	    child10.sortingLayerName = front;
-        if (child11)
-            child11.sortingLayerName = front;
-        if (child12)
-            child12.sortingLayerName = front;
-        if (child13)
-            child13.sortingLayerName = front;
-        if (child14)
-            child14.sortingLayerName = front;
-        if (child15)
-            child15.sortingLayerName = front;
-        if (child16)
-            child16.sortingLayerName = front;
-        if (child17)
-            child17.sortingLayerName = front;
-        if (child18)
-            child18.sortingLayerName = front;
-        if (child19)
-            child19.sortingLayerName = front;
-        if (child20)
-            child20.sortingLayerName = front;
-        if (child21)
-            child21.sortingLayerName = front;
+    void OnTriggerEnter2D(Collider2D col){
+
+            if (child)
+                child.sortingLayerName = front;
+            if (child2)
+                child2.sortingLayerName = front;
+            if (child3)
+                child3.sortingLayerName = front;
+            if (child4)
+                child4.sortingLayerName = front;
+            if (child5)
+                child5.sortingLayerName = front;
+            if (child6)
+                child6.sortingLayerName = front;
+            if (child7)
+                child7.sortingLayerName = front;
+            if (child8)
+                child8.sortingLayerName = front;
+            if (child9)
+                child9.sortingLayerName = front;
+            if (child10)
+                child10.sortingLayerName = front;
+            if (child11)
+                child11.sortingLayerName = front;
+            if (child12)
+                child12.sortingLayerName = front;
+            if (child13)
+                child13.sortingLayerName = front;
+            if (child14)
+                child14.sortingLayerName = front;
+            if (child15)
+                child15.sortingLayerName = front;
+            if (child16)
+                child16.sortingLayerName = front;
+            if (child17)
+                child17.sortingLayerName = front;
+            if (child18)
+                child18.sortingLayerName = front;
+            if (child19)
+                child19.sortingLayerName = front;
+            if (child20)
+                child20.sortingLayerName = front;
+            if (child21)
+                child21.sortingLayerName = front;
     }
     
-    void OnTriggerExit2D(){
+    void OnTriggerExit2D(Collider2D col){
+
+
         if (child)
             child.sortingLayerName = back;
         if (child2)

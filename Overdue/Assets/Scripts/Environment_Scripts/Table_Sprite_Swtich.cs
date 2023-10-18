@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class Table_Sprite_Swtich : MonoBehaviour
 {
-	
-	public GameObject Object;
+	public GameObject hiddenVariant;
+    public GameObject OGVariant;
    // private Collider2D trigger;
-	
     public SpriteRenderer player;
 	
-    // Start is called before the first frame update
     void Start()
     {
        // trigger = GetComponent<CapsuleCollider2D>();
         //trigger.enabled = !trigger.enabled;
     }
 
-    // Update is called once per frame
     void Update()
     {
         /*if (player.sortingLayerName == "Crouching")
@@ -32,8 +29,9 @@ public class Table_Sprite_Swtich : MonoBehaviour
     void OnTriggerEnter2D(Collider2D character){
     	 if(character.tag == "Player" /*&& player.sortingLayerName == crouch_layer*/){
             player.enabled = false;
-            Object.SetActive(true);
-            
+            hiddenVariant.SetActive(true);
+            OGVariant.SetActive(false);
+            OGVariant.GetComponent<SpriteRenderer>().sortingLayerName = "Flashlight_Immune";
      	 }
     	
     }
@@ -41,8 +39,8 @@ public class Table_Sprite_Swtich : MonoBehaviour
     void OnTriggerExit2D(Collider2D character){
     	 if(character.tag == "Player"){
             player.enabled = true;
-            Object.SetActive(false);
-            
+            hiddenVariant.SetActive(false);
+            OGVariant.SetActive(true);
         }
     	
     }

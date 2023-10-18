@@ -151,7 +151,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1981353531
+  m_SortingLayerID: 1106194921
   m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
@@ -276,7 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee044bcb3d3d472418bfe9401d010eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 6553703390166556893}
+  hiddenVariant: {fileID: 6553703390166556893}
+  OGVariant: {fileID: 2113591348099024871}
   player: {fileID: 0}
 --- !u!70 &4479934652303370352
 CapsuleCollider2D:
@@ -307,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 4463270451545400786}
-  child2: {fileID: 6795314540541033934}
+  child2: {fileID: 0}
   child3: {fileID: 0}
   child4: {fileID: 0}
   child5: {fileID: 0}
@@ -397,7 +398,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1974014259
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -6096136496964128554, guid: 54cb55f5b1c21784ba5521c303491813,
     type: 3}
@@ -481,7 +482,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1981353531
+  m_SortingLayerID: 1106194921
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1972807536340823378, guid: 13ed13f050432a844ba298aeacac9278,
@@ -835,7 +836,7 @@ PrefabInstance:
     - target: {fileID: 6234717327477455515, guid: 5ee50069f4d4ed74c89b6f5802f67a94,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -1981353531
+      value: 1106194921
       objectReference: {fileID: 0}
     - target: {fileID: 6234717327477455515, guid: 5ee50069f4d4ed74c89b6f5802f67a94,
         type: 3}
@@ -940,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 4860460403914070972, guid: 149593e6c498405478d9fd37f58bacfa,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4860460403914070972, guid: 149593e6c498405478d9fd37f58bacfa,
         type: 3}
@@ -980,7 +981,7 @@ PrefabInstance:
     - target: {fileID: 4808834000715191425, guid: ce4ceff2c922bdf46b735f4e6514e320,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4808834000715191425, guid: ce4ceff2c922bdf46b735f4e6514e320,
         type: 3}
