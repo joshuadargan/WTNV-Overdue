@@ -6195,6 +6195,8 @@ MonoBehaviour:
   speed: {x: 5, y: 5}
   sprintspeed: {x: 7.5, y: 7.5}
   crouchspeed: {x: 2, y: 2}
+  usesRigidbody: 1
+  ControllerMultiplier: 0.5
   rb: {fileID: 8970223993575225012}
   staminabar: {fileID: 0}
   maxstamina: 100

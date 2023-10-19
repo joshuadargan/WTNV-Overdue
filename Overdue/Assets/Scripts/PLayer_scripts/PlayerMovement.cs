@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 speed = new Vector2(5,5);
     public Vector2 sprintspeed = new Vector2 (10,10);
     public Vector2 crouchspeed = new Vector2 (2,2);
+    
+    public bool usesRigidbody;
+    public float ControllerMultiplier = 0.5f;
+
     Vector3 movement;
 
     public Rigidbody2D rb;
@@ -62,14 +66,30 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")) {
 
             if (Input.GetButton("Crouch")){
-        		//movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
-        		rb.velocity = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
-        		}
-        	else if (Input.GetButton("Sprint") && currentstamina > 0){
-       			//movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
-       			rb.velocity = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
+                //movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
 
-       			UseStamina(staminaconsump);
+                if (usesRigidbody == true)
+                {
+                    rb.velocity = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);           //uses rigidbody  RIGIDBODY USES AND CONTROLLER USES CANNOT COEXIST
+                }
+                else
+                {
+                    gameObject.transform.Translate(new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0) * Time.deltaTime * ControllerMultiplier);        //uses transform
+                }                                                                                                                                            
+        	}
+        	else if (Input.GetButton("Sprint") && currentstamina > 0){
+                //movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
+
+                if (usesRigidbody == true)
+                {
+                    rb.velocity = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);           //uses rigidbody
+                }
+                else
+                {
+                    gameObject.transform.Translate(new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0) * Time.deltaTime * ControllerMultiplier); //uses transform
+                }
+
+                UseStamina(staminaconsump);
                 IsHiddenUnderTable = false;
                 if(!runSound.isPlaying)
                 {
@@ -77,8 +97,18 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             else{
-        		//movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
-        		rb.velocity = new Vector3(speed.x * inputX, speed.y * inputY, 0);
+                //movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
+
+                if (usesRigidbody == true)
+                {
+                    rb.velocity = new Vector3(speed.x * inputX, speed.y * inputY, 0);                       //uses rigidbody
+                }
+                else
+                {
+                    gameObject.transform.Translate(new Vector3(speed.x * inputX, speed.y * inputY, 0) * Time.deltaTime * ControllerMultiplier);        //uses controller
+                }
+
+
                 IsHiddenUnderTable = false;
                 if(!walkSound.isPlaying)
                 {
@@ -86,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }else{
-        	rb.velocity = new Vector3(0, 0, 0);
+        	rb.velocity = new Vector3(0, 0, 0);                                            //uses rigidbody
             walkSound.Stop();
             runSound.Stop();
 
