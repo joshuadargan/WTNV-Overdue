@@ -181,8 +181,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(GameObjectTags.Table) && sprite.sortingLayerName == crouch_layer)
         {
-            if (CheatCodeInput.debugMode)
-                Debug.Log("You are hidden");
+            if (CheatCodeInput.debugMode) Debug.Log("You are hidden");
+
             IsUnderTable = true;
             gameObject.layer = 2;
         }
@@ -195,9 +195,14 @@ public class PlayerMovement : MonoBehaviour
             if (CheatCodeInput.debugMode)
                 Debug.Log("You are exposed");
             IsUnderTable = false;
-            gameObject.layer = 0;
+            gameObject.layer = 9;
         }
     }
 
+
+    // private void OnCollisionEnter2D(Collision2D col){        //when the Player hits something, reset velocity
+    //     Debug.Log("oops!");
+    //    rb.velocity = new Vector3(0, 0, 0);  
+    // }
 
 }

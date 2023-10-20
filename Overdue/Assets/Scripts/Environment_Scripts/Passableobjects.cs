@@ -7,6 +7,7 @@ public class Passableobjects : MonoBehaviour
 {
     private Collider2D Border;
     public bool hidden = false;
+    private bool isUnder = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,19 @@ public class Passableobjects : MonoBehaviour
         {
             Border.enabled = false;
         }
-        else
+        else if(isUnder == false)
         {
             Border.enabled = true;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D col){
+
+        isUnder = true;
+    }
+
+    void OnTriggerExit2D(Collider2D col){
+
+        isUnder = false;
     }
 }
