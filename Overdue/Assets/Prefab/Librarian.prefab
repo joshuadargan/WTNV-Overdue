@@ -691,7 +691,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 13.22434}
+  m_Size: {x: 1, y: 3.31}
   m_EdgeRadius: 0
 --- !u!95 &3005456987976683957
 Animator:
@@ -769,7 +769,7 @@ MonoBehaviour:
   - {x: -3.3162727, y: -5.2304, z: 0}
   m_ShapePathHash: -710432251
   m_Mesh: {fileID: 0}
-  m_InstanceId: 792152
+  m_InstanceId: 149206
 --- !u!1 &4505462231138609080
 GameObject:
   m_ObjectHideFlags: 0
