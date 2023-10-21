@@ -17,7 +17,7 @@ public class Light_Forward_Fix : MonoBehaviour
 
     public void WalkingFoward (){
 
-        if(playersprite.sortingLayerName != "Flashlight_Immune" && PlayerMovement.isCrouching == false)
+        if(playersprite.sortingLayerName != "Flashlight_Immune" /*&& PlayerMovement.isCrouching == false*/)
         {
             
             //Debug.Log("before layer change");
@@ -29,7 +29,7 @@ public class Light_Forward_Fix : MonoBehaviour
 
     public void NotWalkingForward(){
 
-        if(playersprite.sortingLayerName != "Character" && PlayerMovement.isCrouching == false)
+        if(playersprite.sortingLayerName != "Character" /* && PlayerMovement.isCrouching == false*/)
         {
 
             //Debug.Log("before layer change");
