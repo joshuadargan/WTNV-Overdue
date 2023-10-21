@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")) {
 
-            if (Input.GetButton("Crouch")){
+            if (Input.GetButton("Crouch") || IsUnderTable == true){
                 //movement = new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0);
 
                 if (usesRigidbody == true)
@@ -169,7 +169,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 IsHiddenUnderTable = false;
             }
-        } else {
+        } else if (IsUnderTable == true){ 
+            
+            IsHiddenUnderTable = true;
+        
+        }else {
             //sprite.sortingLayerName = stand_layer;
             isCrouching = false;
             IsHiddenUnderTable = false;
@@ -177,11 +181,20 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag(GameObjectTags.Table) && sprite.sortingLayerName == crouch_layer)
-        {
-            if (CheatCodeInput.debugMode) Debug.Log("You are hidden");
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if (collision.gameObject.CompareTag(GameObjectTags.Table) && sprite.sortingLayerName == crouch_layer)
+    //     {
+    //         if (CheatCodeInput.debugMode) Debug.Log("You are hidden"); //this may be broken
+
+    //         IsUnderTable = true;
+    //         gameObject.layer = 2;
+    //     }
+    // }
+
+    private void OnTriggerStay2D(Collider2D col){
+
+        if((col.gameObject.tag == "Table" && isCrouching == true) || CheatCodeInput.debugMode){
 
             IsUnderTable = true;
             gameObject.layer = 2;
