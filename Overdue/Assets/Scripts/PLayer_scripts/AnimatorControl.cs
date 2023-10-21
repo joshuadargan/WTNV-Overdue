@@ -7,11 +7,13 @@ using UnityEngine;
 public class AnimatorControl : MonoBehaviour
 {
     public Animator animator;
+    private PlayerMovement playerMovement;
+    private bool isCrouching = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,16 @@ public class AnimatorControl : MonoBehaviour
         //Debug.Log("Angle = " + angle);
         
         animator.SetFloat("angle", angle);
+
+        if (playerMovement.IsUnderTable == true && isCrouching == false) {
+
+            animator.SetBool("IsUnderTable", true);
+            isCrouching = true;
+        } else if(playerMovement.IsUnderTable == false && isCrouching == true){
+
+            animator.SetBool("IsUnderTable", false);
+            isCrouching = false;
+        }
  
         
        /* if (angle > -45 && angle < 45){
