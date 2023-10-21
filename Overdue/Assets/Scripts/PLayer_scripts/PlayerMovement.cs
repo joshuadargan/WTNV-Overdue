@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
     private void Crouching() {
         if (Input.GetButton("Crouch")) {
             isCrouching = true;
-            sprite.sortingLayerName = crouch_layer;
+         //   sprite.sortingLayerName = crouch_layer;           //disabling as a test
             if (IsUnderTable)
             {
                 IsHiddenUnderTable = true;
