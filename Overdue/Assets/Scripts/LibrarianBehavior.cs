@@ -72,7 +72,9 @@ public class LibrarianBehavior : MonoBehaviour
             {
                 agent.velocity = Vector3.zero;
             }
-            totalTimeSuspicious += Time.deltaTime;
+            
+            totalTimeSuspicious += Time.deltaTime;          //count the seconds
+
             if (totalTimeSuspicious > COOLDOWN)
             {
                 agent.speed = baseSpeed * 2;
@@ -96,11 +98,11 @@ public class LibrarianBehavior : MonoBehaviour
         }
 
     	Direction = transform.position - prevPos;
-			if(agent.speed == baseSpeed && !walkSound.isPlaying && playAudio)
+			if(agent.speed == baseSpeed && !walkSound.isPlaying && playAudio)               //this determines if the walk SFX should play
 			{
 				walkSound.Play();
 			}
-            else if(agent.speed == baseSpeed * 2 && !chaseSound.isPlaying && playAudio)
+            else if(agent.speed == baseSpeed * 2 && !chaseSound.isPlaying && playAudio)     //this determines if the chase SFX should play
             {
                 chaseSound.Play();
             }
@@ -109,7 +111,7 @@ public class LibrarianBehavior : MonoBehaviour
     	Horizontal = Direction.x;
     	Vertical = Direction.y;
 
-    	if (Math.Abs(Horizontal) > Math.Abs(Vertical)){
+    	if (Math.Abs(Horizontal) > Math.Abs(Vertical)){                     //this sets the sprite for the animator
         	VoverH = false;
         } else if (Math.Abs(Vertical) > Math.Abs(Horizontal)){
         	VoverH = true;

@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource walkSound;
     public AudioSource heavyBreathing;
     public AudioSource runSound;
+   // public AudioSource noiseSound;
+
+    public static bool isMakingNoise = false;
 
     // Start is called before the first frame update
     void Start()
@@ -198,6 +201,21 @@ public class PlayerMovement : MonoBehaviour
 
             IsUnderTable = true;
             gameObject.layer = 2;
+        }
+
+        if (col.gameObject.tag == "Noisy" && isCrouching == false && rb.velocity != Vector2.zero)      //checks to see if the Player is walking on something noisy
+        {
+
+            if(isMakingNoise == false) isMakingNoise = true;       //modifies the script on the SoundTarget gameobject
+            
+            //if(noiseSound.isPlaying == false) noiseSound.Play();
+                //play loud crunch sound
+        }
+        else {
+
+            isMakingNoise = false;      
+            //noiseSound.Stop();
+                //play quieter crunch sound
         }
     }
 

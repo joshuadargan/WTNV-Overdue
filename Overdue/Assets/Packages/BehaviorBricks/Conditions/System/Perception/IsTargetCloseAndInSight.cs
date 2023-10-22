@@ -69,7 +69,7 @@ namespace BBUnity.Conditions
 
             if (hit || behavior.IsSuspicious())
             {
-                if (timeSinceLastSighting > HIDE_TIME && movement && movement.IsHiddenUnderTable)
+                if (timeSinceLastSighting > HIDE_TIME && movement && movement.IsHiddenUnderTable)       //determines if the librarians should exit search mode
                 {
                     behavior.SetSuspicion(0);
                 }
