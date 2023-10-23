@@ -27,8 +27,10 @@ namespace BBUnity.Conditions
         /// <returns>True if the magnitude between the gameobject and the target is lower that the given distance.</returns>
         public override bool Check()
 		{
+            if (target.activeInHierarchy == false) {
 
-            if (target.activeInHierarchy == false) return false;       //if the object doesn't exist, return false
+                return false;            
+            }      //if the object doesn't exist, return its last location
 
             return (gameObject.transform.position - target.transform.position).sqrMagnitude < closeDistance * closeDistance;
 		}

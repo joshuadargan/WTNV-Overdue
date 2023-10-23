@@ -206,7 +206,12 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.tag == "Noisy" && isCrouching == false && rb.velocity != Vector2.zero)      //checks to see if the Player is walking on something noisy
         {
 
-            if(isMakingNoise == false) isMakingNoise = true;       //modifies the script on the SoundTarget gameobject
+            if (isMakingNoise == false) { 
+                
+                isMakingNoise = true;
+                //Debug.Log("is making noise");
+            
+            }     //modifies the script on the SoundTarget gameobject
             
             //if(noiseSound.isPlaying == false) noiseSound.Play();
                 //play loud crunch sound
