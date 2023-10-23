@@ -37,9 +37,10 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource walkSound;
     public AudioSource heavyBreathing;
     public AudioSource runSound;
-   // public AudioSource noiseSound;
+    public AudioSource noiseSound;
 
     public static bool isMakingNoise = false;
+    private bool inNoisyArea = false;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +79,16 @@ public class PlayerMovement : MonoBehaviour
                 else
                 {
                     gameObject.transform.Translate(new Vector3(crouchspeed.x * inputX, crouchspeed.y * inputY, 0) * Time.deltaTime * ControllerMultiplier);        //uses transform
-                }                                                                                                                                            
+                }
+
+                if (runSound.isPlaying) runSound.Stop();
+
+
+                //if (walkSound.isPlaying == true && isMakingNoise == true) walkSound.Stop();
+               // else if (walkSound.isPlaying == false && isMakingNoise == false) walkSound.Play();
+                //else if (walkSound.isPlaying == true && isMakingNoise == false) { walkSound.Play(); }         //I CANNOT GET THE CROUCH TO PLAY A WALK SOUND WITHOUT RUNING THE SOUND FOR THE GLASS
+               // else if (walkSound.isPlaying == false && isMakingNoise == true) { walkSound.Stop(); }
+             
         	}
         	else if (Input.GetButton("Sprint") && currentstamina > 0){
                 //movement = new Vector3(sprintspeed.x * inputX, sprintspeed.y * inputY, 0);
@@ -111,9 +121,10 @@ public class PlayerMovement : MonoBehaviour
                     gameObject.transform.Translate(new Vector3(speed.x * inputX, speed.y * inputY, 0) * Time.deltaTime * ControllerMultiplier);        //uses controller
                 }
 
+                if (runSound.isPlaying == true) runSound.Stop();
 
                 IsHiddenUnderTable = false;
-                if(!walkSound.isPlaying)
+                if(!walkSound.isPlaying && inNoisyArea == false)
                 {
                     walkSound.Play();
                 }
@@ -184,16 +195,15 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag(GameObjectTags.Table) && sprite.sortingLayerName == crouch_layer)
-    //     {
-    //         if (CheatCodeInput.debugMode) Debug.Log("You are hidden"); //this may be broken
-
-    //         IsUnderTable = true;
-    //         gameObject.layer = 2;
-    //     }
-    // }
+     private void OnTriggerEnter2D(Collider2D collision)
+     {
+        if (collision.gameObject.tag == "Noisy")
+         {
+            walkSound.Stop();
+            runSound.Stop();
+            inNoisyArea = true;
+         }
+     }
 
     private void OnTriggerStay2D(Collider2D col){
 
@@ -206,21 +216,36 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.tag == "Noisy" && isCrouching == false && rb.velocity != Vector2.zero)      //checks to see if the Player is walking on something noisy
         {
 
-            if (isMakingNoise == false) { 
-                
+            if (isMakingNoise == false)
+            {
+
                 isMakingNoise = true;
                 //Debug.Log("is making noise");
-            
-            }     //modifies the script on the SoundTarget gameobject
-            
-            //if(noiseSound.isPlaying == false) noiseSound.Play();
-                //play loud crunch sound
-        }
-        else {
 
-            isMakingNoise = false;      
-            //noiseSound.Stop();
-                //play quieter crunch sound
+            }     //modifies the script on the SoundTarget gameobject
+
+            if (noiseSound.isPlaying == false)
+            {
+
+                if (noiseSound.volume != 1) noiseSound.volume = 1;
+                noiseSound.Play();
+            }
+            //play loud crunch sound
+        }
+        else if (col.gameObject.tag == "Noisy" && isCrouching == true && rb.velocity != Vector2.zero)
+        {
+
+            isMakingNoise = false;
+
+            if (noiseSound.volume != 1) noiseSound.volume = 1;
+            if (noiseSound.isPlaying == false) noiseSound.Play();
+            //play quieter crunch sound
+        }
+        else if (col.gameObject.tag == "Noisy") {
+
+            if (noiseSound.isPlaying == true) noiseSound.Pause();
+
+            if (isMakingNoise == true) isMakingNoise = false; 
         }
     }
 
@@ -232,6 +257,13 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("You are exposed");
             IsUnderTable = false;
             gameObject.layer = 9;
+        }
+
+        if (collision.gameObject.tag == "Noisy") {
+
+            isMakingNoise = false;
+            noiseSound.Pause();
+            inNoisyArea = false;
         }
     }
 
