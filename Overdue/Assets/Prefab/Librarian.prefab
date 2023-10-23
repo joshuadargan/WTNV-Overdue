@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 3634982403442467865}
   - component: {fileID: 1792509985636408970}
   - component: {fileID: 9073330294352133195}
+  - component: {fileID: 8534586078637842654}
   m_Layer: 2
   m_Name: Librarian
   m_TagString: Librarian
@@ -769,7 +770,26 @@ MonoBehaviour:
   - {x: -3.3162727, y: -5.2304, z: 0}
   m_ShapePathHash: -710432251
   m_Mesh: {fileID: 0}
-  m_InstanceId: 688770
+  m_InstanceId: 207456
+--- !u!114 &8534586078637842654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475600786393597708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b935744a9268a48b9ca4c64f0935c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 4475600786393597706}
+  - {fileID: 873820909224519066}
+  - {fileID: 4520573648294324201}
+  main: {fileID: 4475600786393597706}
+  alt1: {fileID: 873820909224519066}
+  alt2: {fileID: 4520573648294324201}
 --- !u!1 &4505462231138609080
 GameObject:
   m_ObjectHideFlags: 0

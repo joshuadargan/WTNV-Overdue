@@ -7,14 +7,8 @@ using UnityEngine;
 public class AnimatorControl : MonoBehaviour
 {
     public Animator animator;
-    private PlayerMovement playerMovement;
+    //private PlayerMovement playerMovement;
     private bool isCrouching = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerMovement = gameObject.GetComponent<PlayerMovement>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -35,11 +29,11 @@ public class AnimatorControl : MonoBehaviour
         
         animator.SetFloat("angle", angle);
 
-        if (playerMovement.IsUnderTable == true && isCrouching == false) {              //this centers the flashlight on the Player while they are crouched under a table
+        if (PlayerMovement.IsUnderTable == true && isCrouching == false) {              //this centers the flashlight on the Player while they are crouched under a table
 
             animator.SetBool("IsUnderTable", true);
             isCrouching = true;
-        } else if(playerMovement.IsUnderTable == false && isCrouching == true){         //this undoes the above
+        } else if(PlayerMovement.IsUnderTable == false && isCrouching == true){         //this undoes the above
 
             animator.SetBool("IsUnderTable", false);
             isCrouching = false;

@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
 
     public bool IsHiddenUnderTable { get; private set; } = false;
-    public bool IsUnderTable { get; private set; } = false;
+    public static bool IsUnderTable { get; private set; } = false;
 
     public AudioSource walkSound;
     public AudioSource heavyBreathing;
