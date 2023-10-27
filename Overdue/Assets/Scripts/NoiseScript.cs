@@ -42,7 +42,7 @@ public class NoiseScript : MonoBehaviour
     {
         Debug.Log("collided");
 
-        if(col.gameObject.tag == "Librarian")
+       if(col.gameObject.tag == "Lib_Sound_Detect")
         {
             Debug.Log("Librarian reached me");
 

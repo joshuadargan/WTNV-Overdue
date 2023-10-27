@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5364108977623024377}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SoundSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 1440930149829969219}
   - component: {fileID: 487250273619202655}
   - component: {fileID: 4010413322018395267}
+  - component: {fileID: 1183390625034207641}
   m_Layer: 0
   m_Name: SoundTarget
   m_TagString: Untagged
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   NoiseTarget: {fileID: 3378989126263118993}
+  soundTimer: 5
 --- !u!58 &4010413322018395267
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -93,3 +95,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &1183390625034207641
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206342434792765089}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
