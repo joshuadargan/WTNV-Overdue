@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422fb6956201c7944ae2113a1a53b0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTasksPerTick: 500
+  maxTasksPerTick: 100
   behavior: {fileID: 11400000, guid: 034700c5f8f55db408b7483743922cec, type: 2}
   paused: 0
   restartWhenFinished: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
     colorParamsNames: []
     colorParamsLostDefaultValue: 
     objectParams:
-    - {fileID: 8970223993575225014, guid: 533f711c033f6d04ab8761ec31ca0059, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -860,7 +860,7 @@ MonoBehaviour:
   - {x: -3.3162727, y: -5.2304, z: 0}
   m_ShapePathHash: -710432251
   m_Mesh: {fileID: 0}
-  m_InstanceId: 229752
+  m_InstanceId: 40438
 --- !u!114 &8534586078637842654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6296,7 +6296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439506962882130315}
   - component: {fileID: 2250786330131651313}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: Librarian Sound Detector
   m_TagString: Lib_Sound_Detect
   m_Icon: {fileID: 0}

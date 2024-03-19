@@ -10,6 +10,11 @@ public class NoiseScript : MonoBehaviour
     private bool systemOn = false;
     public float soundTimer = 5f;
 
+    void Start(){
+
+        Player = GameObject.Find(GameObjectNames.Player);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -54,7 +59,7 @@ public class NoiseScript : MonoBehaviour
     }
 
 
-    public IEnumerator DeactivateSource()           //deactivates game object automatically after time
+    IEnumerator DeactivateSource()           //deactivates game object automatically after time
     {
         timerRunning = true;
 
@@ -65,4 +70,5 @@ public class NoiseScript : MonoBehaviour
         systemOn = false;
     }   
 
+    
 }
